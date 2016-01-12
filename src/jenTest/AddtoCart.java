@@ -9,6 +9,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -22,7 +24,7 @@ public class AddtoCart {
   		dr = new FirefoxDriver();
   		dr.get("http://beta.angelplastics.co.uk/");
   		dr.manage().window().maximize();
-  		dr.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+  		dr.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
   		dr.findElement(By.id("login_username")).sendKeys("kelvin");
   		dr.findElement(By.id("login_password")).sendKeys("123test456");
   		dr.findElement(By.id("remember")).click();
@@ -59,6 +61,7 @@ public class AddtoCart {
   	public static void SubProduct() throws InterruptedException{
   		
   		List<WebElement> options = dr.findElements(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a"));
+  		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random();
   		int rval=rand.nextInt(n);
@@ -106,9 +109,10 @@ public class AddtoCart {
   	}
   	
   	
-  	public static void FinalSubProductCategories(){
+  	public static void FinalSubProductCategories() throws InterruptedException{
   		
   		List<WebElement> options = dr.findElements(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a"));
+  		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
   		int rval=rand.nextInt(n);
@@ -132,35 +136,47 @@ public class AddtoCart {
   	
   	
   	
-  	public static void ProductPage(){
+  	public static void ProductPage() throws InterruptedException{
   		
   		List<WebElement> Products = dr.findElements(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div"));
+  		TimeUnit.SECONDS.sleep(2);
   		int n=Products.size();
   		System.out.println("Total number of products in the Page: "+n);
-  		for(int i=1; i<=n; i++)
-  		{
-  			int[] a={3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-  			if(Arrays.asList(a).contains(i)){
-  				break;
-  			} else{
+//  		for(int i=1; i<n; i++)
+//  		{
+//  			int[] a={3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
+//  			int d=Arrays.binarySearch(a, i);
+//  			if(d>=0)
+//  			{
+//  				i++;
+//  			} 
+//  			else
+//  			{
+	  		Random rand= new Random(System.currentTimeMillis());
+	  		int rval=rand.nextInt(n);
   			String Str5="html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div[";
   			String Str6="]/div/div[2]/div[2]/div[3]/input";
   			Random num = new Random();
   			int value=num.nextInt(100)+1;
-  			dr.findElement(By.xpath(Str5+i+Str6)).sendKeys(""+value);
+  			dr.findElement(By.xpath(Str5+rval+Str6)).sendKeys(""+value);
   			String Str7="]/div/div[2]/div[4]/a";
-  			dr.findElement(By.xpath(Str5+i+Str7)).click();
+  			dr.findElement(By.xpath(Str5+rval+Str7)).click();
   			String Str8="html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div[";
   			String Str9="]/div/h2";
-  			WebElement ProductName= dr.findElement(By.xpath(Str8+i+Str9));
+  			WebElement ProductName= dr.findElement(By.xpath(Str8+rval+Str9));
   			String ItemName=ProductName.getText();
   			System.out.println("The Selected product name is: "+ItemName);
-//  			dr.switchTo().frame(0);
+  			WebDriverWait wait = new WebDriverWait(dr,50);
+  			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='popup_ok']")));
   			dr.findElement(By.xpath(".//*[@id='popup_ok']")).click();
-  			}
-  			
-  		}
+//  			}
+//  			
+//  		}
   		dr.findElement(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[1]/div[7]/ul/li[7]")).click();
+  		dr.findElement(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div[1]/div[4]/div[1]/div[1]/div/a[2]")).click();
+  		dr.findElement(By.xpath(".//*[@id='header_top']/div[2]/div[2]/div[1]/a")).click();
+  		dr.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+  		dr.findElement(By.xpath(".//*[@id='view']/tbody/tr[2]/td[2]/a")).click();
   		
   		
   	}
