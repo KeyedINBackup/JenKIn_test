@@ -2,37 +2,50 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1217689" started-at="2016-01-20T09:22:05Z" finished-at="2016-01-20T09:42:23Z">
+  <suite name="Suite" duration-ms="854303" started-at="2016-01-20T13:16:52Z" finished-at="2016-01-20T13:31:07Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1217689" started-at="2016-01-20T09:22:05Z" finished-at="2016-01-20T09:42:23Z">
+    <test name="Test" duration-ms="854303" started-at="2016-01-20T13:16:52Z" finished-at="2016-01-20T13:31:07Z">
       <class name="jenTest.AddtoCart">
-        <test-method status="PASS" signature="loginIn()[pri:0, instance:jenTest.AddtoCart@5a01ccaa]" name="loginIn" is-config="true" duration-ms="392254" started-at="2016-01-20T14:52:05Z" finished-at="2016-01-20T14:58:37Z">
+        <test-method status="PASS" signature="loginIn()[pri:0, instance:jenTest.AddtoCart@5a01ccaa]" name="loginIn" is-config="true" duration-ms="412603" started-at="2016-01-20T18:46:52Z" finished-at="2016-01-20T18:53:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginIn -->
-        <test-method status="FAIL" signature="MainProduct()[pri:0, instance:jenTest.AddtoCart@5a01ccaa]" name="MainProduct" duration-ms="825422" started-at="2016-01-20T14:58:37Z" finished-at="2016-01-20T15:12:23Z">
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method status="FAIL" signature="MainProduct()[pri:0, instance:jenTest.AddtoCart@5a01ccaa]" name="MainProduct" duration-ms="441688" started-at="2016-01-20T18:53:45Z" finished-at="2016-01-20T19:01:07Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Timed out after 50 seconds waiting for presence of element located by: By.xpath: .//*[@id='popup_ok']
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a[0]/div"}
+Command duration or timeout: 60.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c54eef79-3180-49c4-9dc9-a43ac86251a7]]>
+Session ID: a347e6f3-f8e0-447f-8ea1-f7d944e5481c
+*** Element info: {Using=xpath, value=html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a[0]/div}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Timed out after 50 seconds waiting for presence of element located by: By.xpath: .//*[@id='popup_ok']
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a[0]/div"}
+Command duration or timeout: 60.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c54eef79-3180-49c4-9dc9-a43ac86251a7
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
-	at jenTest.AddtoCart.ProductPage(AddtoCart.java:261)
-	at jenTest.AddtoCart.SubProductCategories(AddtoCart.java:173)
-	at jenTest.AddtoCart.SubProduct(AddtoCart.java:147)
+Session ID: a347e6f3-f8e0-447f-8ea1-f7d944e5481c
+*** Element info: {Using=xpath, value=html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a[0]/div}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at jenTest.AddtoCart.SubProduct(AddtoCart.java:136)
 	at jenTest.AddtoCart.MainProduct(AddtoCart.java:71)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -57,46 +70,20 @@ Session ID: c54eef79-3180-49c4-9dc9-a43ac86251a7
 	at org.testng.TestNG.run(TestNG.java:1018)
 	at org.testng.TestNG.privateMain(TestNG.java:1325)
 	at org.testng.TestNG.main(TestNG.java:1294)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='popup_ok']"}
-Command duration or timeout: 60.07 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
-System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c54eef79-3180-49c4-9dc9-a43ac86251a7
-*** Element info: {Using=xpath, value=.//*[@id='popup_ok']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:911)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:909)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
-	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	... 27 more
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":".//*[@id='popup_ok']"}
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a[0]/div"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous2719906063846528844webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous2719906063846528844webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous7987836980141354532webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous7987836980141354532webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MainProduct -->
-        <test-method status="PASS" signature="EndofFuntion()[pri:0, instance:jenTest.AddtoCart@5a01ccaa]" name="EndofFuntion" is-config="true" duration-ms="1" started-at="2016-01-20T15:12:23Z" finished-at="2016-01-20T15:12:23Z">
+        <test-method status="PASS" signature="EndofFuntion()[pri:0, instance:jenTest.AddtoCart@5a01ccaa]" name="EndofFuntion" is-config="true" duration-ms="0" started-at="2016-01-20T19:01:07Z" finished-at="2016-01-20T19:01:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndofFuntion -->
