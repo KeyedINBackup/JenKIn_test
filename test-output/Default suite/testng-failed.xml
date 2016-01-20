@@ -5,6 +5,7 @@
     <classes>
       <class name="jenTest.AddtoCart">
         <methods>
+          <include name="EndofFuntion"/>
           <include name="loginIn"/>
           <include name="MainProduct"/>
         </methods>

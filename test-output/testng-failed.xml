@@ -5,8 +5,9 @@
     <classes>
       <class name="jenTest.AddtoCart">
         <methods>
-          <include name="loginIn"/>
           <include name="MainProduct"/>
+          <include name="loginIn"/>
+          <include name="EndofFuntion"/>
         </methods>
       </class> <!-- jenTest.AddtoCart -->
     </classes>

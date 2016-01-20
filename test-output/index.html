@@ -127,15 +127,27 @@
                   <a name="MainProduct">
                   </a> <!-- MainProduct -->
                   <span class="method-name">MainProduct</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div[12]/div/div[2]/div[2]/div[3]/input&quot;}
-Command duration or timeout: 60.10 seconds
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Timed out after 50 seconds waiting for presence of element located by: By.xpath: .//*[@id=&apos;popup_ok&apos;]
+Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:55:52&apos;
+System info: host: &apos;sakthivel-PC&apos;, ip: &apos;172.16.11.74&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c54eef79-3180-49c4-9dc9-a43ac86251a7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at jenTest.AddtoCart.ProductPage(AddtoCart.java:261)
+	at jenTest.AddtoCart.SubProductCategories(AddtoCart.java:173)
+	at jenTest.AddtoCart.SubProduct(AddtoCart.java:147)
+	at jenTest.AddtoCart.MainProduct(AddtoCart.java:71)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;popup_ok&apos;]&quot;}
+Command duration or timeout: 60.07 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:55:52&apos;
-System info: host: &apos;sakthivel-PC&apos;, ip: &apos;172.16.11.74&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_40&apos;
-*** Element info: {Using=xpath, value=html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div[12]/div/div[2]/div[2]/div[3]/input}
-Session ID: da33c02f-68fc-481b-b78d-022dcb4b98e9
+System info: host: &apos;sakthivel-PC&apos;, ip: &apos;172.16.11.74&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_65&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=44.0}]
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=44.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: c54eef79-3180-49c4-9dc9-a43ac86251a7
+*** Element info: {Using=xpath, value=.//*[@id=&apos;popup_ok&apos;]}
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
@@ -143,15 +155,19 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-	at jenTest.AddtoCart.ProductPage(AddtoCart.java:161)
-	at jenTest.AddtoCart.MainProduct(AddtoCart.java:52)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div[12]/div/div[2]/div[2]/div[3]/input&quot;}
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:911)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:909)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	... 27 more
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;popup_ok&apos;]&quot;}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd&apos;, time: &apos;2015-10-09 19:55:52&apos;
-System info: host: &apos;sakthivel-PC&apos;, ip: &apos;172.16.11.74&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_40&apos;
+System info: host: &apos;sakthivel-PC&apos;, ip: &apos;172.16.11.74&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_65&apos;
 Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous8268873459725241195webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Windows/TEMP/anonymous8268873459725241195webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous2719906063846528844webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Windows/TEMP/anonymous2719906063846528844webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -214,12 +230,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'MainProduct')
 data.setCell(0, 2, 'jenTest.AddtoCart')
-data.setCell(0, 3, 444996);
+data.setCell(0, 3, 825422);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 minutes</span>
+              <span class="suite-total-time">Total running time: 13 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -254,8 +270,12 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MainProduct</span>
-                <span class="method-start">390760 ms</span>
+                <span class="method-start">392254 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">EndofFuntion</span>
+                <span class="method-start">1217677 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
