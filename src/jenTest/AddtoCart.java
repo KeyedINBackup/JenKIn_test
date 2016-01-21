@@ -194,16 +194,41 @@ public class AddtoCart {
   		String Title=FSIProdcutTile.getText();
   		System.out.print("Product Final Sub Category title: "+Title);
   		System.out.print("\n");
-  		String[] FIsubcatProduct ={"Half Round", "Camel Embossed Shiplap","White 62mm Square Terrain", "Victorian Ogee", "100mm Half Round Cast Guttering","Moulded No 46 OG", "125mm x 100mm Moulded No 46 Lefthand System", "Beaded Half Round", "Beaded Deep Flow", "Crescent", "Corniche", "Rapidflow", "Streamline", "Omega", "Pushfit / Ringseal Black Soil", "Solvent Weld Black Soil", "Pushfit /Ringseal Grey Soil", "Solvent Weld Grey Soil", "Pushfit /Ringseal Brown Soil"};
+  		String[] FIsubcatProduct ={"Half Round", "Camel Embossed Shiplap","White 62mm Square Terrain", "Victorian Ogee", "100mm Half Round Cast Guttering","Moulded No 46 OG", "125mm x 100mm Moulded No 46 Lefthand System", "Beaded Half Round", "Beaded Deep Flow", "Crescent", "Corniche", "Rapidflow", "Streamline", "Omega"};
   		if(Arrays.asList(FIsubcatProduct).contains(Title))
+  		{
+  			ProductPage();
+  		} else{
+  			FinalSubProductsubCategories();
+  		}
+  	}
+  	
+  	
+  	public static void FinalSubProductsubCategories() throws InterruptedException
+  	{
+  		
+  		WebDriverWait FinalSub = new WebDriverWait(dr, 25);
+  		FinalSub.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a")));
+  		List<WebElement> options = dr.findElements(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a"));
+  		int n=options.size();
+  		Random rand= new Random();
+  		int rval=rand.nextInt(n);
+  		String Str3="html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[8]/div[2]/div/a[";
+  		String Str4="]/div";
+  		WebElement Sproduct=dr.findElement(By.xpath(Str3+rval+Str4));
+  		Sproduct.click();
+  		WebElement FSIProdcutTile = dr.findElement(By.xpath("html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[1]/div/h1"));
+  		String Title=FSIProdcutTile.getText();
+  		System.out.print("Product Final Category title: "+Title);
+  		System.out.print("\n");
+  		String[] FIcatProduct ={"Pipes, Bends, Connectors & Boss Pipes", "Branches & Access Fittings", "Adaptors & Reducers", "Bracketry & Clips"};
+  		if(Arrays.asList(FIcatProduct).contains(Title))
   		{
   			ProductPage();
   		} else{
   			EndofFuntion();
   		}
   	}
-  	
-  	
   	
   	
   	public static void ProductPage() throws InterruptedException
@@ -243,6 +268,8 @@ public class AddtoCart {
   			int value=num.nextInt(100)+1;
   			dr.findElement(By.xpath(Str5+r+Str6)).sendKeys(""+value);
   			String Str7="]/div/div[2]/div[4]/a";
+  			JavascriptExecutor jse = (JavascriptExecutor)dr;
+  			jse.executeScript("scroll(150, 0)");
   			dr.findElement(By.xpath(Str5+r+Str7)).click();
   			String Str8="html/body/div[1]/div[3]/div[1]/div[2]/div/div[3]/div[1]/div/div/div[4]/div[5]/div[2]/div[";
   			String Str9="]/div/h2";
@@ -286,8 +313,8 @@ public class AddtoCart {
   		saveCart.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='admin_login_form']/a[2]")));
   		dr.findElement(By.xpath(".//*[@id='admin_login_form']/a[2]")).click();
   		dr.findElement(By.xpath(".//*[@id='header_top']/div[2]/div[2]/div[1]/a")).click();
-  		dr.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-  		dr.findElement(By.xpath(".//*[@id='view']/tbody/tr[2]/td[2]/a")).click();
+  		
+  	
 			
   		
   	}
