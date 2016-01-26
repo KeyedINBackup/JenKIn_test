@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1544048" started-at="2016-01-21T12:22:59Z" finished-at="2016-01-21T12:48:43Z">
+  <suite name="Default suite" duration-ms="72649" started-at="2016-01-26T13:42:57Z" finished-at="2016-01-26T13:44:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1544048" started-at="2016-01-21T12:22:59Z" finished-at="2016-01-21T12:48:43Z">
+    <test name="Default test" duration-ms="72649" started-at="2016-01-26T13:42:57Z" finished-at="2016-01-26T13:44:09Z">
       <class name="jenTest.AddtoCart">
-        <test-method status="PASS" signature="loginIn()[pri:0, instance:jenTest.AddtoCart@1af1bd6]" name="loginIn" is-config="true" duration-ms="390237" started-at="2016-01-21T17:52:59Z" finished-at="2016-01-21T17:59:29Z">
+        <test-method status="PASS" signature="loginIn()[pri:0, instance:jenTest.AddtoCart@14c7f77]" name="loginIn" is-config="true" duration-ms="39659" started-at="2016-01-26T19:12:57Z" finished-at="2016-01-26T19:13:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginIn -->
-        <test-method status="PASS" signature="MainProduct()[pri:0, instance:jenTest.AddtoCart@1af1bd6]" name="MainProduct" duration-ms="1153799" started-at="2016-01-21T17:59:29Z" finished-at="2016-01-21T18:18:43Z">
+        <test-method status="PASS" signature="MainProduct()[pri:0, instance:jenTest.AddtoCart@14c7f77]" name="MainProduct" duration-ms="32978" started-at="2016-01-26T19:13:36Z" finished-at="2016-01-26T19:14:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- MainProduct -->
-        <test-method status="PASS" signature="EndofFuntion()[pri:0, instance:jenTest.AddtoCart@1af1bd6]" name="EndofFuntion" is-config="true" duration-ms="0" started-at="2016-01-21T18:18:43Z" finished-at="2016-01-21T18:18:43Z">
+        <test-method status="PASS" signature="EndofFuntion()[pri:0, instance:jenTest.AddtoCart@14c7f77]" name="EndofFuntion" is-config="true" duration-ms="0" started-at="2016-01-26T19:14:09Z" finished-at="2016-01-26T19:14:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndofFuntion -->
