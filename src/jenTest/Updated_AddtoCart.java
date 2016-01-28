@@ -16,7 +16,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 
-public class AddtoCart {
+public class Updated_AddtoCart {
  
   	public static WebDriver dr;
   	public static String ItemName, ItemPrice, ItemStockCode;
@@ -25,13 +25,13 @@ public class AddtoCart {
   	public static void loginIn()
   	{
   		dr = new FirefoxDriver();
-  		dr.get("http://beta.angelplastics.co.uk/");
+  		dr.get("http://dev.angelplastics.co.uk/");
   		dr.manage().window().maximize();
+  		dr.findElement(By.xpath("html/body/div[1]/header/section[1]/div/div/div[1]/ul/li[1]/a")).click();
   		dr.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-  		dr.findElement(By.id("login_username")).sendKeys("kelvin");
-  		dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
-  		dr.findElement(By.id("remember")).click();
-  		dr.findElement(By.id("login")).click();
+  		dr.findElement(By.id("username")).sendKeys("kelvin");
+  		dr.findElement(By.id("password")).sendKeys("123asd!@#");
+  		dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/button")).click();
   	}
   	
   	@Test(enabled=true, priority=1)
@@ -196,7 +196,7 @@ public class AddtoCart {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product Category title: "+Title);
   		System.out.print("\n");
-  		String[] subtoProduct ={"Solid Brown Colour Soffit", "Fascia & Soffit Accessories", "Polytop Fixings" , "Pipe & Fittings", "375mm Wide Marbrex Wall Panels", "Universal Compression Waste", "Waste Traps", "Rosewood Fascia", "20mm Thick Flat Tudor Board", "Polystorm Modular Water Storage", "Solid Cream Colour Soffit", "Solid Black Colour Soffit", "Venting Products", "Feather Edge Cladding", "Black Window Trims & Angles", "Rosewood Window Trims & Angles", "Golden Oak Window Trims & Angles", "Mahoghany Window Trims & Angles", "White Woodgrain Window Trims", "Irish Oak Window Trims", "Cream Window Trims", "16mm White Bullnose Window Board", "Window Fitting Accessories", "Temporary Rainwater Pipes", "Guttering Accessories", "Fascia & Soffit Accessories", "Foams & Fillers", "Cleaners", "110mm Imitation Cast Iron Soil", "WC Pan Connectors", "Overflow System", "Condensate Drainage Traps", "Flexible Wastes/Anti-Syphon Units", "Dentil Mouldings", "Mock Tudor Timbers", "Gallows Brackets & Corbels", "20mm Thick Flat Tudor Board", "Exterior Coving", "Decorative Bargeboards", "Decorative Bargeboards", "Drainage Sundries", "Twinson Decking Range", "Dry Verge System for Tile & Slate", "Ubiflex Non Lead Flashing", "Flashband Materials", "Roof Coatings", "Weathering Slates", "Timber Fascia Backing", "Roofing Accessories", "Torch On Roofing Felt", "Standard Screws", "Miscellaneous Fixing Products", "Applicator Tools", "Miscellaneous Tools", "Cutting Tools", "Measuring Tools", "Fixing Tools"};
+  		String[] subtoProduct ={"Solid Brown Colour Soffit", "Fascia & Soffit Accessories", "Polytop Fixings" , "Pipe & Fittings", "375mm Wide Marbrex Wall Panels", "Universal Compression Waste", "Waste Traps", "Rosewood Fascia", "20mm Thick Flat Tudor Board", "Polystorm Modular Water Storage", "Solid Cream Colour Soffit", "Solid Black Colour Soffit", "Venting Products", "Feather Edge Cladding", "Black Window Trims & Angles", "Rosewood Window Trims & Angles", "Golden Oak Window Trims & Angles", "Mahoghany Window Trims & Angles", "White Woodgrain Window Trims", "Irish Oak Window Trims", "Cream Window Trims", "16mm White Bullnose Window Board", "Window Fitting Accessories", "Temporary Rainwater Pipes", "Guttering Accessories", "Fascia & Soffit Accessories", "Foams & Fillers", "Cleaners", "110mm Imitation Cast Iron Soil", "WC Pan Connectors", "Overflow System", "Condensate Drainage Traps", "Flexible Wastes/Anti-Syphon Units", "Dentil Mouldings", "Mock Tudor Timbers", "Gallows Brackets & Corbels", "20mm Thick Flat Tudor Board", "Exterior Coving", "Decorative Bargeboards","Decorative Bargeboards", "Drainage Sundries", "Twinson Decking Range", "Dry Verge System for Tile & Slate", "Ubiflex Non Lead Flashing", "Flashband Materials", "Roof Coatings", "Weathering Slates", "Timber Fascia Backing", "Roofing Accessories", "Torch On Roofing Felt", "Standard Screws", "Miscellaneous Fixing Products", "Applicator Tools", "Miscellaneous Tools", "Cutting Tools", "Measuring Tools", "Fixing Tools"};
   		if(Arrays.asList(subtoProduct).contains(Title))
   		{
   			ProductPage();
@@ -227,7 +227,7 @@ public class AddtoCart {
   		String Title=SIProdcutTile.getText();
   		System.out.print("Product Sub Category title: "+Title);
   		System.out.print("\n");
-  		String[] subcatProduct ={"Light Grey (approx RAL 7040)", "160mm Industrial Half Round Range by Brett Martin", "Surface Drainage", "65mm Cast Iron Effect Square Pipe", "White Shiplap", "Black Woodgrain Shiplap", "Super Glue Products", "Access Fittings", "100mm x 75mm Cast Iron Effect Rectangular Pipe", "Room Liner Wall Cladding", "375mm Wide Marbrex Wall Panels", "Cast Iron Effect Hopper Heads", "V Groove Mahogany Woodgrain", "Budget Silicones", "16mm Black Maxi Fascia Board", "White Window Trims", "One Metre Wide Neptune Mega Panels", "Pipe & Fittings", "9mm Irish Oak Plain Soffits", "M-Boss Fascia (anthracite)", "V Groove Golden Oak Woodgrain", "9mm Irish Oak Capping Fascia", "9mm Mahogany Plain Soffits", "Cast Aluminium Ornamental Hopper Heads", "Mahogany Woodgrain Shiplap", "250mm Wide Marbrex Wall Panels", "Cartridge Glue Products", "Gale Grey (approx RAL 7016)", "V Groove Embossed Cladding", "Standard Half Round", "Modern Squareline", "Victorian Ogee", "Polyflow (deep capacity)", "Sovereign Moulded Ogee", "Miniline (for sheds etc)", "150mm Industrial Size", "Cast Iron Effect Guttering in upvc", "Powder Coated Aluminium Guttering", "Standard Round Pipe 68mm (2.5 inch)", "Standard Square Pipe 65mm", "82mm (3 inch) Round Pipe", "110mm (4 inch) Round Pipe", "68mm Round Terrain", "75mm Square Terrain", "82mm Round Terrain", "110mm Round Terrain", "Round Aluminium Downpipes", "Square & Rectangular Aluminium Downpipes", "Brown 110mm Soil", "32mm Solvent Weld Waste MuPVC", "32mm Grey Solvent Weld Waste"};
+  		String[] subcatProduct ={"Light Grey (approx RAL 7040)", "Surface Drainage", "65mm Cast Iron Effect Square Pipe", "White Shiplap", "Black Woodgrain Shiplap", "Super Glue Products", "Access Fittings", "100mm x 75mm Cast Iron Effect Rectangular Pipe", "Room Liner Wall Cladding", "375mm Wide Marbrex Wall Panels", "Cast Iron Effect Hopper Heads", "V Groove Mahogany Woodgrain", "Budget Silicones", "16mm Black Maxi Fascia Board", "White Window Trims", "One Metre Wide Neptune Mega Panels", "Pipe & Fittings", "9mm Irish Oak Plain Soffits", "M-Boss Fascia (anthracite)", "V Groove Golden Oak Woodgrain", "9mm Irish Oak Capping Fascia", "9mm Mahogany Plain Soffits", "Cast Aluminium Ornamental Hopper Heads", "Mahogany Woodgrain Shiplap", "250mm Wide Marbrex Wall Panels", "Cartridge Glue Products", "Gale Grey (approx RAL 7016)", "V Groove Embossed Cladding", "Standard Half Round", "Modern Squareline", "Victorian Ogee", "Polyflow (deep capacity)", "Sovereign Moulded Ogee", "Miniline (for sheds etc)", "150mm Industrial Size", "Cast Iron Effect Guttering in upvc", "Powder Coated Aluminium Guttering", "Standard Round Pipe 68mm (2.5 inch)", "Standard Square Pipe 65mm", "82mm (3 inch) Round Pipe", "110mm (4 inch) Round Pipe", "68mm Round Terrain", "75mm Square Terrain", "82mm Round Terrain", "110mm Round Terrain", "Round Aluminium Downpipes", "Square & Rectangular Aluminium Downpipes", "Brown 110mm Soil", "32mm Solvent Weld Waste MuPVC", "32mm Grey Solvent Weld Waste"};
   		if(Arrays.asList(subcatProduct).contains(Title))
   		{
   			ProductPage();
