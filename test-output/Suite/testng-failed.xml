@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="jenTest.AddtoCart">
+      <class name="jenTest.Updated_AddtoCart">
         <methods>
           <include name="MainProduct"/>
-          <include name="loginIn"/>
           <include name="EndofFuntion"/>
+          <include name="loginIn"/>
         </methods>
-      </class> <!-- jenTest.AddtoCart -->
+      </class> <!-- jenTest.Updated_AddtoCart -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

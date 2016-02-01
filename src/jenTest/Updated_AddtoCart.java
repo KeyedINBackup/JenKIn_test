@@ -98,7 +98,7 @@ public class Updated_AddtoCart {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product Category title: "+Title);
   		System.out.print("\n");
-  		String[] subtoProduct ={"WC Pan Connectors", "Overflow System", "Condensate Drainage Traps", "Flexible Wastes/Anti-Syphon Units"};
+  		String[] subtoProduct ={"WC PAN CONNECTORS", "OVERFLOW SYSTEM", "CONDENSATE DRAINAGE TRAPS", "FLEXIBLE WASTES/ANTI-SYPHON UNITS"};
   		if(Arrays.asList(subtoProduct).contains(Title))
   		{
   			ProductPage();
@@ -130,8 +130,8 @@ public class Updated_AddtoCart {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product Category title: "+Title);
   		System.out.print("\n");
-  		String[] subtoProduct ={"Solid Brown Colour Soffit", "Millboard Decking", "GROUND GUARD LAWN PAVING TILE", "Fascia & Soffit Accessories", "Polytop Fixings" , "Pipe & Fittings", "375mm Wide Marbrex Wall Panels", "Universal Compression Waste", "Waste Traps", "Rosewood Fascia", "20mm Thick Flat Tudor Board", "Polystorm Modular Water Storage", "Solid Cream Colour Soffit", "Solid Black Colour Soffit", "Venting Products", "Feather Edge Cladding", "Black Window Trims & Angles", "Rosewood Window Trims & Angles", "Golden Oak Window Trims & Angles", "Mahoghany Window Trims & Angles", "White Woodgrain Window Trims", "Irish Oak Window Trims", "Cream Window Trims", "16mm White Bullnose Window Board", "Window Fitting Accessories", "Temporary Rainwater Pipes", "Guttering Accessories", "Fascia & Soffit Accessories", "Foams & Fillers", "Cleaners", "110mm Imitation Cast Iron Soil", "WC Pan Connectors", "Overflow System", "Condensate Drainage Traps", "Flexible Wastes/Anti-Syphon Units", "Dentil Mouldings", "Mock Tudor Timbers", "Gallows Brackets & Corbels", "20mm Thick Flat Tudor Board", "Exterior Coving", "Decorative Bargeboards","Decorative Bargeboards", "Drainage Sundries", "Twinson Decking Range", "Dry Verge System for Tile & Slate", "Ubiflex Non Lead Flashing", "Flashband Materials", "Roof Coatings", "Weathering Slates", "Timber Fascia Backing", "Roofing Accessories", "Torch On Roofing Felt", "Standard Screws", "Miscellaneous Fixing Products", "Applicator Tools", "MISCELLANEOUS TOOLS", "Cutting Tools", "Measuring Tools", "Fixing Tools"};
-  		if(Arrays.asList(subtoProduct).contains(Title))
+  		String[] subtoProduct ={"SOLID BROWN COLOUR SOFFIT", "MILLBOARD DECKING", "GROUND GUARD LAWN PAVING TILE", "FASCIA & SOFFIT ACCESSORIES", "POLYTOP FIXINGS" , "PIPE & FITTINGS", "375MM WIDE MARBREX WALL PANELS", "UNIVERSAL COMPRESSION WASTE", "WASTE TRAPS", "ROSEWOOD FASCIA", "20MM THICK FLAT TUDOR BOARD", "POLYSTORM MODULAR WATER STORAGE", "SOLID CREAM COLOUR SOFFIT", "SOLID BLACK COLOUR SOFFIT", "VENTING PRODUCTS", "FEATHER EDGE CLADDING", "BLACK WINDOW TRIMS & ANGLES", "ROSEWOOD WINDOW TRIMS & ANGLES", "GOLDEN OAK WINDOW TRIMS & ANGLES", "MAHOGHANY WINDOW TRIMS & ANGLES", "WHITE WOODGRAIN WINDOW TRIMS", "IRISH OAK WINDOW TRIMS", "CREAM WINDOW TRIMS", "16MM WHITE BULLNOSE WINDOW BOARD", "WINDOW FITTING ACCESSORIES", "TEMPORARY RAINWATER PIPES", "GUTTERING ACCESSORIES", "FASCIA & SOFFIT ACCESSORIES", "FOAMS & FILLERS", "CLEANERS", "110MM IMITATION CAST IRON SOIL", "WC PAN CONNECTORS", "OVERFLOW SYSTEM", "CONDENSATE DRAINAGE TRAPS", "FLEXIBLE WASTES/ANTI-SYPHON UNITS", "DENTIL MOULDINGS", "MOCK TUDOR TIMBERS", "GALLOWS BRACKETS & CORBELS", "20MM THICK FLAT TUDOR BOARD", "EXTERIOR COVING", "DECORATIVE BARGEBOARDS","DECORATIVE BARGEBOARDS", "DRAINAGE SUNDRIES", "TWINSON DECKING RANGE", "DRY VERGE SYSTEM FOR TILE & SLATE", "UBIFLEX NON LEAD FLASHING", "FLASHBAND MATERIALS", "ROOF COATINGS", "WEATHERING SLATES", "TIMBER FASCIA BACKING", "ROOFING ACCESSORIES", "TORCH ON ROOFING FELT", "STANDARD SCREWS", "MISCELLANEOUS FIXING PRODUCTS", "APPLICATOR TOOLS", "MISCELLANEOUS TOOLS", "CUTTING TOOLS", "MEASURING TOOLS", "FIXING TOOLS"};
+  		if(Arrays.asList(subtoProduct).contains(Title)|| (Title.endsWith(" UNDERGROUND")))
   		{
   			ProductPage();
   		} else{
@@ -161,7 +161,7 @@ public class Updated_AddtoCart {
   		String Title=SIProdcutTile.getText();
   		System.out.print("Product Sub Category title: "+Title);
   		System.out.print("\n");
-  		String[] subcatProduct ={"Light Grey (approx RAL 7040)", "CARBONISED RANGE", "V Groove Rosewood Woodgrain", "9MM BLACK GLOSS CAPPING FASCIA BOARD", "Surface Drainage", "65mm Cast Iron Effect Square Pipe", "White Shiplap", "Black Woodgrain Shiplap", "Super Glue Products", "Access Fittings", "100mm x 75mm Cast Iron Effect Rectangular Pipe", "Room Liner Wall Cladding", "375mm Wide Marbrex Wall Panels", "Cast Iron Effect Hopper Heads", "V Groove Mahogany Woodgrain", "Budget Silicones", "16mm Black Maxi Fascia Board", "White Window Trims", "One Metre Wide Neptune Mega Panels", "Pipe & Fittings", "9mm Irish Oak Plain Soffits", "M-Boss Fascia (anthracite)", "V Groove Golden Oak Woodgrain", "9mm Irish Oak Capping Fascia", "9mm Mahogany Plain Soffits", "Cast Aluminium Ornamental Hopper Heads", "Mahogany Woodgrain Shiplap", "250mm Wide Marbrex Wall Panels", "Cartridge Glue Products", "Gale Grey (approx RAL 7016)", "V Groove Embossed Cladding", "Standard Half Round", "Modern Squareline", "Victorian Ogee", "Polyflow (deep capacity)", "Sovereign Moulded Ogee", "Miniline (for sheds etc)", "150mm Industrial Size", "Cast Iron Effect Guttering in upvc", "Powder Coated Aluminium Guttering", "Standard Round Pipe 68mm (2.5 inch)", "Standard Square Pipe 65mm", "82mm (3 inch) Round Pipe", "110mm (4 inch) Round Pipe", "68mm Round Terrain", "75mm Square Terrain", "82mm Round Terrain", "110mm Round Terrain", "Round Aluminium Downpipes", "Square & Rectangular Aluminium Downpipes", "Brown 110mm Soil", "32mm Solvent Weld Waste MuPVC", "32mm Grey Solvent Weld Waste"};
+  		String[] subcatProduct ={"LIGHT GREY (APPROX RAL 7040)", "150MM HALF ROUND STEEL GUTTER (BLACK COATED)", "32MM WHITE PUSHFIT WASTE", "CARBONISED RANGE", "V GROOVE ROSEWOOD WOODGRAIN", "9MM BLACK GLOSS CAPPING FASCIA BOARD", "SURFACE DRAINAGE", "65MM CAST IRON EFFECT SQUARE PIPE", "WHITE SHIPLAP", "BLACK WOODGRAIN SHIPLAP", "SUPER GLUE PRODUCTS", "ACCESS FITTINGS", "100MM X 75MM CAST IRON EFFECT RECTANGULAR PIPE", "ROOM LINER WALL CLADDING", "375MM WIDE MARBREX WALL PANELS", "CAST IRON EFFECT HOPPER HEADS", "V GROOVE MAHOGANY WOODGRAIN", "BUDGET SILICONES", "16MM BLACK MAXI FASCIA BOARD", "WHITE WINDOW TRIMS", "ONE METRE WIDE NEPTUNE MEGA PANELS", "PIPE & FITTINGS", "9MM IRISH OAK PLAIN SOFFITS", "M-BOSS FASCIA (ANTHRACITE)", "V GROOVE GOLDEN OAK WOODGRAIN", "9MM IRISH OAK CAPPING FASCIA", "9MM MAHOGANY PLAIN SOFFITS", "CAST ALUMINIUM ORNAMENTAL HOPPER HEADS", "MAHOGANY WOODGRAIN SHIPLAP", "250MM WIDE MARBREX WALL PANELS", "CARTRIDGE GLUE PRODUCTS", "GALE GREY (APPROX RAL 7016)", "V GROOVE EMBOSSED CLADDING", "STANDARD HALF ROUND", "MODERN SQUARELINE", "VICTORIAN OGEE", "POLYFLOW (DEEP CAPACITY)", "SOVEREIGN MOULDED OGEE", "MINILINE (FOR SHEDS ETC)", "150MM INDUSTRIAL SIZE", "CAST IRON EFFECT GUTTERING IN UPVC", "POWDER COATED ALUMINIUM GUTTERING", "STANDARD ROUND PIPE 68MM (2.5 INCH)", "STANDARD SQUARE PIPE 65MM", "82MM (3 INCH) ROUND PIPE", "110MM (4 INCH) ROUND PIPE", "68MM ROUND TERRAIN", "75MM SQUARE TERRAIN", "82MM ROUND TERRAIN", "110MM ROUND TERRAIN", "ROUND ALUMINIUM DOWNPIPES", "SQUARE & RECTANGULAR ALUMINIUM DOWNPIPES", "BROWN 110MM SOIL", "32MM SOLVENT WELD WASTE MUPVC", "32MM GREY SOLVENT WELD WASTE"};
   		if(Arrays.asList(subcatProduct).contains(Title))
   		{
   			ProductPage();
@@ -191,7 +191,7 @@ public class Updated_AddtoCart {
   		String Title=FSIProdcutTile.getText();
   		System.out.print("Product Final Sub Category title: "+Title);
   		System.out.print("\n");
-  		String[] FIsubcatProduct ={"Half Round", "Camel Embossed Shiplap", "Black Rapidflow", "Black Streamline","Pushfit /Ringseal Grey Soil","White 62mm Square Terrain", "Victorian Ogee", "100mm Half Round Cast Guttering","Moulded No 46 OG", "125mm x 100mm Moulded No 46 Lefthand System", "Beaded Half Round", "Beaded Deep Flow", "Crescent", "Corniche", "Streamline", "Omega"};
+  		String[] FIsubcatProduct ={"HALF ROUND", "CAMEL EMBOSSED SHIPLAP", "BLACK RAPIDFLOW", "BLACK STREAMLINE","PUSHFIT /RINGSEAL GREY SOIL","WHITE 62MM SQUARE TERRAIN", "VICTORIAN OGEE", "100MM HALF ROUND CAST GUTTERING","MOULDED NO 46 OG", "125MM X 100MM MOULDED NO 46 LEFTHAND SYSTEM", "BEADED HALF ROUND", "BEADED DEEP FLOW", "CRESCENT", "CORNICHE", "STREAMLINE", "OMEGA"};
   		if(Arrays.asList(FIsubcatProduct).contains(Title))
   		{
   			ProductPage();
@@ -221,7 +221,7 @@ public class Updated_AddtoCart {
   		String Title=FSIProdcutTile.getText();
   		System.out.print("Product Final Category title: "+Title);
   		System.out.print("\n");
-  		String[] FIcatProduct ={"Pipes, Bends, Connectors & Boss Pipes", "BROWN RAPIDFLOW GUTTERS", "Branches & Access Fittings", "Adaptors & Reducers", "Bracketry & Clips"};
+  		String[] FIcatProduct ={"PIPES, BENDS, CONNECTORS & BOSS PIPES", "BROWN RAPIDFLOW GUTTERS", "BRANCHES & ACCESS FITTINGS", "ADAPTORS & REDUCERS", "BRACKETRY & CLIPS"};
   		if(Arrays.asList(FIcatProduct).contains(Title))
   		{
   			ProductPage();
@@ -238,15 +238,14 @@ public class Updated_AddtoCart {
   		Productload.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("html/body/div[1]/div[2]/div/div/section/section")));
   		WebElement proList = dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/section"));
   		List<WebElement> Products=new ArrayList<WebElement>();
-  		Products=proList.findElements(By.className("products_container list_type clearfix m_bottom_5 m_left_0 m_right_0 isotope"));
+  		Products=proList.findElements(By.tagName("form"));
   		TimeUnit.SECONDS.sleep(2);
   		int n=Products.size();
   		Random rand= new Random(System.currentTimeMillis());
   		int rval=rand.nextInt(n);
   		int r=rval;
-  		String Str5="html/body/div[1]/div[2]/div/div/section/section";
+  		String Str5="html/body/div[1]/div[2]/div/div/section/section/form[";
 		String Str6="]/div/figure/figcaption/div/div[2]/input";
-		dr.findElement(By.xpath(Str5+r+Str6)).click();
 		String Str7="]/div/figure/figcaption/div/div[1]/h4/a";
 		String Str8="]/div/figure/figcaption/div/div[2]/p/span";
 		WebElement ProductName= dr.findElement(By.xpath(Str5+r+Str7));
@@ -254,9 +253,10 @@ public class Updated_AddtoCart {
 		System.out.println("The Selected product name is: "+ItemName);
 		WebElement ProductPrice= dr.findElement(By.xpath(Str5+r+Str8));
 		ItemPrice=ProductPrice.getText();
+		System.out.println("The Selected product name is: "+ItemPrice);
 		WebDriverWait waitForBuy = new WebDriverWait(dr,50);
 		waitForBuy.until(ExpectedConditions.presenceOfElementLocated(By.xpath(Str5+r+Str7)));
-		dr.findElement(By.xpath(Str5+r+Str7)).click();
+		dr.findElement(By.xpath(Str5+r+Str6)).click();
 		CheckoutFunction();
 			
   	}
@@ -277,6 +277,6 @@ public class Updated_AddtoCart {
   	@AfterMethod
   	public static void EndofFuntion(){
   		
-//		dr.quit();
+	dr.quit();
   	}
 }
