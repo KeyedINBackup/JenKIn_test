@@ -1,0 +1,17 @@
+# MainPage objects.
+
+ProductMainList=html/body/div[1]/div[2]/div/div/section/section
+String1=html/body/div[1]/div[2]/div/div/section/section/ul/li[
+String2=]/div/figure
+ProdcutTileHeading=html/body/div[1]/div[2]/div/div/section/h2
+
+# SubCategory objects.
+String3=html/body/div[1]/div[2]/div/div/section/section/div[
+String4=]/figure
+
+#Final product page Objects
+
+ADDtoCartSelect=html/body/div[1]/div[2]/div/div/section/section/div[
+ADDtoCart=]/figure/form/figcaption/div/div/input
+ProductName=]/figure/form/figcaption/h4/a
+ProductPrice=]/figure/form/figcaption/div/div/p/span
