@@ -264,7 +264,7 @@ public class Updated_AddtoCart {
 		System.out.println("The Selected product name is: "+ItemName);
 		WebElement ProductPrice= dr.findElement(By.xpath(Str5+r+Str8));
 		ItemPrice=ProductPrice.getText();
-		System.out.println("The Selected product name is: "+ItemPrice);
+		System.out.println("The Selected product Price is: "+ItemPrice);
 		WebDriverWait waitForBuy = new WebDriverWait(dr,50);
 		waitForBuy.until(ExpectedConditions.presenceOfElementLocated(By.xpath(Str5+r+Str7)));
 		dr.findElement(By.xpath(Str5+r+Str6)).click();
@@ -276,13 +276,13 @@ public class Updated_AddtoCart {
 		public static void CheckoutFunction() throws IOException{
 		String PS=dr.getPageSource();
 		
-		if((PS.contains(ItemName))){
+		if((PS.startsWith(ItemName))){
 			System.out.print("********************************************************\n");
 	  		System.out.print("\tProduct details in the Checkout page is Correct\n");
 	  		System.out.print("********************************************************\n");
 		} else {
 			System.out.print("********************************************************\n");
-			System.out.println("Product details are Incorrect");
+			System.out.println("\tProduct details are Incorrect");
 			System.out.print("********************************************************\n");
 		}
 		
