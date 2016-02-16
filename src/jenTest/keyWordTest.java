@@ -61,10 +61,10 @@ public class keyWordTest {
   		SubProduct.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(prop.getProperty("ProductMainList"))));
   		WebElement productlist=dr.findElement(By.xpath(prop.getProperty("ProductMainList")));
   		List<WebElement> options=new ArrayList<WebElement>();
-  		options =productlist.findElements(By.tagName("li"));
+  		options =productlist.findElements(By.id("expList"));
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int r=rand.nextInt(n+1);
+  		int r=rand.nextInt(n)+1;
   		String Str1=prop.getProperty("String1");
   		String Str2=prop.getProperty("String2");
   		WebElement Mproduct=dr.findElement(By.xpath(Str1+r+Str2));
@@ -104,7 +104,7 @@ public class keyWordTest {
   		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int rval=rand.nextInt(n+1);
+  		int rval=rand.nextInt(n)+1;
   		String Str3=prop.getProperty("String3");
   		String Str4=prop.getProperty("String4");
   		WebElement Sproduct=dr.findElement(By.xpath(Str3+rval+Str4));
@@ -141,7 +141,7 @@ public class keyWordTest {
   		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int rval=rand.nextInt(n+1);
+  		int rval=rand.nextInt(n)+1;
   		String Str3=prop.getProperty("String3");
   		String Str4=prop.getProperty("String4");
   		WebElement Sproduct=dr.findElement(By.xpath(Str3+rval+Str4));
@@ -151,7 +151,7 @@ public class keyWordTest {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product Category title: "+Title);
   		System.out.print("\n");
-  		String[] subtoProduct ={"SOLID BROWN COLOUR SOFFIT", "STANDARD WHITE WINDOW TRIMS", "INTERIOR COVING/CORNICE", "MILLBOARD DECKING", "GROUND GUARD LAWN PAVING TILE", "FASCIA & SOFFIT ACCESSORIES", "POLYTOP FIXINGS" , "PIPE & FITTINGS", "375MM WIDE MARBREX WALL PANELS", "WASTE TRAPS", "ROSEWOOD FASCIA", "20MM THICK FLAT TUDOR BOARD", "SOLID CREAM COLOUR SOFFIT", "SOLID BLACK COLOUR SOFFIT", "VENTING PRODUCTS", "FEATHER EDGE CLADDING", "BLACK WINDOW TRIMS & ANGLES", "ROSEWOOD WINDOW TRIMS & ANGLES", "GOLDEN OAK WINDOW TRIMS & ANGLES", "MAHOGHANY WINDOW TRIMS & ANGLES", "WHITE WOODGRAIN WINDOW TRIMS", "IRISH OAK WINDOW TRIMS", "CREAM WINDOW TRIMS", "16MM WHITE BULLNOSE WINDOW BOARD", "WINDOW FITTING ACCESSORIES", "TEMPORARY RAINWATER PIPES", "GUTTERING ACCESSORIES", "FASCIA & SOFFIT ACCESSORIES", "FOAMS & FILLERS", "CLEANERS", "110MM IMITATION CAST IRON SOIL", "WC PAN CONNECTORS", "OVERFLOW SYSTEM", "CONDENSATE DRAINAGE TRAPS", "FLEXIBLE WASTES/ANTI-SYPHON UNITS", "DENTIL MOULDINGS", "MOCK TUDOR TIMBERS", "GALLOWS BRACKETS & CORBELS", "20MM THICK FLAT TUDOR BOARD", "EXTERIOR COVING", "DECORATIVE BARGEBOARDS","DECORATIVE BARGEBOARDS", "DRAINAGE SUNDRIES", "TWINSON DECKING RANGE", "DRY VERGE SYSTEM FOR TILE & SLATE", "UBIFLEX NON LEAD FLASHING", "ROOF COATINGS", "WEATHERING SLATES", "TIMBER FASCIA BACKING", "ROOFING ACCESSORIES", "TORCH ON ROOFING FELT", "STANDARD SCREWS", "MISCELLANEOUS FIXING PRODUCTS", "APPLICATOR TOOLS", "MISCELLANEOUS TOOLS", "CUTTING TOOLS", "MEASURING TOOLS", "FIXING TOOLS"};
+  		String[] subtoProduct ={"SOLID BROWN COLOUR SOFFIT", "IMITATION CAST IRON", "GOLDEN OAK WOODGRAIN WINDOW TRIMS & ANGLES", "CREAM WOODGRAIN", "STANDARD WHITE WINDOW TRIMS", "INTERIOR COVING/CORNICE", "GROUND GUARD LAWN PAVING TILE", "FASCIA & SOFFIT ACCESSORIES", "POLYTOP FIXINGS" , "PIPE & FITTINGS", "375MM WIDE MARBREX WALL PANELS", "WASTE TRAPS", "ROSEWOOD FASCIA", "20MM THICK FLAT TUDOR BOARD", "SOLID CREAM COLOUR SOFFIT", "SOLID BLACK COLOUR SOFFIT", "VENTING PRODUCTS", "FEATHER EDGE CLADDING", "BLACK WINDOW TRIMS & ANGLES", "ROSEWOOD WINDOW TRIMS & ANGLES", "GOLDEN OAK WINDOW TRIMS & ANGLES", "MAHOGHANY WINDOW TRIMS & ANGLES", "WHITE WOODGRAIN WINDOW TRIMS", "IRISH OAK WINDOW TRIMS", "CREAM WINDOW TRIMS", "16MM WHITE BULLNOSE WINDOW BOARD", "WINDOW FITTING ACCESSORIES", "TEMPORARY RAINWATER PIPES", "GUTTERING ACCESSORIES", "FASCIA & SOFFIT ACCESSORIES", "FOAMS & FILLERS", "CLEANERS", "110MM IMITATION CAST IRON SOIL", "WC PAN CONNECTORS", "OVERFLOW SYSTEM", "CONDENSATE DRAINAGE TRAPS", "FLEXIBLE WASTES/ANTI-SYPHON UNITS", "DENTIL MOULDINGS", "MOCK TUDOR TIMBERS", "GALLOWS BRACKETS & CORBELS", "20MM THICK FLAT TUDOR BOARD", "EXTERIOR COVING", "DECORATIVE BARGEBOARDS","DECORATIVE BARGEBOARDS", "DRAINAGE SUNDRIES", "TWINSON DECKING RANGE", "DRY VERGE SYSTEM FOR TILE & SLATE", "UBIFLEX NON LEAD FLASHING", "ROOF COATINGS", "WEATHERING SLATES", "TIMBER FASCIA BACKING", "ROOFING ACCESSORIES", "TORCH ON ROOFING FELT", "STANDARD SCREWS", "MISCELLANEOUS FIXING PRODUCTS", "APPLICATOR TOOLS", "MISCELLANEOUS TOOLS", "CUTTING TOOLS", "MEASURING TOOLS", "FIXING TOOLS"};
   		if(Arrays.asList(subtoProduct).contains(Title)|| (Title.endsWith(" UNDERGROUND")))
   		{
   			ProductPage();
@@ -177,7 +177,7 @@ public class keyWordTest {
   		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int rval=rand.nextInt(n+1);
+  		int rval=rand.nextInt(n)+1;
   		String Str3=prop.getProperty("String3");
   		String Str4=prop.getProperty("String4");
   		WebElement Sproduct=dr.findElement(By.xpath(Str3+rval+Str4));
@@ -187,7 +187,7 @@ public class keyWordTest {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product sub Category title: "+Title);
   		System.out.print("\n");
-  		String[] subcatProduct ={"LIGHT GREY (APPROX RAL 7040)", "SWISH ANTHRACITE GREY RAL 7016 GUTTERING", "ROSEWOOD WOODGRAIN SHIPLAP", "150MM HALF ROUND STEEL GUTTER (BLACK COATED)", "32MM WHITE PUSHFIT WASTE", "CARBONISED RANGE", "V GROOVE ROSEWOOD WOODGRAIN", "9MM BLACK GLOSS CAPPING FASCIA BOARD", "SURFACE DRAINAGE", "65MM CAST IRON EFFECT SQUARE PIPE", "WHITE SHIPLAP", "BLACK WOODGRAIN SHIPLAP", "ACCESS FITTINGS", "100MM X 75MM CAST IRON EFFECT RECTANGULAR PIPE", "ROOM LINER WALL CLADDING", "375MM WIDE MARBREX WALL PANELS", "CAST IRON EFFECT HOPPER HEADS", "V GROOVE MAHOGANY WOODGRAIN", "BUDGET SILICONES", "16MM BLACK MAXI FASCIA BOARD", "WHITE WINDOW TRIMS", "ONE METRE WIDE NEPTUNE MEGA PANELS", "PIPE & FITTINGS", "9MM IRISH OAK PLAIN SOFFITS", "M-BOSS FASCIA (ANTHRACITE)", "V GROOVE GOLDEN OAK WOODGRAIN", "9MM IRISH OAK CAPPING FASCIA", "9MM MAHOGANY PLAIN SOFFITS", "CAST ALUMINIUM ORNAMENTAL HOPPER HEADS", "MAHOGANY WOODGRAIN SHIPLAP", "250MM WIDE MARBREX WALL PANELS", "CARTRIDGE GLUE PRODUCTS", "GALE GREY (APPROX RAL 7016)", "STANDARD HALF ROUND", "MODERN SQUARELINE", "VICTORIAN OGEE", "POLYFLOW (DEEP CAPACITY)", "SOVEREIGN MOULDED OGEE", "MINILINE (FOR SHEDS ETC)", "150MM INDUSTRIAL SIZE", "CAST IRON EFFECT GUTTERING IN UPVC", "POWDER COATED ALUMINIUM GUTTERING", "STANDARD ROUND PIPE 68MM (2.5 INCH)", "STANDARD SQUARE PIPE 65MM", "82MM (3 INCH) ROUND PIPE", "110MM (4 INCH) ROUND PIPE", "68MM ROUND TERRAIN", "75MM SQUARE TERRAIN", "82MM ROUND TERRAIN", "110MM ROUND TERRAIN", "ROUND ALUMINIUM DOWNPIPES", "BROWN 110MM SOIL", "32MM SOLVENT WELD WASTE MUPVC", "32MM GREY SOLVENT WELD WASTE"};
+  		String[] subcatProduct ={"LIGHT GREY (APPROX RAL 7040)", "16MM BLACK GLOSS MAXI FASCIA BOARDS", "22MM POLYPLUMB", "15MM POLYPLUMB", "SWISH ANTHRACITE GREY RAL 7016 GUTTERING", "ROSEWOOD WOODGRAIN SHIPLAP", "150MM HALF ROUND STEEL GUTTER (BLACK COATED)", "32MM WHITE PUSHFIT WASTE", "CARBONISED RANGE", "V GROOVE ROSEWOOD WOODGRAIN", "9MM BLACK GLOSS CAPPING FASCIA BOARD", "SURFACE DRAINAGE", "65MM CAST IRON EFFECT SQUARE PIPE", "WHITE SHIPLAP", "BLACK WOODGRAIN SHIPLAP", "ACCESS FITTINGS", "100MM X 75MM CAST IRON EFFECT RECTANGULAR PIPE", "ROOM LINER WALL CLADDING", "375MM WIDE MARBREX WALL PANELS", "CAST IRON EFFECT HOPPER HEADS", "V GROOVE MAHOGANY WOODGRAIN", "BUDGET SILICONES", "16MM BLACK MAXI FASCIA BOARD", "WHITE WINDOW TRIMS", "ONE METRE WIDE NEPTUNE MEGA PANELS", "PIPE & FITTINGS", "9MM IRISH OAK PLAIN SOFFITS", "M-BOSS FASCIA (ANTHRACITE)", "V GROOVE GOLDEN OAK WOODGRAIN", "9MM IRISH OAK CAPPING FASCIA", "9MM MAHOGANY PLAIN SOFFITS", "CAST ALUMINIUM ORNAMENTAL HOPPER HEADS", "MAHOGANY WOODGRAIN SHIPLAP", "250MM WIDE MARBREX WALL PANELS", "CARTRIDGE GLUE PRODUCTS", "GALE GREY (APPROX RAL 7016)", "STANDARD HALF ROUND", "MODERN SQUARELINE", "VICTORIAN OGEE", "POLYFLOW (DEEP CAPACITY)", "SOVEREIGN MOULDED OGEE", "MINILINE (FOR SHEDS ETC)", "150MM INDUSTRIAL SIZE", "CAST IRON EFFECT GUTTERING IN UPVC", "POWDER COATED ALUMINIUM GUTTERING", "STANDARD ROUND PIPE 68MM (2.5 INCH)", "STANDARD SQUARE PIPE 65MM", "82MM (3 INCH) ROUND PIPE", "110MM (4 INCH) ROUND PIPE", "68MM ROUND TERRAIN", "75MM SQUARE TERRAIN", "82MM ROUND TERRAIN", "110MM ROUND TERRAIN", "ROUND ALUMINIUM DOWNPIPES", "BROWN 110MM SOIL", "32MM SOLVENT WELD WASTE MUPVC", "32MM GREY SOLVENT WELD WASTE"};
   		if(Arrays.asList(subcatProduct).contains(Title))
   		{
   			ProductPage();
@@ -212,7 +212,7 @@ public class keyWordTest {
   		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int rval=rand.nextInt(n+1);
+  		int rval=rand.nextInt(n)+1;
   		String Str3=prop.getProperty("String3");
   		String Str4=prop.getProperty("String4");
   		WebElement Sproduct=dr.findElement(By.xpath(Str3+rval+Str4));
@@ -222,7 +222,7 @@ public class keyWordTest {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product sub final Category title: "+Title);
   		System.out.print("\n");
-  		String[] FIsubcatProduct ={"HALF ROUND", "CAMEL EMBOSSED SHIPLAP", "BLACK RAPIDFLOW", "BLACK STREAMLINE","PUSHFIT /RINGSEAL GREY SOIL","WHITE 62MM SQUARE TERRAIN", "VICTORIAN OGEE", "100MM HALF ROUND CAST GUTTERING","MOULDED NO 46 OG", "125MM X 100MM MOULDED NO 46 LEFTHAND SYSTEM", "BEADED HALF ROUND", "BEADED DEEP FLOW", "CRESCENT", "CORNICHE", "STREAMLINE", "OMEGA"};
+  		String[] FIsubcatProduct ={"HALF ROUND", "CAMEL EMBOSSED SHIPLAP", "112MM OGEE CAST GUTTERING", "BLACK RAPIDFLOW", "BLACK STREAMLINE","PUSHFIT /RINGSEAL GREY SOIL","WHITE 62MM SQUARE TERRAIN", "VICTORIAN OGEE", "100MM HALF ROUND CAST GUTTERING","MOULDED NO 46 OG", "125MM X 100MM MOULDED NO 46 LEFTHAND SYSTEM", "BEADED HALF ROUND", "BEADED DEEP FLOW", "CRESCENT", "CORNICHE", "STREAMLINE", "OMEGA"};
   		if(Arrays.asList(FIsubcatProduct).contains(Title))
   		{
   			ProductPage();
@@ -247,7 +247,7 @@ public class keyWordTest {
   		TimeUnit.SECONDS.sleep(2);
   		int n=options.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int rval=rand.nextInt(n+1);
+  		int rval=rand.nextInt(n)+1;
   		String Str3=prop.getProperty("String3");
   		String Str4=prop.getProperty("String4");
   		WebElement Sproduct=dr.findElement(By.xpath(Str3+rval+Str4));
@@ -257,7 +257,7 @@ public class keyWordTest {
   		String Title=SProdcutTile.getText();
   		System.out.print("Product Final Category title: "+Title);
   		System.out.print("\n");
-  		String[] FIcatProduct ={"PIPES, BENDS, CONNECTORS & BOSS PIPES", "BLACK XTRAFLO GUTTER SYSTEM", "BROWN RAPIDFLOW GUTTERS", "BRANCHES & ACCESS FITTINGS", "ADAPTORS & REDUCERS", "BRACKETRY & CLIPS"};
+  		String[] FIcatProduct ={"PIPES, BENDS, CONNECTORS & BOSS PIPES", "GRAPHITE GREY 7024 HI-CAP GUTTER", "BROWN 65MM SQUARE PIPE", "BLACK XTRAFLO GUTTER SYSTEM", "BROWN RAPIDFLOW GUTTERS", "BRANCHES & ACCESS FITTINGS", "ADAPTORS & REDUCERS", "BRACKETRY & CLIPS"};
   		if(Arrays.asList(FIcatProduct).contains(Title))
   		{
   			ProductPage();
@@ -277,11 +277,11 @@ public class keyWordTest {
   		Productload.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(prop.getProperty("ProductMainList"))));
   		WebElement proList = dr.findElement(By.xpath(prop.getProperty("ProductMainList")));
   		List<WebElement> Products=new ArrayList<WebElement>();
-  		Products=proList.findElements(By.tagName("form"));
+  		Products=proList.findElements(By.tagName("figure"));
   		TimeUnit.SECONDS.sleep(2);
   		int n=Products.size();
   		Random rand= new Random(System.currentTimeMillis());
-  		int rval=rand.nextInt(n+1);
+  		int rval=rand.nextInt(n);
   		int r=rval;
   		String Str5=prop.getProperty("ADDtoCartSelect");
 		String Str6=prop.getProperty("ADDtoCart");
@@ -289,7 +289,7 @@ public class keyWordTest {
 		String Str8=prop.getProperty("ProductPrice");
 		WebElement ProductName= dr.findElement(By.xpath(Str5+r+Str7));
 		ItemName=ProductName.getText();
-		ItemName = ItemName.replace("\n", "").replace("\r", "").replaceAll(System.getProperty("line.separator"), " ");
+		ItemName = ItemName.replaceAll("[\r\n]+", " ");
 		System.out.println("The Selected product name is: "+ItemName);
 		WebElement ProductPrice= dr.findElement(By.xpath(Str5+r+Str8));
 		ItemPrice=ProductPrice.getText();
@@ -299,7 +299,7 @@ public class keyWordTest {
 		dr.findElement(By.xpath(Str5+r+Str6)).click();
 		ScreenCapture();
 		CheckoutFunction();
-			
+		
   	}
 
 		public static void CheckoutFunction() throws IOException{

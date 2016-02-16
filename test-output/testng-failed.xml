@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.keyWordTest">
+      <class name="jenTest.FasciaBoards">
         <methods>
-          <include name="EndofFuntion"/>
-          <include name="loginIn"/>
-          <include name="MainProduct"/>
+          <include name="FasciaBoardsProduct"/>
+          <include name="LoginTest"/>
         </methods>
-      </class> <!-- jenTest.keyWordTest -->
+      </class> <!-- jenTest.FasciaBoards -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
