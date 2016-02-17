@@ -1,7 +1,9 @@
 #Fascia Boards
 
+mainproductname=html/body/div[1]/div[2]/div/div/section/h2
 MainProduct=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
-
+WhiteFascia=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+subproductname=html/body/div[1]/div[2]/div/div/section/h2
 subproduct=html/body/div[1]/div[2]/div/div/section/section
 subproduct_part1=html/body/div[1]/div[2]/div/div/section/section/div[
 subproduct_part2=]/figure/a/img
@@ -9,6 +11,23 @@ subproduct_part2=]/figure/a/img
 FinalProduct=html/body/div[1]/div[2]/div/div/section/section[1]
 Finalproduct_Quantity_part1=html/body/div[1]/div[2]/div/div/section/section[1]/div[
 Finalproduct_Quantity_part2=]/figure/form/div[1]/div[2]/div[2]/div/button[2]
+Finalproductname=]/figure/form/h2
 Finalproduct_Addtocart=]/figure/form/div[1]/div[2]/div[3]/input
 
 Continue_shopping=html/body/div[1]/div[2]/div/div/section/a[3]
+
+subcatproductname=html/body/div[1]/div[2]/div/div/section/h2
+
+catproductname=html/body/div[1]/div[2]/div/div/section/h2
+
+LightgreyURL=http://dev.angelplastics.co.uk/Category/648/LightGreyGlossRAL70
+
+HazygreyURL=http://dev.angelplastics.co.uk/Category/647/HazyGreyGlossRAL7046
+
+AnthraciteGreyURL=http://dev.angelplastics.co.uk/Category/649/AnthraciteGreyGlossRAL7016
+
+AnthraciteGreyWoodgrainURL=http://dev.angelplastics.co.uk/Category/874/AnthraciteGreyWoodgrainFoilRAL7016
+
+Subproductpage=http://dev.angelplastics.co.uk/Category/16/White-Fascia
+
+FasciaMainPage=http://dev.angelplastics.co.uk/Category/1/Fascia-boards
