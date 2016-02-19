@@ -17,6 +17,20 @@ M-BossFascia=html/body/div[1]/div[2]/div/div/section/section/div[10]/figure/a/im
 SoftitMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
 WhiteSoftit=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 BlackwoodGrainSoftit=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+GreySoftit=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+MahoganySoftit=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+GoldenOakWoodgrainSoftit=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+RoseWoodgrainSoftit=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
+IrishOakSoftit=html/body/div[1]/div[2]/div/div/section/section/div[7]/figure/a/img
+ChartwellGreenSoftit=html/body/div[1]/div[2]/div/div/section/section/div[8]/figure/a/img
+SolidBrownColourSoftit=html/body/div[1]/div[2]/div/div/section/section/div[9]/figure/a/img
+SolidCreamColourSoftit=html/body/div[1]/div[2]/div/div/section/section/div[10]/figure/a/img
+SolidBlackColourSoftit=html/body/div[1]/div[2]/div/div/section/section/div[11]/figure/a/img
+venting=html/body/div[1]/div[2]/div/div/section/section/div[12]/figure/a/img
+CreamwoodGrain=html/body/div[1]/div[2]/div/div/section/section/div[13]/figure/a/img
+
+CladdingMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+StandardShiplap=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 
 
 
@@ -61,15 +75,18 @@ CreamFasciamainPage=http://dev.angelplastics.co.uk/Category/889/Cream-Fascia
 M-BossFasciamainPage=http://dev.angelplastics.co.uk/Category/656/MBossFasciaembossed
 
 FasciaMainPage=http://dev.angelplastics.co.uk/Category/1/Fascia-boards
+SoftitMainPage=http://dev.angelplastics.co.uk/Category/2/Soffit-Boards/Flat-Boards
+claddigMainPage=http://dev.angelplastics.co.uk/Category/3/Cladding
+
 
 WhiteSoftitproductpage=http://dev.angelplastics.co.uk/Category/21/White-Soffit
 BlackwoodGrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/22/Black-Woodgrain-Soffit
+GreySoftitproductpage=http://dev.angelplastics.co.uk/Category/878/Grey-Soffit-Range
+MahoganySoftitproductpage=http://dev.angelplastics.co.uk/Category/23/Mahogany-Woodgrain-Soffit
+GoldenOakWoodgrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/24/Golden-Oak-Woodgrain-Soffit
+RoseWoodgrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/173/Rosewood-Woodgrain-Soffit
+IrishOakSoftitproductpage=http://dev.angelplastics.co.uk/Category/662/Irish-Oak-Woodgrain-Soffit
 
 
-
-
-
-
-
-
+StandardShiplapProductpage=http://dev.angelplastics.co.uk/Category/89/StandardShiplapWallCladdingallcolours
 
