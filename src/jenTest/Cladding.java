@@ -33,7 +33,7 @@ public class Cladding{
 			dr.switchTo().window(winhandle);
 		  
 	  }
-	@Test(enabled=true,priority=1)
+	@Test(enabled=false,priority=1)
 	  public void StandardShiplapProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -89,6 +89,181 @@ public class Cladding{
 			  dr.navigate().to(prop.getProperty("StandardShiplapProductpage"));
 	  }
 	  }
+	 
+	@Test(enabled=false,priority=2)
+	  public void VgroovecladdingProducts() throws IOException, InterruptedException {
+		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		  FileInputStream input = new FileInputStream(file);
+		  Properties prop = new Properties();
+		  prop.load(input);
+		  dr.navigate().to(prop.getProperty("claddigMainPage"));
+		  dr.findElement(By.xpath(prop.getProperty("Vgroovecladding"))).click();
+		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subproname=Subproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  int t=list.size();
+		  for(int i=1;i<=t;i++){
+			  String str1=prop.getProperty("subproduct_part1");
+			  String str2=prop.getProperty("subproduct_part2");
+			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
+			  String Subcatproname=Subcatproductname.getText();
+			  System.out.println("***********************************************************************************************");
+			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
+			  System.out.println("***********************************************************************************************");
+			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  int Subtotal=FinalSubproducts.size();
+			  for(int n=1; n<=Subtotal; n++){
+				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
+					int d=Arrays.binarySearch(a, n);
+					if(d>=0)
+					{
+						int l=n;
+					} 
+					else
+					{
+				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
+				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
+				  String str7=prop.getProperty("Finalproduct_Addtocart");
+				  String str8=prop.getProperty("Finalproductname");
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  TimeUnit.SECONDS.sleep(2);
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  String Name=ProductName.getText();
+				  System.out.println("The Added product name is:"+Name);
+				  dr.findElement(By.xpath(str5+n+str7)).click();
+				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
+	           }
+			  }
+			  dr.navigate().to(prop.getProperty("VgrooveCladdingProductpage"));
+	  }
+	  }
+	
 	  
+	@Test(enabled=false,priority=3)
+	  public void FeatherEdgeSmoothProducts() throws IOException, InterruptedException {
+		  
+		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		  FileInputStream input = new FileInputStream(file);
+		  Properties prop = new Properties();
+		  prop.load(input);
+		  dr.navigate().to(prop.getProperty("claddigMainPage"));
+		  dr.findElement(By.xpath(prop.getProperty("FeatherEdgeSmooth"))).click();
+		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subproname=Subproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
+			  int Subtotal=FinalSubproducts.size();
+			  for(int n=2; n<=Subtotal; n++){
+				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27};
+					int d=Arrays.binarySearch(a, n);
+					if(d>=0)
+					{
+						int l=n;
+					} 
+					else
+					{
+				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
+				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
+				  String str7=prop.getProperty("Finalproduct_Addtocart");
+				  String str8=prop.getProperty("Finalproductname");
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  TimeUnit.SECONDS.sleep(2);
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  String Name=ProductName.getText();
+				  System.out.println("The Added product name is:"+Name);
+				  dr.findElement(By.xpath(str5+n+str7)).click();
+				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
+	           }
+			  }
+			  dr.navigate().to(prop.getProperty("claddigMainPage"));
+	  }
+
+	@Test(enabled=true,priority=3)
+	  public void EMbossedcladdingProducts() throws IOException, InterruptedException {
+		  
+		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		  FileInputStream input = new FileInputStream(file);
+		  Properties prop = new Properties();
+		  prop.load(input);
+		  dr.navigate().to(prop.getProperty("claddigMainPage"));
+		  dr.findElement(By.xpath(prop.getProperty("EMbossedcladding"))).click();
+		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subproname=Subproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  int t=list.size();
+		  for(int i=1;i<=t;i++){
+			  String str1=prop.getProperty("subproduct_part1");
+			  String str2=prop.getProperty("subproduct_part2");
+			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
+			  String Subcatproname=Subcatproductname.getText();
+			  System.out.println("***********************************************************************************************");
+			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
+			  System.out.println("***********************************************************************************************");
+			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  int Subtotal=FinalSubproducts.size();
+			  for(int j=1;j<=Subtotal;j++){
+				  String str3=prop.getProperty("subproduct_part1");
+				  String str4=prop.getProperty("subproduct_part2");
+				  dr.findElement(By.xpath(str3+j+str4)).click();
+				  WebElement Finalcatproductname=dr.findElement(By.xpath(prop.getProperty("finalcatproductname")));
+				  String Finalcatproname=Finalcatproductname.getText();
+				  System.out.println("\t\tThe Sub category Product Name is:"+Finalcatproname);
+				  System.out.println("***********************************************************************************************");
+				  WebElement FinalSubcatProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+				  List<WebElement> FinalSubcatproducts=FinalSubcatProduct.findElements(By.tagName("figure"));
+				  int finaltotal=FinalSubcatproducts.size();
+				  for(int n=1; n<=finaltotal-1; n++){
+				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
+					int d=Arrays.binarySearch(a, n);
+					if(d>=0)
+					{
+						int l=n;
+					} 
+					else
+					{
+				  String str5=prop.getProperty("EmbossedSubproduct_1");
+				  String str6=prop.getProperty("EmbossedSubproduct_2");
+				  String str7=prop.getProperty("EmbossedAddtoCart");
+				  String str8=prop.getProperty("EmbossedProductName");
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  TimeUnit.SECONDS.sleep(2);
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  String Name=ProductName.getText();
+				  System.out.println("The Added product name is:"+Name);
+				  dr.findElement(By.xpath(str5+n+str7)).click();
+				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
+	           }
+			  }
+				  WebElement catproduct=dr.findElement(By.xpath(prop.getProperty("catproductname")));
+					 String Name=catproduct.getText();
+					 String [] DoubleShiplap={"WHITE EMBOSSED SHIPLAP", "CREAM EMBOSSED SHIPLAP", "GREY EMBOSSED SHIPLAP", "SAND EMBOSSED SHIPLAP", "CAMEL EMBOSSED SHIPLAP", "ANTHRACITE GREY EMBOSSED SHIPLAP"};
+					 String [] FeatherEdge={"WHITE EMBOSSED FEATHEREDGE", "CREAM EMBOSSED FEATHEREDGE", "GREY EMBOSSED FEATHEREDGE", "SAND EMBOSSED FEATHEREDGE", "CAMEL EMBOSSED FEATHEREDGE", "ANTHRACITE GREY EMBOSSED FEATHEREDGE"};
+					 if(Arrays.asList(DoubleShiplap).contains(Name)){
+						 dr.navigate().to(prop.getProperty("DoubleShiplap"));
+					 } else if(Arrays.asList(FeatherEdge).contains(Name)){
+						 dr.navigate().to(prop.getProperty("FeatherEdge"));
+					 }else{
+						 dr.navigate().to(prop.getProperty("VgrooveEmbossed"));
+					 }
+			}
+		 dr.navigate().to(prop.getProperty("EMbossedcladdingProductpage"));
+	  }
+  }
+
+
 	
 }
+
+

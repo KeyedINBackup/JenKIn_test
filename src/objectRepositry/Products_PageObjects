@@ -14,6 +14,8 @@ CreamFascia=html/body/div[1]/div[2]/div/div/section/section/div[9]/figure/a/img
 M-BossFascia=html/body/div[1]/div[2]/div/div/section/section/div[10]/figure/a/img
 20mmThickFlatTudorBoard=html/body/div[1]/div[2]/div/div/section/section/div[11]/figure/a/img
 
+*****************************************************************************************************************
+#Sofit
 SoftitMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
 WhiteSoftit=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 BlackwoodGrainSoftit=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
@@ -29,13 +31,38 @@ SolidBlackColourSoftit=html/body/div[1]/div[2]/div/div/section/section/div[11]/f
 venting=html/body/div[1]/div[2]/div/div/section/section/div[12]/figure/a/img
 CreamwoodGrain=html/body/div[1]/div[2]/div/div/section/section/div[13]/figure/a/img
 
+
+*****************************************************************************************************************
+
+#Cladding
 CladdingMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
 StandardShiplap=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+Vgroovecladding=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+FeatherEdgeSmooth=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+EMbossedcladding=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
 
 
+*****************************************************************************************************************
+
+#WindowTrims
+WindowTrimsMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+StandaraWhiteWindowTrims=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+BlackAshWindowTrims=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+RoseWoodWindowTrims=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+AnthraciteGrey=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+GoldenOakWindowTrims=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+ChartWellGreenWindowTrims=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
+MahoghanyWoodgrain=html/body/div[1]/div[2]/div/div/section/section/div[7]/figure/a/img
+WhiteWoodgrain=html/body/div[1]/div[2]/div/div/section/section/div[8]/figure/a/img
+IrishOakWoodgrain=html/body/div[1]/div[2]/div/div/section/section/div[9]/figure/a/img
+CreamWoodgrain=html/body/div[1]/div[2]/div/div/section/section/div[10]/figure/a/img
+ExternalWindowChills=html/body/div[1]/div[2]/div/div/section/section/div[11]/figure/a/img
+HockeyNoseWindowBoard=html/body/div[1]/div[2]/div/div/section/section/div[12]/figure/a/img
+WhiteBullnoseWindowBoard=html/body/div[1]/div[2]/div/div/section/section/div[13]/figure/a/img
+WindowFittingAccesories=html/body/div[1]/div[2]/div/div/section/section/div[14]/figure/a/img
 
 
-
+*****************************************************************************************************************
 subproductname=html/body/div[1]/div[2]/div/div/section/h2
 subproduct=html/body/div[1]/div[2]/div/div/section/section
 subproduct_part1=html/body/div[1]/div[2]/div/div/section/section/div[
@@ -63,6 +90,9 @@ AnthraciteGreyURL=http://dev.angelplastics.co.uk/Category/649/AnthraciteGreyGlos
 
 AnthraciteGreyWoodgrainURL=http://dev.angelplastics.co.uk/Category/874/AnthraciteGreyWoodgrainFoilRAL7016
 
+
+*****************************************************************************************************************
+FasciaMainPage=http://dev.angelplastics.co.uk/Category/1/Fascia-boards
 WhiteFasicaproductpage=http://dev.angelplastics.co.uk/Category/16/White-Fascia
 BlackFasicaproductpage=http://dev.angelplastics.co.uk/Category/17/Black-Fascia
 GreyFasicaproductpage=http://dev.angelplastics.co.uk/Category/646/Grey-Fascia-Range
@@ -74,11 +104,8 @@ ChartwellGreenFasciamainPage=http://dev.angelplastics.co.uk/Category/883/Chartwe
 CreamFasciamainPage=http://dev.angelplastics.co.uk/Category/889/Cream-Fascia
 M-BossFasciamainPage=http://dev.angelplastics.co.uk/Category/656/MBossFasciaembossed
 
-FasciaMainPage=http://dev.angelplastics.co.uk/Category/1/Fascia-boards
+*****************************************************************************************************************
 SoftitMainPage=http://dev.angelplastics.co.uk/Category/2/Soffit-Boards/Flat-Boards
-claddigMainPage=http://dev.angelplastics.co.uk/Category/3/Cladding
-
-
 WhiteSoftitproductpage=http://dev.angelplastics.co.uk/Category/21/White-Soffit
 BlackwoodGrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/22/Black-Woodgrain-Soffit
 GreySoftitproductpage=http://dev.angelplastics.co.uk/Category/878/Grey-Soffit-Range
@@ -87,6 +114,27 @@ GoldenOakWoodgrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/24/G
 RoseWoodgrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/173/Rosewood-Woodgrain-Soffit
 IrishOakSoftitproductpage=http://dev.angelplastics.co.uk/Category/662/Irish-Oak-Woodgrain-Soffit
 
-
+*****************************************************************************************************************
+claddigMainPage=http://dev.angelplastics.co.uk/Category/3/Cladding
 StandardShiplapProductpage=http://dev.angelplastics.co.uk/Category/89/StandardShiplapWallCladdingallcolours
+VgrooveCladdingProductpage=http://dev.angelplastics.co.uk/Category/456/VGrooveCladdingallcolours
+EMbossedcladdingProductpage=http://dev.angelplastics.co.uk/Category/463/EmbossedCladdingallcoloursprofiles
+
+DoubleShiplap=http://dev.angelplastics.co.uk/Category/464/Double-Shiplap-Embossed-Cladding
+FeatherEdge=http://dev.angelplastics.co.uk/Category/465/Featheredge-Embossed-Siding
+VgrooveEmbossed=http://dev.angelplastics.co.uk/Category/466/V-Groove-Embossed-Cladding
+
+EmbossedSubproduct_1=html/body/div[1]/div[2]/div/div/section/section[1]/div/figure/div[
+EmbossedSubproduct_2=]/figure/form/div[1]/div[2]/div[2]/div/button[2]
+EmbossedAddtoCart=]/figure/form/div[1]/div[2]/div[3]/input
+EmbossedProductName=]/figure/form/h2
+
+WhiteHockeyBoard=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+
+*****************************************************************************************************************
+WindowTrimsMainpage=http://dev.angelplastics.co.uk/Category/4/Window-Trims
+StandaraWhiteWindowTrimsProductpage=http://dev.angelplastics.co.uk/Category/444/Standard-White-Window-Trims
+AnthraciteGreyProductpage=http://dev.angelplastics.co.uk/Category/812/Anthracite-Grey-7016-Window-Trims
+
+
 
