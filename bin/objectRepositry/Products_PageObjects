@@ -60,6 +60,33 @@ ExternalWindowChills=html/body/div[1]/div[2]/div/div/section/section/div[11]/fig
 HockeyNoseWindowBoard=html/body/div[1]/div[2]/div/div/section/section/div[12]/figure/a/img
 WhiteBullnoseWindowBoard=html/body/div[1]/div[2]/div/div/section/section/div[13]/figure/a/img
 WindowFittingAccesories=html/body/div[1]/div[2]/div/div/section/section/div[14]/figure/a/img
+*****************************************************************************************************************
+
+#Guttering
+GutteringMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+PlasticGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+PolypipeTradeRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+112mmStandardHalfRoundProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+112mmSquarelineGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+117mmPolyflowGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+130mmVictorianOgeeGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+117mmSovereignMouldedOgeePrducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 *****************************************************************************************************************
@@ -135,6 +162,21 @@ WhiteHockeyBoard=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a
 WindowTrimsMainpage=http://dev.angelplastics.co.uk/Category/4/Window-Trims
 StandaraWhiteWindowTrimsProductpage=http://dev.angelplastics.co.uk/Category/444/Standard-White-Window-Trims
 AnthraciteGreyProductpage=http://dev.angelplastics.co.uk/Category/812/Anthracite-Grey-7016-Window-Trims
+
+*****************************************************************************************************************
+GutteringMainpage=http://dev.angelplastics.co.uk/Category/5/Guttering
+PolypipeTradeRange=http://dev.angelplastics.co.uk/Category/755/Polypipe-Trade-Range
+112mmStandardHalfRoundProductspage=http://dev.angelplastics.co.uk/Category/757/112mm-Standard-Half-Round
+112mmSquarelineGutteringProductPage=http://dev.angelplastics.co.uk/Category/758/112mm-Squareline-Guttering
+117mmPolyflowGutteringProductPage=http://dev.angelplastics.co.uk/Category/759/117mm-Polyflow-Guttering
+130mmVictorianOgeeGutteringProductPage=http://dev.angelplastics.co.uk/Category/760/130mm-Victorian-Ogee-Guttering
+117mmSovereignMouldedOgeePrductPage=http://dev.angelplastics.co.uk/Category/761/117mm-Sovereign-Moulded-Ogee
+
+
+
+
+
+
 
 
 
