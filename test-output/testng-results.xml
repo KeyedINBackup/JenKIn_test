@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="986110" started-at="2016-02-23T13:39:08Z" finished-at="2016-02-23T13:55:34Z">
+  <suite name="Default suite" duration-ms="29668" started-at="2016-02-24T13:42:26Z" finished-at="2016-02-24T13:42:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="986110" started-at="2016-02-23T13:39:08Z" finished-at="2016-02-23T13:55:34Z">
-      <class name="jenTest.GutteringPlastic">
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.GutteringPlastic@12c662b]" name="LoginTest" is-config="true" duration-ms="17634" started-at="2016-02-23T19:09:08Z" finished-at="2016-02-23T19:09:26Z">
+    <test name="Default test" duration-ms="29668" started-at="2016-02-24T13:42:26Z" finished-at="2016-02-24T13:42:55Z">
+      <class name="jenTest.keyWordTest">
+        <test-method status="PASS" signature="loginIn()[pri:0, instance:jenTest.keyWordTest@3dad65]" name="loginIn" is-config="true" duration-ms="28236" started-at="2016-02-24T19:12:26Z" finished-at="2016-02-24T19:12:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="FAIL" signature="SovereignMouldedOgeePrducts()[pri:0, instance:jenTest.GutteringPlastic@12c662b]" name="SovereignMouldedOgeePrducts" duration-ms="968460" started-at="2016-02-23T19:09:26Z" finished-at="2016-02-23T19:25:34Z">
+        </test-method> <!-- loginIn -->
+        <test-method status="FAIL" signature="MainProduct()[pri:0, instance:jenTest.keyWordTest@3dad65]" name="MainProduct" duration-ms="255" started-at="2016-02-24T19:12:54Z" finished-at="2016-02-24T19:12:54Z">
           <exception class="org.openqa.selenium.UnhandledAlertException">
             <message>
-              <![CDATA[Unexpected modal dialog (text: Please select the quantity): Please select the quantity
+              <![CDATA[Unexpected modal dialog (text: frontlogin): frontlogin
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/a[3]}
-Session ID: 1df5ff18-82df-4383-9392-4a8fb075f313
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section}
+Session ID: 4fa2dabd-7dd1-4346-ac67-fd48de931f9a
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: Please select the quantity): Please select the quantity
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: frontlogin): frontlogin
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/a[3]}
-Session ID: 1df5ff18-82df-4383-9392-4a8fb075f313
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section}
+Session ID: 4fa2dabd-7dd1-4346-ac67-fd48de931f9a
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -38,11 +38,16 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, br
 	at org.openqa.selenium.remote.ErrorHandler.createUnhandledAlertException(ErrorHandler.java:187)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:154)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-	at jenTest.GutteringPlastic.SovereignMouldedOgeePrducts(GutteringPlastic.java:265)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:378)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:494)
+	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:341)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:929)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$2(ExpectedConditions.java:927)
+	at org.openqa.selenium.support.ui.ExpectedConditions$11.apply(ExpectedConditions.java:317)
+	at org.openqa.selenium.support.ui.ExpectedConditions$11.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at jenTest.keyWordTest.MainProduct(keyWordTest.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -72,8 +77,12 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, br
           </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SovereignMouldedOgeePrducts -->
-      </class> <!-- jenTest.GutteringPlastic -->
+        </test-method> <!-- MainProduct -->
+        <test-method status="PASS" signature="EndofFuntion()[pri:0, instance:jenTest.keyWordTest@3dad65]" name="EndofFuntion" is-config="true" duration-ms="1161" started-at="2016-02-24T19:12:54Z" finished-at="2016-02-24T19:12:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndofFuntion -->
+      </class> <!-- jenTest.keyWordTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

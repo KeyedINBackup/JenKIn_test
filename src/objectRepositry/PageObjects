@@ -11,8 +11,12 @@ String4=]/figure
 
 #Final product page Objects
 
-ADDtoCartSelect=html/body/div[1]/div[2]/div/div/section/section[1]/div[
-ADDtoCart=]/figure/form/div[1]/div[2]/div[3]/input
-ProductName=]/figure/form/h2
-ProductPrice=]/figure/form/div[1]/div[1]/h3
-ProductQuantity=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/form/div[1]/div[2]/div[2]/div/button[2]
+
+
+QuickViewpart_1=html/body/div[1]/div[2]/div/div/section/section[1]/div[
+QuickViewpart_2=]/figure/form/a/span
+ADDtoCart=]/section/div/div/div[2]/div/form/div[2]/div[2]/input
+ProductName_part1=html/body/div[1]/div[2]/div/div/section/div[
+ProductName_part2=]/section/div/div/div[2]/div/form/div[2]/h4/b
+ProductPrice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
+ProductQuantity=html/body/div[1]/div[2]/div/div/section/div[6]/section/div/div/div[2]/div/form/div[2]/table[2]/tbody/tr/td[2]/div/button[2]

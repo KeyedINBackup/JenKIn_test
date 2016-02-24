@@ -71,6 +71,32 @@ PolypipeTradeRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[1
 117mmPolyflowGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
 130mmVictorianOgeeGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
 117mmSovereignMouldedOgeePrducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+75mmMinlineGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
+150mmIndustrialGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[7]/figure/a/img
+TerrainPremiumRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+110mmCrescentHalfRoundGutteringProduts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+120mmCornicheSquarelineGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+131mmRapidflowDeepflowGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+137mmStreamlineSquareGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+122mmOmegaOgeeGutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+AccessoriesProducts=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
+FloplastTradeRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+112mmStandardHalfRoundFloplastProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+BlackHalfRoundFloplastProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+170mmXtrafloGutterSystemProducts==html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+BlackXtraFlowGutterProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -165,18 +191,21 @@ AnthraciteGreyProductpage=http://dev.angelplastics.co.uk/Category/812/Anthracite
 
 *****************************************************************************************************************
 GutteringMainpage=http://dev.angelplastics.co.uk/Category/5/Guttering
+PlasticGutteringMainpage=http://dev.angelplastics.co.uk/Category/750/Plastic-Guttering
 PolypipeTradeRange=http://dev.angelplastics.co.uk/Category/755/Polypipe-Trade-Range
 112mmStandardHalfRoundProductspage=http://dev.angelplastics.co.uk/Category/757/112mm-Standard-Half-Round
 112mmSquarelineGutteringProductPage=http://dev.angelplastics.co.uk/Category/758/112mm-Squareline-Guttering
 117mmPolyflowGutteringProductPage=http://dev.angelplastics.co.uk/Category/759/117mm-Polyflow-Guttering
 130mmVictorianOgeeGutteringProductPage=http://dev.angelplastics.co.uk/Category/760/130mm-Victorian-Ogee-Guttering
 117mmSovereignMouldedOgeePrductPage=http://dev.angelplastics.co.uk/Category/761/117mm-Sovereign-Moulded-Ogee
-
-
-
-
-
-
-
-
-
+75mmMinlineGutteringProductPage=http://dev.angelplastics.co.uk/Category/762/75mm-Miniline-Guttering
+150mmIndustrialGutteringProductPage=http://dev.angelplastics.co.uk/Category/763/150mm-Industrial-Guttering
+TerrainPremiumRangeMainPage=http://dev.angelplastics.co.uk/Category/756/Terrain-Premium-Range
+110mmCrescentHalfRoundGutteringProdutPage=http://dev.angelplastics.co.uk/Category/764/110mm-Crescent-Half-Round-Guttering
+120mmCornicheSquarelineGutteringProductPage=http://dev.angelplastics.co.uk/Category/765/120mm-Corniche-Squareline-Guttering
+131mmRapidflowDeepflowGutteringProductPage=http://dev.angelplastics.co.uk/Category/766/131mm-Rapidflow-Deepflow-Guttering
+137mmStreamlineSquareGutteringProductPage=http://dev.angelplastics.co.uk/Category/767/137mm-Streamline-Square-Guttering
+122mmOmegaOgeeGutteringProductPage=http://dev.angelplastics.co.uk/Category/768/122mm-Omega-Ogee-Guttering
+FloplastTradeRangeProductPage=http://dev.angelplastics.co.uk/Category/751/Floplast-Trade-Range
+112mmStandardHalfRoundFloplastProductPage=http://dev.angelplastics.co.uk/Category/752/112mm-Standard-Half-Round-Floplast
+170mmXtrafloGutterSystemProductPage=http://dev.angelplastics.co.uk/Category/822/170mm-Xtraflo-Gutter-System
