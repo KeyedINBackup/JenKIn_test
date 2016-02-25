@@ -1,88 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="29668" started-at="2016-02-24T13:42:26Z" finished-at="2016-02-24T13:42:55Z">
+  <suite name="Suite" duration-ms="2" started-at="2016-02-25T06:25:01Z" finished-at="2016-02-25T06:25:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="29668" started-at="2016-02-24T13:42:26Z" finished-at="2016-02-24T13:42:55Z">
-      <class name="jenTest.keyWordTest">
-        <test-method status="PASS" signature="loginIn()[pri:0, instance:jenTest.keyWordTest@3dad65]" name="loginIn" is-config="true" duration-ms="28236" started-at="2016-02-24T19:12:26Z" finished-at="2016-02-24T19:12:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginIn -->
-        <test-method status="FAIL" signature="MainProduct()[pri:0, instance:jenTest.keyWordTest@3dad65]" name="MainProduct" duration-ms="255" started-at="2016-02-24T19:12:54Z" finished-at="2016-02-24T19:12:54Z">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
-            <message>
-              <![CDATA[Unexpected modal dialog (text: frontlogin): frontlogin
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
-System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section}
-Session ID: 4fa2dabd-7dd1-4346-ac67-fd48de931f9a
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: Unexpected modal dialog (text: frontlogin): frontlogin
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
-System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section}
-Session ID: 4fa2dabd-7dd1-4346-ac67-fd48de931f9a
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.createUnhandledAlertException(ErrorHandler.java:187)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:154)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:378)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:494)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:341)
-	at org.openqa.selenium.support.ui.ExpectedConditions.findElements(ExpectedConditions.java:929)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$2(ExpectedConditions.java:927)
-	at org.openqa.selenium.support.ui.ExpectedConditions$11.apply(ExpectedConditions.java:317)
-	at org.openqa.selenium.support.ui.ExpectedConditions$11.apply(ExpectedConditions.java:1)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	at jenTest.keyWordTest.MainProduct(keyWordTest.java:61)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:773)
-	at org.testng.TestRunner.run(TestRunner.java:623)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
-	at org.testng.TestNG.run(TestNG.java:1018)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MainProduct -->
-        <test-method status="PASS" signature="EndofFuntion()[pri:0, instance:jenTest.keyWordTest@3dad65]" name="EndofFuntion" is-config="true" duration-ms="1161" started-at="2016-02-24T19:12:54Z" finished-at="2016-02-24T19:12:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- EndofFuntion -->
-      </class> <!-- jenTest.keyWordTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    <test name="Test" duration-ms="2" started-at="2016-02-25T06:25:01Z" finished-at="2016-02-25T06:25:01Z">
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

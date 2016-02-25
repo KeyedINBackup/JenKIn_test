@@ -144,7 +144,7 @@ public class FasciaSubProducts {
   }
   }
 	  
-	  @Test(enabled=true,priority=3)
+	  @Test(enabled=false,priority=3)
 	  public void GreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -225,7 +225,7 @@ public class FasciaSubProducts {
 	  }
 }
   
-	  @Test(enabled=true,priority=4)
+	  @Test(enabled=false,priority=4)
 	  public void RosewoodFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -279,7 +279,7 @@ public class FasciaSubProducts {
 	  }
 	  }
   
-	  @Test(enabled=true,priority=5)
+	  @Test(enabled=false,priority=5)
 	  public void MahoganyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -333,7 +333,7 @@ public class FasciaSubProducts {
 	  }
 	  }
 	  
-	  @Test(enabled=true,priority=6)
+	  @Test(enabled=false,priority=6)
 	  public void GoldenOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -387,7 +387,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=7)
+	  @Test(enabled=false,priority=7)
 	  public void IrishOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -441,7 +441,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=8)
+	  @Test(enabled=false,priority=8)
 	  public void ChartwellGreenFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -495,7 +495,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=9)
+	  @Test(enabled=false,priority=9)
 	  public void CreamFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -549,7 +549,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=10)
+	  @Test(enabled=false,priority=10)
 	  public void MBossFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -603,7 +603,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=11)
+	  @Test(enabled=false,priority=11)
 	  public void ThickFlatTudorBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
