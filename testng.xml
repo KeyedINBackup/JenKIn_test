@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="none">
-  <test name="Test">
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="KeyedIN Complete Suite for Sales Order" verbose="1" >
+  <test name="KeyedIN Test" >
+    <classes>
+       <class name="jenTest.FasciaSubProducts">
+       </class>
+    </classes>
+  </test>
+</suite>

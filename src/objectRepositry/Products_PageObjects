@@ -83,16 +83,16 @@ AccessoriesProducts=html/body/div[1]/div[2]/div/div/section/section/div[6]/figur
 FloplastTradeRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
 112mmStandardHalfRoundFloplastProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 BlackHalfRoundFloplastProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
-170mmXtrafloGutterSystemProducts==html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+170mmXtrafloGutterSystemProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
 BlackXtraFlowGutterProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
-
-
-
-
-
-
-
-
+112mmHi-CapDeepCapacityGutterSystemProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+SwishAnthraciteGreyRAL7016GutteringProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+ImitationCastIronProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+Standard112mmHalfRoundbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+115mmDeepCapacityRoundbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+106mmMouldedOgeeGutterbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+160mmIndustrialHalfRoundbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+EleganceCastIronSystembyPolypipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
 
 
 
@@ -168,7 +168,7 @@ RoseWoodgrainSoftitproductpage=http://dev.angelplastics.co.uk/Category/173/Rosew
 IrishOakSoftitproductpage=http://dev.angelplastics.co.uk/Category/662/Irish-Oak-Woodgrain-Soffit
 
 *****************************************************************************************************************
-claddigMainPage=http://dev.angelplastics.co.uk/Category/3/Cladding
+CladdigMainPage=http://dev.angelplastics.co.uk/Category/3/Cladding
 StandardShiplapProductpage=http://dev.angelplastics.co.uk/Category/89/StandardShiplapWallCladdingallcolours
 VgrooveCladdingProductpage=http://dev.angelplastics.co.uk/Category/456/VGrooveCladdingallcolours
 EMbossedcladdingProductpage=http://dev.angelplastics.co.uk/Category/463/EmbossedCladdingallcoloursprofiles
@@ -209,3 +209,9 @@ TerrainPremiumRangeMainPage=http://dev.angelplastics.co.uk/Category/756/Terrain-
 FloplastTradeRangeProductPage=http://dev.angelplastics.co.uk/Category/751/Floplast-Trade-Range
 112mmStandardHalfRoundFloplastProductPage=http://dev.angelplastics.co.uk/Category/752/112mm-Standard-Half-Round-Floplast
 170mmXtrafloGutterSystemProductPage=http://dev.angelplastics.co.uk/Category/822/170mm-Xtraflo-Gutter-System
+112mmHi-CapDeepCapacityGutterSystemProductPage=http://dev.angelplastics.co.uk/Category/893/112mm-Hi-Cap-Deep-Capacity-Gutter-System
+ImitationCastIronProductPage=http://dev.angelplastics.co.uk/Category/140/Imitation-Cast-Iron
+
+
+
+

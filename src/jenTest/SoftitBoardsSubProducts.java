@@ -3,7 +3,6 @@ package jenTest;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -39,7 +38,7 @@ public class SoftitBoardsSubProducts {
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.findElement(By.xpath(prop.getProperty("SoftitMainProduct"))).click();
+		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -65,14 +64,7 @@ public class SoftitBoardsSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -84,7 +76,7 @@ public class SoftitBoardsSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("WhiteSoftitproductpage"));
 	  }
@@ -119,14 +111,7 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -138,7 +123,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("BlackwoodGrainSoftitproductpage"));
   }
@@ -172,14 +157,7 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -191,7 +169,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("GreySoftitproductpage"));
   }
@@ -225,14 +203,7 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -244,7 +215,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("MahoganySoftitproductpage"));
   }
@@ -278,14 +249,7 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -297,7 +261,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("GoldenOakWoodgrainSoftitproductpage"));
   }
@@ -332,14 +296,7 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -351,7 +308,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("RoseWoodgrainSoftitproductpage"));
   }
@@ -385,14 +342,7 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -404,7 +354,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("IrishOakSoftitproductpage"));
   }
@@ -428,14 +378,7 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -447,7 +390,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -471,14 +414,7 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -490,7 +426,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -513,14 +449,7 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -532,7 +461,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -555,14 +484,7 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -574,7 +496,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -597,14 +519,7 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -616,7 +531,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -639,14 +554,7 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
+			  	
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -658,7 +566,7 @@ public class SoftitBoardsSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }

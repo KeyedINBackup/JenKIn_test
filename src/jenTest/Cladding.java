@@ -39,7 +39,7 @@ public class Cladding{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.findElement(By.xpath(prop.getProperty("CladdingMainProduct"))).click();
+		  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");

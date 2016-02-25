@@ -39,7 +39,7 @@ public class FasciaSubProducts {
 	  FileInputStream input = new FileInputStream(file);
 	  Properties prop = new Properties();
 	  prop.load(input);
-	  dr.findElement(By.xpath(prop.getProperty("MainProduct"))).click();
+	  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 	  String Mainproductname=mainname.getText();
 	  System.out.println("***********************************************************************************************");
@@ -65,14 +65,6 @@ public class FasciaSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -84,7 +76,7 @@ public class FasciaSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("WhiteFasicaproductpage"));
   }
@@ -119,14 +111,6 @@ public class FasciaSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-				int d=Arrays.binarySearch(a, n);
-				if(d>=0)
-				{
-					int l=n;
-				} 
-				else
-				{
 			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 			  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -138,13 +122,13 @@ public class FasciaSubProducts {
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
 			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           }
+           
 		  }
 		  dr.navigate().to(prop.getProperty("BlackFasicaproductpage"));
   }
   }
 	  
-	  @Test(enabled=false,priority=3)
+	  @Test(enabled=true,priority=3)
 	  public void GreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -185,14 +169,6 @@ public class FasciaSubProducts {
 				  List<WebElement> FinalSubcatproducts=FinalSubcatProduct.findElements(By.tagName("figure"));
 				  int finaltotal=FinalSubcatproducts.size();
 				  for(int n=1; n<=finaltotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -204,7 +180,7 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 				  WebElement catproduct=dr.findElement(By.xpath(prop.getProperty("catproductname")));
 					 String Name=catproduct.getText();
@@ -225,7 +201,7 @@ public class FasciaSubProducts {
 	  }
 }
   
-	  @Test(enabled=false,priority=4)
+	  @Test(enabled=true,priority=4)
 	  public void RosewoodFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -254,14 +230,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -273,13 +242,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("RosewoodFasciaMainPage"));
 	  }
 	  }
   
-	  @Test(enabled=false,priority=5)
+	  @Test(enabled=true,priority=5)
 	  public void MahoganyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -308,14 +277,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -327,13 +289,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("MahoganyFasciaMainPage"));
 	  }
 	  }
 	  
-	  @Test(enabled=false,priority=6)
+	  @Test(enabled=true,priority=6)
 	  public void GoldenOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -362,14 +324,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -381,13 +336,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("GoldenOakFasciaMainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=7)
+	  @Test(enabled=true,priority=7)
 	  public void IrishOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -416,14 +371,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -435,13 +383,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("IrishOakFasciaMainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=8)
+	  @Test(enabled=true,priority=8)
 	  public void ChartwellGreenFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -470,14 +418,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -489,13 +430,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("ChartwellGreenFasciamainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=9)
+	  @Test(enabled=true,priority=9)
 	  public void CreamFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -524,14 +465,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -543,13 +477,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("CreamFasciamainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=10)
+	  @Test(enabled=true,priority=10)
 	  public void MBossFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -578,14 +512,7 @@ public class FasciaSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  	int[] a={0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -597,13 +524,13 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("M-BossFasciamainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=11)
+	  @Test(enabled=true,priority=11)
 	  public void ThickFlatTudorBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -619,15 +546,8 @@ public class FasciaSubProducts {
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
-			  for(int n=2; n<=Subtotal; n++){
-				  	int[] a={0, 4, 7};
-					int d=Arrays.binarySearch(a, n);
-					if(d>=0)
-					{
-						int l=n;
-					} 
-					else
-					{
+			  for(int n=1; n<=Subtotal; n++){
+				  	
 				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
 				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
 				  String str7=prop.getProperty("Finalproduct_Addtocart");
@@ -639,7 +559,7 @@ public class FasciaSubProducts {
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
 				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           }
+	           
 			  }
 			  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  }
