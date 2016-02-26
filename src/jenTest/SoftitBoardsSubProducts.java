@@ -75,9 +75,7 @@ public class SoftitBoardsSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+ }
 			  dr.navigate().to(prop.getProperty("WhiteSoftitproductpage"));
 	  }
 	  }
@@ -122,9 +120,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		}
 		  dr.navigate().to(prop.getProperty("BlackwoodGrainSoftitproductpage"));
   }
   }
@@ -168,9 +164,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		 }
 		  dr.navigate().to(prop.getProperty("GreySoftitproductpage"));
   }
   }
@@ -214,9 +208,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		 }
 		  dr.navigate().to(prop.getProperty("MahoganySoftitproductpage"));
   }
   }
@@ -260,9 +252,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		 }
 		  dr.navigate().to(prop.getProperty("GoldenOakWoodgrainSoftitproductpage"));
   }
   }
@@ -307,9 +297,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		}
 		  dr.navigate().to(prop.getProperty("RoseWoodgrainSoftitproductpage"));
   }
   }
@@ -353,9 +341,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		 }
 		  dr.navigate().to(prop.getProperty("IrishOakSoftitproductpage"));
   }
   }
@@ -389,9 +375,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
   
@@ -425,9 +409,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
   
@@ -460,9 +442,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		 }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
   
@@ -495,9 +475,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		 }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
   
@@ -530,8 +508,6 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -565,9 +541,7 @@ public class SoftitBoardsSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
   

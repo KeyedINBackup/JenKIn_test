@@ -93,8 +93,31 @@ Standard112mmHalfRoundbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/sect
 106mmMouldedOgeeGutterbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
 160mmIndustrialHalfRoundbyBrettMartinProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
 EleganceCastIronSystembyPolypipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+CastAluminiumGuttersProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+HalfRoundCastAluminiumProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+VictorianOgeeCastAluminiumProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+MouldedNo46OgeeCastAluminiumProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+BeadedHalfRoundCastAluminiumProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+BeadedDeepFlowCastAluminiumProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+GalvanisedSteelProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
 
+*****************************************************************************************************************
 
+#Downpipes&Hoppers
+Downpipes&HoppersMainProduct=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+StandardPlasticPipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+StandardRoundPipe68mmProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+Black68mmPipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+StandardSquarePipe65mmProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+82mm(3inch)RoundPipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+110mm(4inch)RoundPipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+TerrainPremiumDownpipeRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+68mmRoundDownPipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+62mmSquareDownPipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+75mmSquareDownpipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+82mmRoundDownpipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+110mmRoundDownpipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+RoofBalconyOutletsProducts=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
 
 
 
@@ -211,6 +234,33 @@ FloplastTradeRangeProductPage=http://dev.angelplastics.co.uk/Category/751/Flopla
 170mmXtrafloGutterSystemProductPage=http://dev.angelplastics.co.uk/Category/822/170mm-Xtraflo-Gutter-System
 112mmHi-CapDeepCapacityGutterSystemProductPage=http://dev.angelplastics.co.uk/Category/893/112mm-Hi-Cap-Deep-Capacity-Gutter-System
 ImitationCastIronProductPage=http://dev.angelplastics.co.uk/Category/140/Imitation-Cast-Iron
+EleganceCastIronSystembyPolypipeProductPage=http://dev.angelplastics.co.uk/Category/554/EleganceCastIronSystembyPolypipe2Styles
+CastAluminiumGuttersProductPage=http://dev.angelplastics.co.uk/Category/186/Cast-Aluminium-Gutters
+HalfRoundCastAluminiumProductPage=http://dev.angelplastics.co.uk/Category/187/Half-Round-Cast-Aluminium
+VictorianOgeeCastAluminiumProductPage=http://dev.angelplastics.co.uk/Category/188/Victorian-Ogee-Cast-Aluminium
+MouldedNo46OgeeCastAluminiumProductPage=http://dev.angelplastics.co.uk/Category/233/Moulded-No-46-Ogee-Cast-Aluminium
+BeadedHalfRoundCastAluminiumProductPage=http://dev.angelplastics.co.uk/Category/393/Beaded-Half-Round-Cast-Aluminium
+BeadedDeepFlowCastAluminiumProductPage=http://dev.angelplastics.co.uk/Category/394/Beaded-Deep-Flow-Cast-Aluminium
+GalvanisedSteelProductPage=http://dev.angelplastics.co.uk/Category/542/Galvanised-Steel
+
+*****************************************************************************************************************
+Downpipes&HoppersProductPage=http://dev.angelplastics.co.uk/Category/6/Downpipes-Hoppers
+StandardPlasticPipesProductPage=http://dev.angelplastics.co.uk/Category/824/Standard-Plastic-Pipes
+PolypipeTradeDownpipeRangeProductPage=http://dev.angelplastics.co.uk/Category/825/Polypipe-Trade-Downpipe-Range
+StandardRoundPipe68mmProductPage=http://dev.angelplastics.co.uk/Category/828/StandardRoundPipe68mm25inch
+StandardSquarePipe65mmProductPage=http://dev.angelplastics.co.uk/Category/829/Standard-Square-Pipe-65mm
+82mm(3inch)RoundPipeProductPage=http://dev.angelplastics.co.uk/Category/830/82mm-3-inch-Round-Pipe
+110mm(4inch)RoundPipeProductPage=http://dev.angelplastics.co.uk/Category/831/110mm-4-inch-Round-Pipe
+TerrainPremiumDownpipeRangeMainPage=http://dev.angelplastics.co.uk/Category/826/Terrain-Premium-Downpipe-Range
+68mmRoundDownPipeProductPage=http://dev.angelplastics.co.uk/Category/832/68mm-Round-Downpipes
+62mmSquareDownPipeProductPage=http://dev.angelplastics.co.uk/Category/833/62mm-Square-Downpipes
+75mmSquareDownpipesProductPage=http://dev.angelplastics.co.uk/Category/834/75mm-Square-Downpipes
+82mmRoundDownpipesProductPage=http://dev.angelplastics.co.uk/Category/835/82mm-Round-Downpipes
+110mmRoundDownpipesProductPage=http://dev.angelplastics.co.uk/Category/836/110mm-Round-Downpipes
+
+
+
+
 
 
 

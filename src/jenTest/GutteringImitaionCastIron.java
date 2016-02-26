@@ -67,8 +67,7 @@ public class GutteringImitaionCastIron{
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-          }
+			  }
 	  }
 	@Test(enabled=true,priority=2)
 	  public void DeepCapacityRoundbyBrettMartinProducts() throws IOException, InterruptedException {
@@ -76,7 +75,7 @@ public class GutteringImitaionCastIron{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.findElement(By.xpath(prop.getProperty("ImitationCastIronProducts"))).click();
+		  dr.navigate().to(prop.getProperty("ImitationCastIronProductPage"));
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -100,8 +99,7 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
+			  dr.findElement(By.xpath(str5+n+str7)).click();		  
         }
 	 }
 	
@@ -111,7 +109,7 @@ public class GutteringImitaionCastIron{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.findElement(By.xpath(prop.getProperty("ImitationCastIronProducts"))).click();
+		  dr.navigate().to(prop.getProperty("ImitationCastIronProductPage"));
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -135,8 +133,7 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
+			  dr.findElement(By.xpath(str5+n+str7)).click();			  
       }
 	 }
 	
@@ -146,7 +143,7 @@ public class GutteringImitaionCastIron{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.findElement(By.xpath(prop.getProperty("ImitationCastIronProducts"))).click();
+		  dr.navigate().to(prop.getProperty("ImitationCastIronProductPage"));
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -170,24 +167,23 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-    }
+			  dr.findElement(By.xpath(str5+n+str7)).click();			  
+         }
 	 }
 	
 	
-	@Test(enabled=false,priority=1)
-	  public void Products() throws IOException, InterruptedException {
+	@Test(enabled=true,priority=5)
+	  public void EleganceCastIronSystembyPolypipeProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("GutteringMainpage"));
+		  dr.navigate().to(prop.getProperty("ImitationCastIronProductPage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
-		  dr.findElement(By.xpath(prop.getProperty("ImitationCastIronProducts"))).click();
+		  dr.findElement(By.xpath(prop.getProperty("EleganceCastIronSystembyPolypipeProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -218,9 +214,8 @@ public class GutteringImitaionCastIron{
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
 	          }
-			  dr.navigate().to(prop.getProperty("ImitationCastIronProductPage"));
+			  dr.navigate().to(prop.getProperty("EleganceCastIronSystembyPolypipeProductPage"));
 	  }
 	  }
 	

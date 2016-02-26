@@ -75,9 +75,7 @@ public class FasciaSubProducts {
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
-		  }
+	  }
 		  dr.navigate().to(prop.getProperty("WhiteFasicaproductpage"));
   }
   }
@@ -120,9 +118,7 @@ public class FasciaSubProducts {
 			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
-			  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-           
+			  dr.findElement(By.xpath(str5+n+str7)).click();          
 		  }
 		  dr.navigate().to(prop.getProperty("BlackFasicaproductpage"));
   }
@@ -179,9 +175,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+      		  }
 				  WebElement catproduct=dr.findElement(By.xpath(prop.getProperty("catproductname")));
 					 String Name=catproduct.getText();
 					 String [] lightgrey={"9MM LIGHT GREY CAPPING FASCIA BOARD", "16MM LIGHT GREY MAXI FASCIA BOARD"};
@@ -241,9 +235,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+		  }
 			  dr.navigate().to(prop.getProperty("RosewoodFasciaMainPage"));
 	  }
 	  }
@@ -288,9 +280,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+	  }
 			  dr.navigate().to(prop.getProperty("MahoganyFasciaMainPage"));
 	  }
 	  }
@@ -335,9 +325,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+	  }
 			  dr.navigate().to(prop.getProperty("GoldenOakFasciaMainPage"));
 	  }
 	  } 
@@ -382,9 +370,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+		  }
 			  dr.navigate().to(prop.getProperty("IrishOakFasciaMainPage"));
 	  }
 	  } 
@@ -429,9 +415,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+	  }
 			  dr.navigate().to(prop.getProperty("ChartwellGreenFasciamainPage"));
 	  }
 	  } 
@@ -476,9 +460,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+  }
 			  dr.navigate().to(prop.getProperty("CreamFasciamainPage"));
 	  }
 	  } 
@@ -523,9 +505,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+		  }
 			  dr.navigate().to(prop.getProperty("M-BossFasciamainPage"));
 	  }
 	  } 
@@ -558,9 +538,7 @@ public class FasciaSubProducts {
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+		}
 			  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  }
 	  

@@ -75,9 +75,7 @@ public class Cladding{
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+		 }
 			  dr.navigate().to(prop.getProperty("StandardShiplapProductpage"));
 	  }
 	  }
@@ -120,9 +118,7 @@ public class Cladding{
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+			 }
 			  dr.navigate().to(prop.getProperty("VgrooveCladdingProductpage"));
 	  }
 	  }
@@ -155,9 +151,7 @@ public class Cladding{
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+			 }
 			  dr.navigate().to(prop.getProperty("claddigMainPage"));
 	  }
 
@@ -211,9 +205,7 @@ public class Cladding{
 				  String Name=ProductName.getText();
 				  System.out.println("The Added product name is:"+Name);
 				  dr.findElement(By.xpath(str5+n+str7)).click();
-				  dr.findElement(By.xpath(prop.getProperty("Continue_shopping"))).click();
-	           
-			  }
+			 }
 				  WebElement catproduct=dr.findElement(By.xpath(prop.getProperty("catproductname")));
 					 String Name=catproduct.getText();
 					 String [] DoubleShiplap={"WHITE EMBOSSED SHIPLAP", "CREAM EMBOSSED SHIPLAP", "GREY EMBOSSED SHIPLAP", "SAND EMBOSSED SHIPLAP", "CAMEL EMBOSSED SHIPLAP", "ANTHRACITE GREY EMBOSSED SHIPLAP"};
