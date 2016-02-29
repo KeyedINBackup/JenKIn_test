@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class DownpipesHoppersSubproducts{
+public class DownpipesHoppersStandardHalfroundSubproducts{
 	public static WebDriver dr= new FirefoxDriver();
 	@BeforeTest
 	  public void LoginTest() {
@@ -31,7 +31,7 @@ public class DownpipesHoppersSubproducts{
 			}
 			dr.switchTo().window(winhandle);
 	}
-	@Test(enabled=false,priority=1)
+	@Test(enabled=true,priority=1)
 	  public void StandardHalfRoundProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -88,7 +88,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }
 	
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	  public void StandardSquarePipe65mmProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -131,7 +131,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }  
 	
-	@Test(enabled=false,priority=3)
+	@Test(enabled=true,priority=3)
 	  public void ThreeinchRoundPipeProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -174,7 +174,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }  
 	
-	@Test(enabled=false,priority=4)
+	@Test(enabled=true,priority=4)
 	  public void FourinchRoundPipeProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -217,7 +217,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }  
 	
-	@Test(enabled=false,priority=5)
+	@Test(enabled=true,priority=5)
 	  public void TerrainPremiumDownpipeRangeProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -265,7 +265,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }
 	
-	@Test(enabled=false,priority=6)
+	@Test(enabled=true,priority=6)
 	  public void CornicheSquarelineGutteringProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -308,7 +308,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }
 	
-	@Test(enabled=false,priority=7)
+	@Test(enabled=true,priority=7)
 	  public void SquareDownpipesProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -351,7 +351,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }
 	
-	@Test(enabled=false,priority=8)
+	@Test(enabled=true,priority=8)
 	  public void RoundDownpipesProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -394,7 +394,7 @@ public class DownpipesHoppersSubproducts{
 	  }
 	  }
 	
-	@Test(enabled=false,priority=9)
+	@Test(enabled=true,priority=9)
 	  public void MMRoundDownpipesProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -464,14 +464,144 @@ public class DownpipesHoppersSubproducts{
 			  String Name=ProductName.getText();
 			  System.out.println("The Added product name is:"+Name);
 			  dr.findElement(By.xpath(str5+n+str7)).click();
+  
 		 }
 		  dr.navigate().to(prop.getProperty("TerrainPremiumDownpipeRangeMainPage"));
 	  }
 	
+	@Test(enabled=true,priority=11)
+	  public void FloplastTradeDownpipeRangeProducts() throws IOException, InterruptedException {
+		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		  FileInputStream input = new FileInputStream(file);
+		  Properties prop = new Properties();
+		  prop.load(input);
+		  dr.navigate().to(prop.getProperty("StandardPlasticPipesProductPage"));
+		  dr.findElement(By.xpath(prop.getProperty("FloplastTradeDownpipeRangeProducts"))).click();
+		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subcatproname=Subcatproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
+		  dr.findElement(By.xpath(prop.getProperty("68mmRoundDownPipeFloplastProducts"))).click();
+		  WebElement Subfinalproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subfinalproname=Subfinalproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  int t=list.size();
+		  for(int i=1;i<=t;i++){
+			  String str1=prop.getProperty("subproduct_part1");
+			  String str2=prop.getProperty("subproduct_part2");
+			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
+			  String finalcatproname=productname.getText();
+			  System.out.println("***********************************************************************************************");
+			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
+			  System.out.println("***********************************************************************************************");
+			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  int Subtotal=FinalSubproducts.size();
+			  for(int n=1; n<=Subtotal; n++){
+				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
+				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
+				  String str7=prop.getProperty("Finalproduct_Addtocart");
+				  String str8=prop.getProperty("Finalproductname");
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  TimeUnit.SECONDS.sleep(2);
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  String Name=ProductName.getText();
+				  System.out.println("The Added product name is:"+Name);
+				  dr.findElement(By.xpath(str5+n+str7)).click();
+			}
+			  dr.navigate().to(prop.getProperty("68mmRoundDownPipeFloplastProductPage"));
+	  }
+	  }
 	
+	@Test(enabled=true,priority=12)
+	  public void FloplastRoundDownpipesProducts() throws IOException, InterruptedException {
+		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		  FileInputStream input = new FileInputStream(file);
+		  Properties prop = new Properties();
+		  prop.load(input);
+		  dr.navigate().to(prop.getProperty("FloplastTradeDownpipeRangeMainPage"));
+		  dr.findElement(By.xpath(prop.getProperty("80mmRoundDownpipesProducts"))).click();
+		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subcatproname=Subcatproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  int t=list.size();
+		  for(int i=1;i<=t;i++){
+			  String str1=prop.getProperty("subproduct_part1");
+			  String str2=prop.getProperty("subproduct_part2");
+			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
+			  String finalcatproname=productname.getText();
+			  System.out.println("***********************************************************************************************");
+			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
+			  System.out.println("***********************************************************************************************");
+			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  int Subtotal=FinalSubproducts.size();
+			  for(int n=1; n<=Subtotal; n++){
+				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
+				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
+				  String str7=prop.getProperty("Finalproduct_Addtocart");
+				  String str8=prop.getProperty("Finalproductname");
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  TimeUnit.SECONDS.sleep(2);
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  String Name=ProductName.getText();
+				  System.out.println("The Added product name is:"+Name);
+				  dr.findElement(By.xpath(str5+n+str7)).click();
+			 }
+			  dr.navigate().to(prop.getProperty("80mmRoundDownpipesProductPage"));
+	  }
+	  }
 	
-	
-	
+	@Test(enabled=true,priority=13)
+	  public void BlackpipesProducts() throws IOException, InterruptedException {
+		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		  FileInputStream input = new FileInputStream(file);
+		  Properties prop = new Properties();
+		  prop.load(input);
+		  dr.navigate().to(prop.getProperty("FloplastTradeDownpipeRangeMainPage"));
+		  dr.findElement(By.xpath(prop.getProperty("Black110mmpipeProducts"))).click();
+		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
+		  String Subcatproname=Subcatproductname.getText();
+		  System.out.println("***********************************************************************************************");
+		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  int t=list.size();
+		  for(int i=1;i<=t;i++){
+			  String str1=prop.getProperty("subproduct_part1");
+			  String str2=prop.getProperty("subproduct_part2");
+			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
+			  String finalcatproname=productname.getText();
+			  System.out.println("***********************************************************************************************");
+			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
+			  System.out.println("***********************************************************************************************");
+			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  int Subtotal=FinalSubproducts.size();
+			  for(int n=1; n<=Subtotal; n++){
+				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
+				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
+				  String str7=prop.getProperty("Finalproduct_Addtocart");
+				  String str8=prop.getProperty("Finalproductname");
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  TimeUnit.SECONDS.sleep(2);
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  String Name=ProductName.getText();
+				  System.out.println("The Added product name is:"+Name);
+				  dr.findElement(By.xpath(str5+n+str7)).click();
+			 }
+			  dr.navigate().to(prop.getProperty("Black110mmpipeProductPage"));
+	  }
+	  }
 	
 	
 	

@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.DownpipesHoppersSubproducts">
+      <class name="jenTest.GutterAndFasciaAccessories">
         <methods>
           <include name="LoginTest"/>
-          <include name="RoofBalconyOutletsProducts"/>
+          <include name="GutterAndFasciaAccessoriesSubProduct"/>
         </methods>
-      </class> <!-- jenTest.DownpipesHoppersSubproducts -->
+      </class> <!-- jenTest.GutterAndFasciaAccessories -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

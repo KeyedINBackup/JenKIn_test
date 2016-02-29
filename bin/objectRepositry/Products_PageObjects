@@ -118,23 +118,28 @@ TerrainPremiumDownpipeRangeProducts=html/body/div[1]/div[2]/div/div/section/sect
 82mmRoundDownpipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
 110mmRoundDownpipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
 RoofBalconyOutletsProducts=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
+FloplastTradeDownpipeRangeProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+68mmRoundDownPipeFloplastProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+80mmRoundDownpipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+Black110mmpipeProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+ImitationCastIronPipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+AluminiumPipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+RoundAluminiumPipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+SquareAndRectangularAluminiumPipesProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+CastAluminiumHoppersProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+OrnamentalFixingLugsProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+EmbelishmentsProducts=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+TemporaryRainWaterPipeProduct=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+*****************************************************************************************************************
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#HotandColdPlumbingSubproducts
+PolyplumpPushFitProduct=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+*****************************************************************************************************************
+#
+110mmUnderGroundProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+PolystormModularWaterStorageProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+DrainageSundriesProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+150mmUnderGroundProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
 
 
 
@@ -143,12 +148,20 @@ subproductname=html/body/div[1]/div[2]/div/div/section/h2
 subproduct=html/body/div[1]/div[2]/div/div/section/section
 subproduct_part1=html/body/div[1]/div[2]/div/div/section/section/div[
 subproduct_part2=]/figure/a/img
-
-FinalProduct=html/body/div[1]/div[2]/div/div/section/section[1]
-Finalproduct_Quantity_part1=html/body/div[1]/div[2]/div/div/section/section[1]/div[
+FinalProduct=html/body/div[1]/div[2]/div/div/section/section
+Finalproduct_Quantity_part1=html/body/div[1]/div[2]/div/div/section/section/div[
 Finalproduct_Quantity_part2=]/figure/form/div[1]/div[2]/div[2]/div/button[2]
-Finalproductname=]/figure/form/h2
 Finalproduct_Addtocart=]/figure/form/div[1]/div[2]/div[3]/input
+Finalproductname=]/figure/form/h2
+ProductImage_Part1=html/body/div[1]/div[2]/div/div/section/section/div[
+ProductImage_Part2=]/figure/form/a/img
+QuickView_part1=html/body/div[1]/div[2]/div/div/section/section/div[
+QuickView_part2=]/figure/form/a/span
+Finalproductname_part1=html/body/div[1]/div[2]/div/div/div[
+Finalproductname_part2=]/section/div/div/div[2]/div/form/div[2]/h4/b
+Finalproductprice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
+FinalQuantity=]/section/div/div/div[2]/div/form/div[2]/table[2]/tbody/tr/td[2]/div/button[2]
+Finalproduct_Addtocart_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/input
 
 Continue_shopping=html/body/div[1]/div[2]/div/div/section/a[3]
 
@@ -257,11 +270,28 @@ TerrainPremiumDownpipeRangeMainPage=http://dev.angelplastics.co.uk/Category/826/
 75mmSquareDownpipesProductPage=http://dev.angelplastics.co.uk/Category/834/75mm-Square-Downpipes
 82mmRoundDownpipesProductPage=http://dev.angelplastics.co.uk/Category/835/82mm-Round-Downpipes
 110mmRoundDownpipesProductPage=http://dev.angelplastics.co.uk/Category/836/110mm-Round-Downpipes
+FloplastTradeDownpipeRangeMainPage=http://dev.angelplastics.co.uk/Category/827/Floplast-Trade-Downpipe-Range
+68mmRoundDownPipeFloplastProductPage=http://dev.angelplastics.co.uk/Category/838/68mm-Round-Downpipes
+80mmRoundDownpipesProductPage=http://dev.angelplastics.co.uk/Category/839/80mm-Round-Downpipes
+Black110mmpipeProductPage=http://dev.angelplastics.co.uk/Category/840/110mm-Round-Downpipes
+ImitationCastIronPipesProductPage=http://dev.angelplastics.co.uk/Category/142/Imitation-Cast-Iron-Pipes
+AluminiumPipesProductPage=http://dev.angelplastics.co.uk/Category/196/Aluminium-Pipes
+RoundAluminiumPipesProductPage=http://dev.angelplastics.co.uk/Category/197/Round-Aluminium-Downpipes
+SquareAndRectangularAluminiumPipesProductPage=http://dev.angelplastics.co.uk/Category/198/Square-Rectangular-Aluminium-Downpipes
+CastAluminiumHoppersProductPage=http://dev.angelplastics.co.uk/Category/203/Cast-Aluminium-Ornamental-Hopper-Heads
+OrnamentalFixingLugsProductPage=http://dev.angelplastics.co.uk/Category/550/Ornamental-Fixing-Lugs
+*****************************************************************************************************************
 
+HotandColdPlumbingProductPage=http://dev.angelplastics.co.uk/Category/817/Hot-Cold-Plumbing-Systems
+PolyplumpPushFitProductPage=http://dev.angelplastics.co.uk/Category/818/Polyplumb-Push-Fit
+****************************************************************************************************************
 
+DecorativeProductPage=http://dev.angelplastics.co.uk/Category/178/Decorative-Internal-External-Products
+****************************************************************************************************************
 
+UnderGroundDrainageProductPage=http://dev.angelplastics.co.uk/Category/180/Underground-Drainage
+110mmUnderGroundProductPage=http://dev.angelplastics.co.uk/Category/217/110mm-4
+****************************************************************************************************************
 
-
-
-
+GutterAndFasciaAccessoriesProductPage=http://dev.angelplastics.co.uk/Category/500/Gutter-Fascia-Accessories
 

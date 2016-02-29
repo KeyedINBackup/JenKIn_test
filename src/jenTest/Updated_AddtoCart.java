@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -259,6 +260,7 @@ public class Updated_AddtoCart {
 		String Str6="]/div/figure/figcaption/div/div[2]/input";
 		String Str7="]/div/figure/figcaption/div/div[1]/h4/a";
 		String Str8="]/div/figure/figcaption/div/div[2]/p/span";
+		
 		WebElement ProductName= dr.findElement(By.xpath(Str5+r+Str7));
 		ItemName=ProductName.getText();
 		System.out.println("The Selected product name is: "+ItemName);
