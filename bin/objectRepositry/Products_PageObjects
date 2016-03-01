@@ -135,11 +135,65 @@ TemporaryRainWaterPipeProduct=html/body/div[1]/div[2]/div/div/section/section/di
 #HotandColdPlumbingSubproducts
 PolyplumpPushFitProduct=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 *****************************************************************************************************************
-#
+#UnderGround
 110mmUnderGroundProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 PolystormModularWaterStorageProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
 DrainageSundriesProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
 150mmUnderGroundProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+*****************************************************************************************************************
+#Soil and Vent
+110mmPolypipeSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+Black110mmSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+Pushfit/RingsealBlackSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+SolventWeldBlackSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+Grey110mmSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+Pushfit/RingsealGreySoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+SolventWeldGreySoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+Brown110mmSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+Pushfit/RingsealBrownSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+110mmSoilAccessoriesProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+110mmFloplastSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+82mmPolypipeSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+Black82mmSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+Grey82mmSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+82mmSoilAccessoriesProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+ReplicaCastIronSoilProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+*****************************************************************************************************************
+
+#PlumbingWasteProducts
+WCPanConnectorsProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+PushFitWasteSystemProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+UniversalCompressionWasteProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+SolventWeldWasteMuPVCProducts=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+32mmSolventWeldWasteMuPVCProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+40mmSolventWeldWasteMuPVCProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+50mmSolventWeldWasteMuPVCProducts=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,10 +212,13 @@ ProductImage_Part2=]/figure/form/a/img
 QuickView_part1=html/body/div[1]/div[2]/div/div/section/section/div[
 QuickView_part2=]/figure/form/a/span
 Finalproductname_part1=html/body/div[1]/div[2]/div/div/div[
+Finalproductname_part1a=html/body/div[1]/div[2]/div/div/section/div[
 Finalproductname_part2=]/section/div/div/div[2]/div/form/div[2]/h4/b
 Finalproductprice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
+Finalproductprice_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/span/p
 FinalQuantity=]/section/div/div/div[2]/div/form/div[2]/table[2]/tbody/tr/td[2]/div/button[2]
 Finalproduct_Addtocart_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/input
+Finalproduct_Addtocart_2=]/section/div/div/div[2]/div/form/div[2]/div[3]/input
 
 Continue_shopping=html/body/div[1]/div[2]/div/div/section/a[3]
 
@@ -294,4 +351,33 @@ UnderGroundDrainageProductPage=http://dev.angelplastics.co.uk/Category/180/Under
 ****************************************************************************************************************
 
 GutterAndFasciaAccessoriesProductPage=http://dev.angelplastics.co.uk/Category/500/Gutter-Fascia-Accessories
+****************************************************************************************************************
+
+SoilAndVentProductpage=http://dev.angelplastics.co.uk/Category/570/Soil-Vent
+Pushfit/RingsealBlackSoilProductpage=http://dev.angelplastics.co.uk/Category/577/Pushfit-/-Ringseal-Black-Soil
+Black110mmSoilProductpage=http://dev.angelplastics.co.uk/Category/574/Black-110mm-Soil
+SolventWeldBlackSoilProductPage=http://dev.angelplastics.co.uk/Category/578/Solvent-Weld-Black-Soil
+110mmPolypipeSoilProductPage=http://dev.angelplastics.co.uk/Category/571/110mm-Polypipe-Soil
+Pushfit/RingsealGreySoilProductPage=http://dev.angelplastics.co.uk/Category/579/Pushfit-/Ringseal-Grey-Soil
+Grey110mmSoilProductpage=http://dev.angelplastics.co.uk/Category/574/Black-110mm-Soil
+SolventWeldGreySoilProductPage=http://dev.angelplastics.co.uk/Category/580/Solvent-Weld-Grey-Soil
+Pushfit/RingsealBrownSoilProductPage=http://dev.angelplastics.co.uk/Category/581/Pushfit-/Ringseal-Brown-Soil
+Brown110mmSoilProductpage=http://dev.angelplastics.co.uk/Category/576/Brown-110mm-Soil
+Black82mmSoilProductpage=http://dev.angelplastics.co.uk/Category/583/Black-82mm-Soil
+82mmPolyPipeSoilProductpage=http://dev.angelplastics.co.uk/Category/572/82mm-Polypipe-Soil
+Grey82mmSoilProductPage=http://dev.angelplastics.co.uk/Category/584/Grey-82mm-Soil
+****************************************************************************************************************
+PlumbingWasteProductPage=http://dev.angelplastics.co.uk/Category/615/Plumbing-Waste
+PushfitWasteSystemProductPage=http://dev.angelplastics.co.uk/Category/617/Pushfit-Waste-System
+UniversalCompressionWasteProductPage=http://dev.angelplastics.co.uk/Category/620/Universal-Compression-Waste
+SolventWeldWasteMuPVCProductPage=http://dev.angelplastics.co.uk/Category/623/Solvent-Weld-Waste-MuPVC
+32mmSolventWeldWasteMuPVCProductPage=http://dev.angelplastics.co.uk/Category/624/32mm-Solvent-Weld-Waste-MuPVC
+40mmSolventWeldWasteMuPVCProductPage=http://dev.angelplastics.co.uk/Category/625/40mm-Solvent-Weld-Waste-MuPVC
+50mmSolventWeldWasteMuPVCProductPage=http://dev.angelplastics.co.uk/Category/626/50mm-Solvent-Weld-Waste-MuPVC
+
+
+
+
+
+
 

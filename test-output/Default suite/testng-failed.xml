@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.GutterAndFasciaAccessories">
+      <class name="jenTest.PlumbingWasteSubproducts">
         <methods>
           <include name="LoginTest"/>
-          <include name="GutterAndFasciaAccessoriesSubProduct"/>
+          <include name="ThreemmSolventWeldWasteMuPVCProductPage"/>
         </methods>
-      </class> <!-- jenTest.GutterAndFasciaAccessories -->
+      </class> <!-- jenTest.PlumbingWasteSubproducts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
