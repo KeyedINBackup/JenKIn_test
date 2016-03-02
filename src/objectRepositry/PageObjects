@@ -1,7 +1,8 @@
 # MainPage objects.
 
+ProductsPage=http://dev.angelplastics.co.uk/Products
 ProductMainList=html/body/div[1]/div[2]/div/div/section/section
-String1=html/body/div[1]/div[2]/div/div/section/section/div[
+String1=html/body/div[1]/div[2]/div/div/section/section/ul/div[
 String2=]/figure/a/img
 ProdcutTileHeading=html/body/div[1]/div[2]/div/div/section/h2
 
@@ -20,3 +21,21 @@ ProductName_part1=html/body/div[1]/div[2]/div/div/section/div[
 ProductName_part2=]/section/div/div/div[2]/div/form/div[2]/h4/b
 ProductPrice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
 ProductQuantity=html/body/div[1]/div[2]/div/div/section/div[6]/section/div/div/div[2]/div/form/div[2]/table[2]/tbody/tr/td[2]/div/button[2]
+
+FinalProduct=html/body/div[1]/div[2]/div/div/section/section
+Finalproduct_Quantity_part1=html/body/div[1]/div[2]/div/div/section/section/div[
+Finalproduct_Quantity_part2=]/figure/form/div[1]/div[2]/div[2]/div/button[2]
+Finalproduct_Addtocart=]/figure/form/div[1]/div[2]/div[3]/input
+Finalproductname=]/figure/form/h2
+ProductImage_Part1=html/body/div[1]/div[2]/div/div/section/section/div[
+ProductImage_Part2=]/figure/form/a/img
+QuickView_part1=html/body/div[1]/div[2]/div/div/section/section/div[
+QuickView_part2=]/figure/form/a/span
+Finalproductname_part1=html/body/div[1]/div[2]/div/div/div[
+Finalproductname_part1a=html/body/div[1]/div[2]/div/div/section/div[
+Finalproductname_part2=]/section/div/div/div[2]/div/form/div[2]/h4/b
+Finalproductprice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
+Finalproductprice_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/span/p
+FinalQuantity=]/section/div/div/div[2]/div/form/div[2]/table[2]/tbody/tr/td[2]/div/button[2]
+Finalproduct_Addtocart_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/input
+Finalproduct_Addtocart_2=]/section/div/div/div[2]/div/form/div[2]/div[3]/input

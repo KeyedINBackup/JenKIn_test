@@ -7,8 +7,11 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -31,6 +34,11 @@ public class GutteringCastAluminium{
 				dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/input")).click();
 			}
 			dr.switchTo().window(winhandle);
+	}
+	public static void ScreenCapture() throws IOException{
+		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		String filename="Screenshot"+System.currentTimeMillis();
+		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
 	@Test(enabled=true,priority=1)
 	  public void CastAluminiumGuttersProducts() throws IOException, InterruptedException {
@@ -87,6 +95,7 @@ public class GutteringCastAluminium{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
+				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+n+str11)).click();
 				  dr.findElement(By.xpath(str7+n+str12)).click();
 	          }
@@ -140,6 +149,7 @@ public class GutteringCastAluminium{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
+				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+n+str11)).click();
 				  dr.findElement(By.xpath(str7+n+str12)).click();
 	          }
@@ -193,6 +203,7 @@ public class GutteringCastAluminium{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
+				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+n+str11)).click();
 				  dr.findElement(By.xpath(str7+n+str12)).click();
 	          }
@@ -246,6 +257,7 @@ public class GutteringCastAluminium{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
+				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+n+str11)).click();
 				  dr.findElement(By.xpath(str7+n+str12)).click();
 	          }
@@ -299,6 +311,7 @@ public class GutteringCastAluminium{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
+				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+n+str11)).click();
 				  dr.findElement(By.xpath(str7+n+str12)).click();
 	          }

@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +23,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-import objectRepositry.*;
 
 public class keyWordTest {
  
@@ -58,6 +58,7 @@ public class keyWordTest {
   		System.out.print("\tWelcome to Angel Plastics site\n");
   		System.out.print("********************************************************\n");
   		WebDriverWait SubProduct = new WebDriverWait(dr, 25);
+  		dr.navigate().to(prop.getProperty("ProductsPage"));
   		SubProduct.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(prop.getProperty("ProductMainList"))));
   		WebElement productlist=dr.findElement(By.xpath(prop.getProperty("ProductMainList")));
   		List<WebElement> options=new ArrayList<WebElement>();
@@ -282,28 +283,50 @@ public class keyWordTest {
   		int n=Products.size();
   		Random rand= new Random(System.currentTimeMillis());
   		int rval=rand.nextInt(n);
-  		int r=rval;
-  		int j=r+1;
-  		String Str5=prop.getProperty("QuickViewpart_1");
-		String Str6=prop.getProperty("QuickViewpart_2");
-		String Str7=prop.getProperty("ProductName_part1");
-		String Str8=prop.getProperty("ProductName_part2");
-		String Str9=prop.getProperty("ProductPrice");
-		String Str10=prop.getProperty("ADDtoCart");
-		dr.findElement(By.xpath(Str5+r+Str6)).click();
-		WebElement ProductName= dr.findElement(By.xpath(Str7+j+Str8));
-		ItemName=ProductName.getText();
-//		ItemName = ItemName.replaceAll("[\r\n]+", " ");
-		System.out.println("The Selected product name is: "+ItemName);
-		WebElement ProductPrice= dr.findElement(By.xpath(Str7+j+Str9));
-		ItemPrice=ProductPrice.getText();
-		System.out.println("The Selected product Price is: "+ItemPrice);
-		dr.findElement(By.xpath(prop.getProperty("ProductQuantity"))).click();
-		WebDriverWait waitForBuy = new WebDriverWait(dr,50);
-		waitForBuy.until(ExpectedConditions.presenceOfElementLocated(By.xpath(Str5+r+Str7)));
-		dr.findElement(By.xpath(Str7+j+Str10)).click();
-		ScreenCapture();
-		CheckoutFunction();
+//  		int r=rval;
+  		int r=rval+1;
+		  String str5=prop.getProperty("ProductImage_Part1");
+		  String str6=prop.getProperty("ProductImage_Part2");
+		  String str7=prop.getProperty("Finalproductname_part1a");
+		  String str8=prop.getProperty("Finalproductname_part2");
+		  String str10=prop.getProperty("Finalproductprice");
+		  String str11=prop.getProperty("FinalQuantity");
+		  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+		  JavascriptExecutor jse=(JavascriptExecutor)dr;
+		  jse.executeScript("scroll(0,-500);");
+		  TimeUnit.SECONDS.sleep(2);
+		  dr.findElement(By.xpath(str5+n+str6)).click();
+		  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+		  String Name=ProductName.getText();
+		  String Proname=Name.replaceAll("[\r\n]+", " ");
+		  System.out.println("The Added product name is:"+Proname);
+		  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
+		  String Price=ProductPrice.getText();
+		  System.out.println("The Added product price is:"+Price);
+		  ScreenCapture();
+		  dr.findElement(By.xpath(str7+r+str11)).click();
+		  dr.findElement(By.xpath(str7+r+str12)).click();
+//  		int j=r+1;
+//  		String Str5=prop.getProperty("QuickViewpart_1");
+//		String Str6=prop.getProperty("QuickViewpart_2");
+//		String Str7=prop.getProperty("ProductName_part1");
+//		String Str8=prop.getProperty("ProductName_part2");
+//		String Str9=prop.getProperty("ProductPrice");
+//		String Str10=prop.getProperty("ADDtoCart");
+//		dr.findElement(By.xpath(Str5+r+Str6)).click();
+//		WebElement ProductName= dr.findElement(By.xpath(Str7+j+Str8));
+//		ItemName=ProductName.getText();
+////		ItemName = ItemName.replaceAll("[\r\n]+", " ");
+//		System.out.println("The Selected product name is: "+ItemName);
+//		WebElement ProductPrice= dr.findElement(By.xpath(Str7+j+Str9));
+//		ItemPrice=ProductPrice.getText();
+//		System.out.println("The Selected product Price is: "+ItemPrice);
+//		dr.findElement(By.xpath(prop.getProperty("ProductQuantity"))).click();
+//		WebDriverWait waitForBuy = new WebDriverWait(dr,50);
+//		waitForBuy.until(ExpectedConditions.presenceOfElementLocated(By.xpath(Str5+r+Str7)));
+//		dr.findElement(By.xpath(Str7+j+Str10)).click();
+//		ScreenCapture();
+//		CheckoutFunction();
 		
   	}
 

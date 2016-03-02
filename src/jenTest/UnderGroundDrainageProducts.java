@@ -7,7 +7,11 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -31,6 +35,14 @@ public class UnderGroundDrainageProducts{
 			}
 			dr.switchTo().window(winhandle);
 	}
+	
+	public static void ScreenCapture() throws IOException{
+		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		String filename="Screenshot"+System.currentTimeMillis();
+		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
+	}
+	
+	
 	@Test(enabled=true,priority=1)
 	  public void UnderGroundDrainageSubProduct() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -63,16 +75,28 @@ public class UnderGroundDrainageProducts{
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  String str5=prop.getProperty("Finalproduct_Quantity_part1");
-				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
-				  String str7=prop.getProperty("Finalproduct_Addtocart");
-				  String str8=prop.getProperty("Finalproductname");
-				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  int r=n+1;
+				  String str5=prop.getProperty("ProductImage_Part1");
+				  String str6=prop.getProperty("ProductImage_Part2");
+				  String str7=prop.getProperty("Finalproductname_part1a");
+				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str10=prop.getProperty("Finalproductprice");
+				  String str11=prop.getProperty("FinalQuantity");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  JavascriptExecutor jse=(JavascriptExecutor)dr;
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
-				  System.out.println("The Added product name is:"+Name);
-				  dr.findElement(By.xpath(str5+n+str7)).click();
+				  String Proname=Name.replaceAll("[\r\n]+", " ");
+				  System.out.println("The Added product name is:"+Proname);
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
+				  String Price=ProductPrice.getText();
+				  System.out.println("The Added product price is:"+Price);
+				  ScreenCapture();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
 	          }
 			  dr.navigate().to(prop.getProperty("110mmUnderGroundProductPage"));
 	  }
@@ -95,16 +119,28 @@ public class UnderGroundDrainageProducts{
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
-			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
-			  String str7=prop.getProperty("Finalproduct_Addtocart");
-			  String str8=prop.getProperty("Finalproductname");
-			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  int r=n+1;
+			  String str5=prop.getProperty("ProductImage_Part1");
+			  String str6=prop.getProperty("ProductImage_Part2");
+			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str10=prop.getProperty("Finalproductprice");
+			  String str11=prop.getProperty("FinalQuantity");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  JavascriptExecutor jse=(JavascriptExecutor)dr;
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
-			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
+			  String Proname=Name.replaceAll("[\r\n]+", " ");
+			  System.out.println("The Added product name is:"+Proname);
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
+			  String Price=ProductPrice.getText();
+			  System.out.println("The Added product price is:"+Price);
+			  ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
   }		  
 }
 	
@@ -125,16 +161,28 @@ public class UnderGroundDrainageProducts{
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
-			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
-			  String str7=prop.getProperty("Finalproduct_Addtocart");
-			  String str8=prop.getProperty("Finalproductname");
-			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  int r=n+1;
+			  String str5=prop.getProperty("ProductImage_Part1");
+			  String str6=prop.getProperty("ProductImage_Part2");
+			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str10=prop.getProperty("Finalproductprice");
+			  String str11=prop.getProperty("FinalQuantity");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  JavascriptExecutor jse=(JavascriptExecutor)dr;
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
-			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
+			  String Proname=Name.replaceAll("[\r\n]+", " ");
+			  System.out.println("The Added product name is:"+Proname);
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
+			  String Price=ProductPrice.getText();
+			  System.out.println("The Added product price is:"+Price);
+			  ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 }		  
 }
 	
@@ -155,16 +203,29 @@ public class UnderGroundDrainageProducts{
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  String str5=prop.getProperty("Finalproduct_Quantity_part1");
-			  String str6=prop.getProperty("Finalproduct_Quantity_part2");
-			  String str7=prop.getProperty("Finalproduct_Addtocart");
-			  String str8=prop.getProperty("Finalproductname");
-			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  int r=n+1;
+			  String str5=prop.getProperty("ProductImage_Part1");
+			  String str6=prop.getProperty("ProductImage_Part2");
+			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str10=prop.getProperty("Finalproductprice");
+			  String str11=prop.getProperty("FinalQuantity");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  JavascriptExecutor jse=(JavascriptExecutor)dr;
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
-			  System.out.println("The Added product name is:"+Name);
-			  dr.findElement(By.xpath(str5+n+str7)).click();
+			  String Proname=Name.replaceAll("[\r\n]+", " ");
+			  System.out.println("The Added product name is:"+Proname);
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
+			  String Price=ProductPrice.getText();
+			  System.out.println("The Added product price is:"+Price);
+			  ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  
 }	
 		  dr.navigate().to(prop.getProperty("UnderGroundDrainageProductPage"));
 }	
