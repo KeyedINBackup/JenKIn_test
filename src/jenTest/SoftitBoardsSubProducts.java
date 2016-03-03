@@ -75,9 +75,10 @@ public class SoftitBoardsSubProducts {
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
@@ -86,16 +87,16 @@ public class SoftitBoardsSubProducts {
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
  }
 			  dr.navigate().to(prop.getProperty("WhiteSoftitproductpage"));
 	  }
@@ -130,9 +131,10 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -141,16 +143,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		}
 		  dr.navigate().to(prop.getProperty("BlackwoodGrainSoftitproductpage"));
   }
@@ -184,9 +186,10 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -195,16 +198,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("GreySoftitproductpage"));
   }
@@ -238,9 +241,10 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -249,16 +253,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("MahoganySoftitproductpage"));
   }
@@ -292,9 +296,10 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -303,16 +308,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("GoldenOakWoodgrainSoftitproductpage"));
   }
@@ -347,9 +352,10 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -358,16 +364,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		}
 		  dr.navigate().to(prop.getProperty("RoseWoodgrainSoftitproductpage"));
   }
@@ -401,9 +407,10 @@ public class SoftitBoardsSubProducts {
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -412,16 +419,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("IrishOakSoftitproductpage"));
   }
@@ -445,9 +452,10 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -456,16 +464,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -489,9 +497,10 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -500,16 +509,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -532,9 +541,10 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -543,16 +553,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -575,9 +585,10 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -586,16 +597,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -618,9 +629,10 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -629,16 +641,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -661,9 +673,10 @@ public class SoftitBoardsSubProducts {
 	  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
@@ -672,16 +685,16 @@ public class SoftitBoardsSubProducts {
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
 		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }

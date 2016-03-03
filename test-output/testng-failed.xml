@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [KeyedIN Complete Suite for Sales Order]">
+  <test name="KeyedIN Test(failed)">
     <classes>
       <class name="jenTest.FasciaSubProducts">
         <methods>
-          <include name="IrishOakFasciaProducts"/>
-          <include name="ChartwellGreenFasciaProducts"/>
-          <include name="LoginTest"/>
-          <include name="WhiteFasciaProducts"/>
           <include name="BlackFasciaProducts"/>
+          <include name="MBossFasciaProducts"/>
+          <include name="MahoganyFasciaProducts"/>
+          <include name="ChartwellGreenFasciaProducts"/>
+          <include name="GoldenOakFasciaProducts"/>
           <include name="GreyFasciaProducts"/>
           <include name="ThickFlatTudorBoardProducts"/>
-          <include name="MBossFasciaProducts"/>
+          <include name="IrishOakFasciaProducts"/>
+          <include name="WhiteFasciaProducts"/>
+          <include name="LoginTest"/>
           <include name="CreamFasciaProducts"/>
-          <include name="MahoganyFasciaProducts"/>
-          <include name="GoldenOakFasciaProducts"/>
           <include name="RosewoodFasciaProducts"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- KeyedIN Test(failed) -->
+</suite> <!-- Failed suite [KeyedIN Complete Suite for Sales Order] -->

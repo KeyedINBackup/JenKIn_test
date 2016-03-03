@@ -3,22 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.FasciaSubProducts">
+      <class name="jenTest.InternalCadding">
         <methods>
-          <include name="IrishOakFasciaProducts"/>
-          <include name="ChartwellGreenFasciaProducts"/>
+          <include name="NeptuneWallCeilingCladdingProducts"/>
           <include name="LoginTest"/>
-          <include name="WhiteFasciaProducts"/>
-          <include name="BlackFasciaProducts"/>
-          <include name="GreyFasciaProducts"/>
-          <include name="ThickFlatTudorBoardProducts"/>
-          <include name="MBossFasciaProducts"/>
-          <include name="CreamFasciaProducts"/>
-          <include name="MahoganyFasciaProducts"/>
-          <include name="GoldenOakFasciaProducts"/>
-          <include name="RosewoodFasciaProducts"/>
         </methods>
-      </class> <!-- jenTest.FasciaSubProducts -->
+      </class> <!-- jenTest.InternalCadding -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
