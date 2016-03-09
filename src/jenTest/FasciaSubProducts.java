@@ -81,7 +81,9 @@ public class FasciaSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -96,6 +98,7 @@ public class FasciaSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 	  }
 		  dr.navigate().to(prop.getProperty("WhiteFasicaproductpage"));
   }
@@ -137,7 +140,9 @@ public class FasciaSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -151,13 +156,14 @@ public class FasciaSubProducts {
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();  
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();  
 		  }
 		  dr.navigate().to(prop.getProperty("BlackFasicaproductpage"));
   }
   }
 	  
-	  @Test(enabled=true,priority=3)
+	  @Test(enabled=true,priority=7)
 	  public void GreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -181,7 +187,6 @@ public class FasciaSubProducts {
 			  String Subcatproname=Subcatproductname.getText();
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
-			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
@@ -205,7 +210,9 @@ public class FasciaSubProducts {
 					  String str8=prop.getProperty("Finalproductname_part2");
 					  String str10=prop.getProperty("Finalproductprice");
 					  String str11=prop.getProperty("FinalQuantity");
-					  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+					  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+					  String str13=prop.getProperty("popupClose_1");
+					  String str14=prop.getProperty("popupClose_2");
 					  JavascriptExecutor jse=(JavascriptExecutor)dr;
 					  jse.executeScript("scroll(0,-500);");
 					  TimeUnit.SECONDS.sleep(2);
@@ -220,27 +227,26 @@ public class FasciaSubProducts {
 					  ScreenCapture();
 					  dr.findElement(By.xpath(str7+r+str11)).click();
 					  dr.findElement(By.xpath(str7+r+str12)).click();
+					  dr.findElement(By.xpath(str13+r+str14)).click();
       		  }
 				  WebElement catproduct=dr.findElement(By.xpath(prop.getProperty("catproductname")));
 					 String Name=catproduct.getText();
 					 String [] lightgrey={"9MM LIGHT GREY CAPPING FASCIA BOARD", "16MM LIGHT GREY MAXI FASCIA BOARD"};
 					 String [] Hazygrey={"9MM HAZY GREY CAPPING FASCIA BOARD", "16MM HAZY GREY MAXI FASCIA BOARD"};
-					 String [] AnthraciteGrey={"9MM ANTHRACITE GREY GLOSS CAPPING FASCIA BOARD", "16MM ANTHRACITE GREY GLOSS MAXI FASCIA BOARD"};
+					 String [] Galegrey={"9MM GALE GREY CAPPING FASCIA BOARD", "16MM GALE GREY CAPPING FASCIA BOARD"};
 					 if(Arrays.asList(lightgrey).contains(Name)){
 						 dr.navigate().to(prop.getProperty("LightgreyURL"));
 					 } else if(Arrays.asList(Hazygrey).contains(Name)){
 						 dr.navigate().to(prop.getProperty("HazygreyURL"));
-					 }else if(Arrays.asList(AnthraciteGrey).contains(Name)){
-						 dr.navigate().to(prop.getProperty("AnthraciteGreyURL"));
-				}else{
-					dr.navigate().to(prop.getProperty("AnthraciteGreyWoodgrainURL"));
-				}
+					 }else if(Arrays.asList(Galegrey).contains(Name)){
+						 dr.navigate().to(prop.getProperty("GalegreyURL"));
+				     }
 			}
 		 dr.navigate().to(prop.getProperty("GreyFasicaproductpage"));
 	  }
 }
   
-	  @Test(enabled=true,priority=4)
+	  @Test(enabled=true,priority=5)
 	  public void RosewoodFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -276,7 +282,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -291,12 +299,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 			  dr.navigate().to(prop.getProperty("RosewoodFasciaMainPage"));
 	  }
 	  }
   
-	  @Test(enabled=true,priority=5)
+	  @Test(enabled=true,priority=3)
 	  public void MahoganyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -332,7 +341,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -347,12 +358,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 	  }
 			  dr.navigate().to(prop.getProperty("MahoganyFasciaMainPage"));
 	  }
 	  }
 	  
-	  @Test(enabled=true,priority=6)
+	  @Test(enabled=true,priority=4)
 	  public void GoldenOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -388,7 +400,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -403,12 +417,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 	  }
 			  dr.navigate().to(prop.getProperty("GoldenOakFasciaMainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=7)
+	  @Test(enabled=true,priority=6)
 	  public void IrishOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -444,7 +459,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -459,12 +476,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 			  dr.navigate().to(prop.getProperty("IrishOakFasciaMainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=8)
+	  @Test(enabled=false,priority=8)
 	  public void ChartwellGreenFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -500,7 +518,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -515,12 +535,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 	  }
 			  dr.navigate().to(prop.getProperty("ChartwellGreenFasciamainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=9)
+	  @Test(enabled=false,priority=9)
 	  public void CreamFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -556,7 +577,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -571,12 +594,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
   }
 			  dr.navigate().to(prop.getProperty("CreamFasciamainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=10)
+	  @Test(enabled=true,priority=8)
 	  public void MBossFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -612,7 +636,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -627,12 +653,13 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 			  dr.navigate().to(prop.getProperty("M-BossFasciamainPage"));
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=11)
+	  @Test(enabled=true,priority=9)
 	  public void ThickFlatTudorBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -656,7 +683,9 @@ public class FasciaSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -671,6 +700,7 @@ public class FasciaSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 		}
 			  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  }

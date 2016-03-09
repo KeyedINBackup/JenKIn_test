@@ -1,5 +1,10 @@
 <suite name="KeyedIN Complete Suite for Sales Order" verbose="1" >
   <test name="KeyedIN Test" >
+  <dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.40.2</version>
+</dependency>
     <classes>
        <class name="jenTest.FasciaSubProducts">
        </class>

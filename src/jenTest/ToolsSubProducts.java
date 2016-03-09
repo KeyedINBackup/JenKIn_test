@@ -1,5 +1,8 @@
 package jenTest;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,6 +18,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -43,7 +47,7 @@ public class ToolsSubProducts{
 	}
 	
 	@Test(enabled=true,priority=1)
-	  public void ToolsProductPage() throws IOException, InterruptedException {
+	  public void ToolsProductPage() throws IOException, InterruptedException, AWTException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
@@ -68,29 +72,38 @@ public class ToolsSubProducts{
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
-			  for(int n=1; n<=Subtotal; n++){
-				  int r=n+1;
+			  for(int n=2; n<=Subtotal; n++){
+				  
 				  String str5=prop.getProperty("ProductImage_Part1");
-				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1a");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
-				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
-				  TimeUnit.SECONDS.sleep(2);
+				  String str6=prop.getProperty("Finalproduct_Quantity_part2");
+				  String str7=prop.getProperty("Finalproductname");
+				  String str8=prop.getProperty("Price");
+				  String str10=prop.getProperty("Cart");
+				  String str11=prop.getProperty("ok");
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  TimeUnit.SECONDS.sleep(2);
+				  JavascriptExecutor jse=(JavascriptExecutor)dr;
+				  jse.executeScript("scroll(0,-2500);");
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str7));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str5+n+str8));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  Actions act = new Actions(dr);
+				  act.moveToElement(dr.findElement(By.xpath(str5+n+str10))).doubleClick().perform();
+//				  dr.switchTo().frame(0);
+//				  Robot object = new Robot();
+//					object.delay(2000);
+//					object.keyPress(KeyEvent.VK_TAB);
+//					object.keyRelease(KeyEvent.VK_TAB);
+//					object.keyPress(KeyEvent.VK_TAB);
+//					object.keyRelease(KeyEvent.VK_TAB);
+//					object.keyPress(KeyEvent.VK_ENTER);
+//					object.keyRelease(KeyEvent.VK_ENTER);
+				  dr.findElement(By.id(str11)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("ToolsProductPage"));
 	}

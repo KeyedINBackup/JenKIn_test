@@ -4,15 +4,15 @@ mainproductname=html/body/div[1]/div[2]/div/div/section/h2
 MainProduct=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 WhiteFascia=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 BlackFascia=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
-GreyFascia=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
-RosewoodFascia=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
-MahoganyFascia=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
-GoldenOakFascia=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
-IrishOakFascia=html/body/div[1]/div[2]/div/div/section/section/div[7]/figure/a/img
+GreyFascia=html/body/div[1]/div[2]/div/div/section/section/div[7]/figure/a/img
+RosewoodFascia=html/body/div[1]/div[2]/div/div/section/section/div[5]/figure/a/img
+MahoganyFascia=html/body/div[1]/div[2]/div/div/section/section/div[3]/figure/a/img
+GoldenOakFascia=html/body/div[1]/div[2]/div/div/section/section/div[4]/figure/a/img
+IrishOakFascia=html/body/div[1]/div[2]/div/div/section/section/div[6]/figure/a/img
 ChartwellGreenFascia=html/body/div[1]/div[2]/div/div/section/section/div[8]/figure/a/img
 CreamFascia=html/body/div[1]/div[2]/div/div/section/section/div[9]/figure/a/img
-M-BossFascia=html/body/div[1]/div[2]/div/div/section/section/div[10]/figure/a/img
-20mmThickFlatTudorBoard=html/body/div[1]/div[2]/div/div/section/section/div[11]/figure/a/img
+M-BossFascia=html/body/div[1]/div[2]/div/div/section/section/div[8]/figure/a/img
+20mmThickFlatTudorBoard=html/body/div[1]/div[2]/div/div/section/section/div[9]/figure/a/img
 
 *****************************************************************************************************************
 #Sofit
@@ -212,6 +212,9 @@ Finalproduct_Addtocart=]/figure/form/div[1]/div[2]/div[3]/input
 Finalproductname=]/figure/form/h2
 ProductImage_Part1=html/body/div[1]/div[2]/div/div/section/section/div[
 ProductImage_Part2=]/figure/form/a/img
+Price=]/figure/form/div/div[1]/h3
+Cart=]/figure/form/div/div[2]/div[3]/a
+ok=closedialog
 QuickView_part1=html/body/div[1]/div[2]/div/div/section/section/div[
 QuickView_part2=]/figure/form/a/span
 Finalproductname_part1=html/body/div[1]/div[2]/div/div/div[
@@ -221,7 +224,10 @@ Finalproductprice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
 Finalproductprice_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/span/p
 FinalQuantity=]/section/div/div/div[2]/div/form/div[2]/table[2]/tbody/tr/td[2]/div/button[2]
 Finalproduct_Addtocart_1=]/section/div/div/div[2]/div/form/div[2]/div[2]/input
+Finalproduct_Addtocart_1a=]/section/div/div/div[2]/div/form/div[2]/div[2]/a
 Finalproduct_Addtocart_2=]/section/div/div/div[2]/div/form/div[2]/div[3]/input
+popupClose_1=html/body/div[1]/div[2]/div/div/section/div[
+popupClose_2=]/section/button
 
 Continue_shopping=html/body/div[1]/div[2]/div/div/section/a[3]
 
@@ -234,6 +240,8 @@ finalcatproductname=html/body/div[1]/div[2]/div/div/section/h2
 LightgreyURL=http://dev.angelplastics.co.uk/Category/648/LightGreyGlossRAL70
 
 HazygreyURL=http://dev.angelplastics.co.uk/Category/647/HazyGreyGlossRAL7046
+
+GalegreyURL=http://dev.angelplastics.co.uk/Category/649/GaleGreyapproxRAL7016
 
 AnthraciteGreyURL=http://dev.angelplastics.co.uk/Category/649/AnthraciteGreyGlossRAL7016
 
