@@ -82,7 +82,9 @@ public class SoftitBoardsSubProducts {
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -97,6 +99,7 @@ public class SoftitBoardsSubProducts {
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
  }
 			  dr.navigate().to(prop.getProperty("WhiteSoftitproductpage"));
 	  }
@@ -138,7 +141,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -153,6 +158,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		}
 		  dr.navigate().to(prop.getProperty("BlackwoodGrainSoftitproductpage"));
   }
@@ -193,7 +199,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -208,6 +216,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("GreySoftitproductpage"));
   }
@@ -248,7 +257,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -263,6 +274,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("MahoganySoftitproductpage"));
   }
@@ -303,7 +315,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -318,6 +332,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("GoldenOakWoodgrainSoftitproductpage"));
   }
@@ -359,7 +374,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -374,6 +391,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		}
 		  dr.navigate().to(prop.getProperty("RoseWoodgrainSoftitproductpage"));
   }
@@ -414,7 +432,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -429,6 +449,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("IrishOakSoftitproductpage"));
   }
@@ -459,7 +480,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -474,6 +497,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -504,7 +528,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -519,6 +545,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -548,7 +575,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -563,6 +592,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -592,7 +622,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -607,6 +639,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -636,7 +669,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -651,6 +686,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }
@@ -680,7 +716,9 @@ public class SoftitBoardsSubProducts {
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -695,6 +733,7 @@ public class SoftitBoardsSubProducts {
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		}
 		  dr.navigate().to(prop.getProperty("SoftitMainPage"));
   }

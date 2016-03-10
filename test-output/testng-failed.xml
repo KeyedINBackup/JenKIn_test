@@ -6,9 +6,7 @@
       <class name="jenTest.FasciaSubProducts">
         <methods>
           <include name="ChartwellGreenFasciaProducts"/>
-          <include name="GreyFasciaProducts"/>
           <include name="LoginTest"/>
-          <include name="CreamFasciaProducts"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
     </classes>

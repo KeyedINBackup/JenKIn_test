@@ -3,12 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.FasciaSubProducts">
+      <class name="jenTest.SoftitBoardsSubProducts">
         <methods>
           <include name="LoginTest"/>
-          <include name="GreyFasciaProducts"/>
+          <include name="GreySoftitProducts"/>
+          <include name="IrishOakSoftitProducts"/>
+          <include name="GoldenOakWoodgrainSoftitProducts"/>
+          <include name="MahoganySoftitProducts"/>
         </methods>
-      </class> <!-- jenTest.FasciaSubProducts -->
+      </class> <!-- jenTest.SoftitBoardsSubProducts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
