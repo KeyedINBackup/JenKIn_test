@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.SoftitBoardsSubProducts">
+      <class name="jenTest.GutteringImitaionCastIron">
         <methods>
           <include name="LoginTest"/>
-          <include name="GreySoftitProducts"/>
-          <include name="IrishOakSoftitProducts"/>
-          <include name="GoldenOakWoodgrainSoftitProducts"/>
-          <include name="MahoganySoftitProducts"/>
+          <include name="EleganceCastIronSystembyPolypipeProducts"/>
+          <include name="StandardHalfRoundProducts"/>
         </methods>
-      </class> <!-- jenTest.SoftitBoardsSubProducts -->
+      </class> <!-- jenTest.GutteringImitaionCastIron -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

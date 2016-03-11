@@ -48,7 +48,7 @@ public class WindowTrimsSubProducts{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.findElement(By.xpath(prop.getProperty("WindowTrimsMainProduct"))).click();
+		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -59,7 +59,7 @@ public class WindowTrimsSubProducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
-		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
 		  for(int i=1;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
@@ -74,33 +74,37 @@ public class WindowTrimsSubProducts{
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 	           
 			  }
 			  dr.navigate().to(prop.getProperty("StandaraWhiteWindowTrimsProductpage"));
 	  }
 	  }
-	@Test(enabled=true,priority=2)
+	@Test(enabled=false,priority=2)
 	  public void BlackAshWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -118,33 +122,37 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 	           
 			  }
 			  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
 	  }
 
-	@Test(enabled=true,priority=3)
+	@Test(enabled=false,priority=3)
 	  public void RoseWoodWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -162,32 +170,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 			  }
 			  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
 	  }
 
-	@Test(enabled=true,priority=4)
+	@Test(enabled=false,priority=4)
 	  public void AnthraciteGreyProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -215,33 +227,37 @@ public class WindowTrimsSubProducts{
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 			  }
 			  dr.navigate().to(prop.getProperty("AnthraciteGreyProductpage"));
 	  }
 	  }
 	
-	@Test(enabled=true,priority=5)
+	@Test(enabled=false,priority=5)
 	  public void GoldenOakWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -259,32 +275,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=6)
+	@Test(enabled=false,priority=6)
 	  public void ChartWellGreenWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -302,32 +322,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=7)
+	@Test(enabled=false,priority=7)
 	  public void MahoghanyWoodgrainWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -345,32 +369,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=8)
+	@Test(enabled=false,priority=8)
 	  public void WhiteWoodgrainWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -388,32 +416,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=9)
+	@Test(enabled=false,priority=9)
 	  public void IrishOakWoodgrainWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -431,32 +463,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=10)
+	@Test(enabled=false,priority=10)
 	  public void CreamWoodgrainWindowTrimsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -474,32 +510,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=11)
+	@Test(enabled=false,priority=11)
 	  public void ExternalWindowChillsProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -517,32 +557,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=12)
+	@Test(enabled=false,priority=12)
 	  public void HockeyNoseWindowBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -561,32 +605,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=13)
+	@Test(enabled=false,priority=13)
 	  public void WhiteBullnoseWindowBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -604,32 +652,36 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
+			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
+			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
 			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 		  }
 		  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
   }
 	
-	@Test(enabled=true,priority=14)
+	@Test(enabled=false,priority=14)
 	  public void WindowFittingAccesoriesProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -647,27 +699,31 @@ public class WindowTrimsSubProducts{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 			  }
 			  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
 	  }

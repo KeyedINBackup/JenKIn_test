@@ -44,7 +44,7 @@ public class Cladding{
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
 	
-	@Test(enabled=false,priority=1)
+	@Test(enabled=true,priority=1)
 	  public void StandardShiplapProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -61,7 +61,7 @@ public class Cladding{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
-		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
 		  for(int i=1;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
@@ -76,46 +76,50 @@ public class Cladding{
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 		 }
 			  dr.navigate().to(prop.getProperty("StandardShiplapProductpage"));
 	  }
 	  }
 	 
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	  public void VgroovecladdingProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("claddigMainPage"));
+		  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 		  dr.findElement(By.xpath(prop.getProperty("Vgroovecladding"))).click();
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
-		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
 		  for(int i=1;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
@@ -130,41 +134,45 @@ public class Cladding{
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 			 }
 			  dr.navigate().to(prop.getProperty("VgrooveCladdingProductpage"));
 	  }
 	  }
 	
 	  
-	@Test(enabled=false,priority=3)
+	@Test(enabled=true,priority=3)
 	  public void FeatherEdgeSmoothProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("claddigMainPage"));
+		  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 		  dr.findElement(By.xpath(prop.getProperty("FeatherEdgeSmooth"))).click();
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
@@ -174,29 +182,33 @@ public class Cladding{
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=2; n<=Subtotal; n++){
+				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
+				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
 				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 			 }
-			  dr.navigate().to(prop.getProperty("claddigMainPage"));
+			  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 	  }
 
 	@Test(enabled=true,priority=3)
@@ -206,14 +218,14 @@ public class Cladding{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("claddigMainPage"));
+		  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 		  dr.findElement(By.xpath(prop.getProperty("EMbossedcladding"))).click();
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
-		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
 		  for(int i=1;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
@@ -225,7 +237,7 @@ public class Cladding{
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int j=1;j<=Subtotal;j++){
 				  String str3=prop.getProperty("subproduct_part1");
@@ -239,27 +251,31 @@ public class Cladding{
 				  List<WebElement> FinalSubcatproducts=FinalSubcatProduct.findElements(By.tagName("figure"));
 				  int finaltotal=FinalSubcatproducts.size();
 				  for(int n=1; n<=finaltotal-1; n++){
+					  int r=n+1;
 					  String str5=prop.getProperty("ProductImage_Part1");
 					  String str6=prop.getProperty("ProductImage_Part2");
-					  String str7=prop.getProperty("Finalproductname_part1");
+					  String str7=prop.getProperty("Finalproductname_part1a");
 					  String str8=prop.getProperty("Finalproductname_part2");
 					  String str10=prop.getProperty("Finalproductprice");
 					  String str11=prop.getProperty("FinalQuantity");
-					  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+					  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+					  String str13=prop.getProperty("popupClose_1");
+					  String str14=prop.getProperty("popupClose_2");
 					  JavascriptExecutor jse=(JavascriptExecutor)dr;
 					  jse.executeScript("scroll(0,-500);");
 					  TimeUnit.SECONDS.sleep(2);
 					  dr.findElement(By.xpath(str5+n+str6)).click();
-					  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+					  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 					  String Name=ProductName.getText();
 					  String Proname=Name.replaceAll("[\r\n]+", " ");
 					  System.out.println("The Added product name is:"+Proname);
-					  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+					  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 					  String Price=ProductPrice.getText();
 					  System.out.println("The Added product price is:"+Price);
 					  ScreenCapture();
-					  dr.findElement(By.xpath(str7+n+str11)).click();
-					  dr.findElement(By.xpath(str7+n+str12)).click();
+					  dr.findElement(By.xpath(str7+r+str11)).click();
+					  dr.findElement(By.xpath(str7+r+str12)).click();
+					  dr.findElement(By.xpath(str13+r+str14)).click();
 			 }
 				  WebElement catproduct=dr.findElement(By.xpath(prop.getProperty("catproductname")));
 					 String Name=catproduct.getText();

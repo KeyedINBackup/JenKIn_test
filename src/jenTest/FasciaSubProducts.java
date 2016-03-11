@@ -42,7 +42,7 @@ public class FasciaSubProducts {
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
-  @Test(enabled=false,priority=1)
+  @Test(enabled=true,priority=1)
   public void WhiteFasciaProducts() throws IOException, InterruptedException {
 	  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 	  FileInputStream input = new FileInputStream(file);
@@ -73,7 +73,7 @@ public class FasciaSubProducts {
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
-		  for(int n=1; n<=Subtotal; n++){
+		  for(int n=3; n<=Subtotal; n++){
 			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
@@ -484,7 +484,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=8)
+	  @Test(enabled=false,priority=8)
 	  public void ChartwellGreenFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -602,7 +602,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=10)
+	  @Test(enabled=false,priority=10)
 	  public void MBossFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");

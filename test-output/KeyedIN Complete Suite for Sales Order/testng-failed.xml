@@ -5,7 +5,7 @@
     <classes>
       <class name="jenTest.FasciaSubProducts">
         <methods>
-          <include name="ChartwellGreenFasciaProducts"/>
+          <include name="WhiteFasciaProducts"/>
           <include name="LoginTest"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
