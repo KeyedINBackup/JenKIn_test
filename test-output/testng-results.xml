@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="5" passed="3">
+<testng-results skipped="0" failed="2" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="467896" started-at="2016-03-11T12:35:40Z" finished-at="2016-03-11T12:43:28Z">
+  <suite name="Default suite" duration-ms="1018355" started-at="2016-03-22T10:53:28Z" finished-at="2016-03-22T11:10:26Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="467896" started-at="2016-03-11T12:35:40Z" finished-at="2016-03-11T12:43:28Z">
-      <class name="jenTest.GutteringImitaionCastIron">
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.GutteringImitaionCastIron@120f4c8]" name="LoginTest" is-config="true" duration-ms="15334" started-at="2016-03-11T18:05:40Z" finished-at="2016-03-11T18:05:55Z">
+    <test name="Default test" duration-ms="1018355" started-at="2016-03-22T10:53:28Z" finished-at="2016-03-22T11:10:26Z">
+      <class name="jenTest.Cladding">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.Cladding@1f2e11b]" name="LoginTest" is-config="true" duration-ms="16602" started-at="2016-03-22T16:23:28Z" finished-at="2016-03-22T16:23:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
-        <test-method status="FAIL" signature="StandardHalfRoundProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@120f4c8]" name="StandardHalfRoundProducts" duration-ms="69333" started-at="2016-03-11T18:05:55Z" finished-at="2016-03-11T18:07:05Z">
+        <test-method status="FAIL" signature="StandardShiplapProducts()[pri:0, instance:jenTest.Cladding@1f2e11b]" name="StandardShiplapProducts" duration-ms="228679" started-at="2016-03-22T16:23:44Z" finished-at="2016-03-22T16:27:33Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/form/a/img"}
-Command duration or timeout: 60.06 seconds
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/div[2]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p"}
+Command duration or timeout: 60.14 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/form/a/img}
-Session ID: 27a9f966-de75-4b92-a95f-3d0c9109f064
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/div[2]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p}
+Session ID: b850c762-d6b4-4ffe-87ef-80673318c658
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/form/a/img"}
-Command duration or timeout: 60.06 seconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/div[2]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p"}
+Command duration or timeout: 60.14 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/form/a/img}
-Session ID: 27a9f966-de75-4b92-a95f-3d0c9109f064
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/div[2]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p}
+Session ID: b850c762-d6b4-4ffe-87ef-80673318c658
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -45,7 +45,7 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, br
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
-	at jenTest.GutteringImitaionCastIron.StandardHalfRoundProducts(GutteringImitaionCastIron.java:82)
+	at jenTest.Cladding.StandardShiplapProducts(Cladding.java:112)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -70,48 +70,40 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, br
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/form/a/img"}
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/div[2]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p"}
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
 Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous4408744647449128777webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous4408744647449128777webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous2608936117856888513webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous2608936117856888513webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StandardHalfRoundProducts -->
-        <test-method status="PASS" signature="DeepCapacityRoundbyBrettMartinProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@120f4c8]" name="DeepCapacityRoundbyBrettMartinProducts" duration-ms="87006" started-at="2016-03-11T18:07:05Z" finished-at="2016-03-11T18:08:32Z">
+        </test-method> <!-- StandardShiplapProducts -->
+        <test-method status="PASS" signature="VgroovecladdingProducts()[pri:0, instance:jenTest.Cladding@1f2e11b]" name="VgroovecladdingProducts" duration-ms="581975" started-at="2016-03-22T16:27:33Z" finished-at="2016-03-22T16:37:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeepCapacityRoundbyBrettMartinProducts -->
-        <test-method status="PASS" signature="MouldedOgeeGutterbyBrettMartinProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@120f4c8]" name="MouldedOgeeGutterbyBrettMartinProducts" duration-ms="132931" started-at="2016-03-11T18:08:32Z" finished-at="2016-03-11T18:10:45Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MouldedOgeeGutterbyBrettMartinProducts -->
-        <test-method status="PASS" signature="IndustrialHalfRoundbyBrettMartinProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@120f4c8]" name="IndustrialHalfRoundbyBrettMartinProducts" duration-ms="66076" started-at="2016-03-11T18:10:45Z" finished-at="2016-03-11T18:11:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- IndustrialHalfRoundbyBrettMartinProducts -->
-        <test-method status="FAIL" signature="EleganceCastIronSystembyPolypipeProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@120f4c8]" name="EleganceCastIronSystembyPolypipeProducts" duration-ms="97165" started-at="2016-03-11T18:11:51Z" finished-at="2016-03-11T18:13:28Z">
+        </test-method> <!-- VgroovecladdingProducts -->
+        <test-method status="FAIL" signature="EMbossedcladdingProducts()[pri:0, instance:jenTest.Cladding@1f2e11b]" name="EMbossedcladdingProducts" duration-ms="87289" started-at="2016-03-22T16:37:15Z" finished-at="2016-03-22T16:38:42Z">
           <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
               <![CDATA[Element is not currently visible and so may not be interacted with
-Command duration or timeout: 60.10 seconds
+Command duration or timeout: 60.05 seconds
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-Session ID: 27a9f966-de75-4b92-a95f-3d0c9109f064
+Session ID: b850c762-d6b4-4ffe-87ef-80673318c658
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 60.10 seconds
+Command duration or timeout: 60.05 seconds
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-Session ID: 27a9f966-de75-4b92-a95f-3d0c9109f064
+Session ID: b850c762-d6b4-4ffe-87ef-80673318c658
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
@@ -123,7 +115,7 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, br
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at jenTest.GutteringImitaionCastIron.EleganceCastIronSystembyPolypipeProducts(GutteringImitaionCastIron.java:298)
+	at jenTest.Cladding.EMbossedcladdingProducts(Cladding.java:291)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -152,17 +144,21 @@ Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not curren
 Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
 System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous4408744647449128777webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous4408744647449128777webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous4408744647449128777webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous4408744647449128777webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous2608936117856888513webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous2608936117856888513webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous2608936117856888513webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous2608936117856888513webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EleganceCastIronSystembyPolypipeProducts -->
-      </class> <!-- jenTest.GutteringImitaionCastIron -->
+        </test-method> <!-- EMbossedcladdingProducts -->
+        <test-method status="PASS" signature="FeatherEdgeSmoothProducts()[pri:0, instance:jenTest.Cladding@1f2e11b]" name="FeatherEdgeSmoothProducts" duration-ms="103778" started-at="2016-03-22T16:38:42Z" finished-at="2016-03-22T16:40:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FeatherEdgeSmoothProducts -->
+      </class> <!-- jenTest.Cladding -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

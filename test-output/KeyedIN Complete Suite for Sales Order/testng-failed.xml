@@ -5,7 +5,8 @@
     <classes>
       <class name="jenTest.FasciaSubProducts">
         <methods>
-          <include name="WhiteFasciaProducts"/>
+          <include name="BlackFasciaProducts"/>
+          <include name="CloseBrowser"/>
           <include name="LoginTest"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->

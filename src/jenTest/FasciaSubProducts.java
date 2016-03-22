@@ -1,5 +1,6 @@
 package jenTest;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,14 +9,18 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -38,9 +43,21 @@ public class FasciaSubProducts {
 	  }
 	
 	public static void ScreenCapture() throws IOException{
+		File file=new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		FileInputStream input = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(input);
+		WebElement element=dr.findElement(By.xpath(prop.getProperty("ScreenElement")));
 		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		BufferedImage  fullImg = ImageIO.read(scrFile);
+		Point point = element.getLocation();
+		int eleWidth = element.getSize().getWidth();
+		int eleHeight = element.getSize().getHeight();
+		BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(), eleWidth, eleHeight);
+		ImageIO.write(eleScreenshot, "png", scrFile);
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
+	
 	}
   @Test(enabled=true,priority=1)
   public void WhiteFasciaProducts() throws IOException, InterruptedException {
@@ -104,7 +121,7 @@ public class FasciaSubProducts {
   }
   }
   
-  @Test(enabled=false,priority=2)
+  @Test(enabled=true,priority=2)
   public void BlackFasciaProducts() throws IOException, InterruptedException {
 	  
 	  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -163,7 +180,7 @@ public class FasciaSubProducts {
   }
   }
 	  
-	  @Test(enabled=false,priority=3)
+	  @Test(enabled=true,priority=3)
 	  public void GreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -248,7 +265,7 @@ public class FasciaSubProducts {
 	  }
 }
   
-	  @Test(enabled=false,priority=4)
+	  @Test(enabled=true,priority=4)
 	  public void RosewoodFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -307,7 +324,7 @@ public class FasciaSubProducts {
 	  }
 	  }
   
-	  @Test(enabled=false,priority=5)
+	  @Test(enabled=true,priority=5)
 	  public void MahoganyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -366,7 +383,7 @@ public class FasciaSubProducts {
 	  }
 	  }
 	  
-	  @Test(enabled=false,priority=6)
+	  @Test(enabled=true,priority=6)
 	  public void GoldenOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -425,7 +442,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=7)
+	  @Test(enabled=true,priority=7)
 	  public void IrishOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -484,7 +501,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=8)
+	  @Test(enabled=true,priority=8)
 	  public void ChartwellGreenFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -543,7 +560,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=9)
+	  @Test(enabled=true,priority=9)
 	  public void CreamFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -602,7 +619,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=10)
+	  @Test(enabled=true,priority=10)
 	  public void MBossFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -661,7 +678,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=false,priority=11)
+	  @Test(enabled=true,priority=11)
 	  public void ThickFlatTudorBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -674,11 +691,12 @@ public class FasciaSubProducts {
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  System.out.println("***********************************************************************************************");
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=SubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  int r=n+1;
+				  int r=n+2;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
@@ -706,7 +724,11 @@ public class FasciaSubProducts {
 		}
 			  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  }
-	  
+	  @AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
+	  }
 
 	  
 }

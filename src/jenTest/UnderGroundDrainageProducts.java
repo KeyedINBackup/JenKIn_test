@@ -82,7 +82,9 @@ public class UnderGroundDrainageProducts{
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str13=prop.getProperty("popupClose_1");
+				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -97,12 +99,13 @@ public class UnderGroundDrainageProducts{
 				  ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str13+r+str14)).click();
 	          }
 			  dr.navigate().to(prop.getProperty("110mmUnderGroundProductPage"));
 	  }
 	}
 	
-	@Test(enabled=true,priority=2)
+	@Test(enabled=false,priority=2)
 	  public void PolystormModularWaterStorageProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -126,7 +129,9 @@ public class UnderGroundDrainageProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -141,10 +146,11 @@ public class UnderGroundDrainageProducts{
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
   }		  
 }
 	
-	@Test(enabled=true,priority=3)
+	@Test(enabled=false,priority=3)
 	  public void DrainageSundriesProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -168,7 +174,9 @@ public class UnderGroundDrainageProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -183,10 +191,11 @@ public class UnderGroundDrainageProducts{
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 }		  
 }
 	
-	@Test(enabled=true,priority=4)
+	@Test(enabled=false,priority=4)
 	  public void MMUnderGroundProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -210,7 +219,9 @@ public class UnderGroundDrainageProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str13=prop.getProperty("popupClose_1");
+			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -225,6 +236,7 @@ public class UnderGroundDrainageProducts{
 			  ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str13+r+str14)).click();
 			  
 }	
 		  dr.navigate().to(prop.getProperty("UnderGroundDrainageProductPage"));
