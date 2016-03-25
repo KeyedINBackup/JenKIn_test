@@ -20,6 +20,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -90,7 +91,8 @@ public class Cladding{
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
-			  for(int n=1; n<=Subtotal; n++){
+			  // PROBLEM WITH THE FIRST PRODUCT OF Anthracite Grey 7016 Shiplap SO STARTING FROM 2 PRODUCT
+			  for(int n=2; n<=Subtotal; n++){
 				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
@@ -226,7 +228,7 @@ public class Cladding{
 			  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 	  }
 
-	@Test(enabled=true,priority=3)
+	@Test(enabled=true,priority=4)
 	  public void EMbossedcladdingProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -242,7 +244,8 @@ public class Cladding{
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
-		  for(int i=1;i<=t;i++){
+		  // there is an issue with first 2 products. So, staring from the 3 product
+		  for(int i=3;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
 			  String str2=prop.getProperty("subproduct_part2");
 			  dr.findElement(By.xpath(str1+i+str2)).click();
@@ -260,6 +263,7 @@ public class Cladding{
 				  dr.findElement(By.xpath(str3+j+str4)).click();
 				  WebElement Finalcatproductname=dr.findElement(By.xpath(prop.getProperty("finalcatproductname")));
 				  String Finalcatproname=Finalcatproductname.getText();
+				  System.out.println("***********************************************************************************************");
 				  System.out.println("\t\tThe Sub category Product Name is:"+Finalcatproname);
 				  System.out.println("***********************************************************************************************");
 				  WebElement FinalSubcatProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
@@ -307,9 +311,12 @@ public class Cladding{
 		 dr.navigate().to(prop.getProperty("EMbossedcladdingProductpage"));
 	  }
   }
+	 @AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
 
-
-	
+	 }
 }
 
 

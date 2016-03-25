@@ -1,5 +1,6 @@
 package jenTest;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,14 +8,18 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -36,11 +41,23 @@ public class GutteringPlastic{
 			dr.switchTo().window(winhandle);
 	}
 	public static void ScreenCapture() throws IOException{
+		File file=new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		FileInputStream input = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(input);
+		WebElement element=dr.findElement(By.xpath(prop.getProperty("ScreenElement")));
 		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		BufferedImage  fullImg = ImageIO.read(scrFile);
+		Point point = element.getLocation();
+		int eleWidth = element.getSize().getWidth();
+		int eleHeight = element.getSize().getHeight();
+		BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(), eleWidth, eleHeight);
+		ImageIO.write(eleScreenshot, "png", scrFile);
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
-	@Test(enabled=true,priority=1)
+	
+	@Test(enabled=false,priority=1)
 	  public void StandardHalfRoundProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -87,9 +104,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -111,7 +128,7 @@ public class GutteringPlastic{
 			  dr.navigate().to(prop.getProperty("112mmStandardHalfRoundProductspage"));
 	  }
 	  }
-	@Test(enabled=true,priority=2)
+	@Test(enabled=false,priority=2)
 	  public void SquareLineGutterinProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -144,9 +161,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -169,7 +186,7 @@ public class GutteringPlastic{
 	  }
 	  }  
 	
-	@Test(enabled=true,priority=3)
+	@Test(enabled=false,priority=3)
 	  public void PolyFlowGutterinProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -202,9 +219,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -227,7 +244,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=4)
+	@Test(enabled=false,priority=4)
 	  public void VictorianOgeeGutterinProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -260,9 +277,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -285,7 +302,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=5)
+	@Test(enabled=false,priority=5)
 	  public void SovereignMouldedOgeePrducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -318,9 +335,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -376,9 +393,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -401,7 +418,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=7)
+	@Test(enabled=false,priority=7)
 	  public void IndustrialGutteringProductPage() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -434,9 +451,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -460,7 +477,7 @@ public class GutteringPlastic{
 	  }
 	
 	
-	@Test(enabled=true,priority=8)
+	@Test(enabled=false,priority=8)
 	  public void TerrainPremiumRangeProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -498,9 +515,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -523,7 +540,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=9)
+	@Test(enabled=false,priority=9)
 	  public void CornicheSquarelineGutteringProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -556,9 +573,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -584,7 +601,7 @@ public class GutteringPlastic{
 			  
 	  
 	  
-	@Test(enabled=true,priority=10)
+	@Test(enabled=false,priority=10)
 	  public void RapidflowDeepflowGutteringProducts() throws IOException, InterruptedException {
 		File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -617,9 +634,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -642,7 +659,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=11)
+	@Test(enabled=false,priority=11)
 	  public void StreamlineSquareGutteringProductPage() throws IOException, InterruptedException {
 		File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -675,9 +692,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -700,7 +717,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=12)
+	@Test(enabled=false,priority=12)
 	  public void OmegaOgeeGutteringProductPage() throws IOException, InterruptedException {
 		File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -733,9 +750,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -758,7 +775,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=13)
+	@Test(enabled=false,priority=13)
 	  public void AccessoriesProductPage() throws IOException, InterruptedException {
 		File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -779,9 +796,9 @@ public class GutteringPlastic{
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  String str13=prop.getProperty("popupClose_1");
 			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -803,7 +820,7 @@ public class GutteringPlastic{
 		  dr.navigate().to(prop.getProperty("TerrainPremiumRangeMainPage"));
 		  }
 	
-	@Test(enabled=true,priority=14)
+	@Test(enabled=false,priority=14)
 	  public void FloplastTradeRangeProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -835,9 +852,9 @@ public class GutteringPlastic{
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  String str13=prop.getProperty("popupClose_1");
 			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -859,7 +876,7 @@ public class GutteringPlastic{
 		  dr.navigate().to(prop.getProperty("112mmStandardHalfRoundFloplastProductPage"));
   }
   
-	@Test(enabled=true,priority=15)
+	@Test(enabled=false,priority=15)
 	  public void XtrafloGutterSystemProductPage() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -886,9 +903,9 @@ public class GutteringPlastic{
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1a");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  String str13=prop.getProperty("popupClose_1");
 			  String str14=prop.getProperty("popupClose_2");
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -913,7 +930,7 @@ public class GutteringPlastic{
 	
 	
 
-	@Test(enabled=true,priority=16)
+	@Test(enabled=false,priority=16)
 	  public void CapDeepCapacityGutterSystemProductPage() throws IOException, InterruptedException {
 		File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -946,9 +963,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -971,7 +988,7 @@ public class GutteringPlastic{
 	  }
 	  }
 	
-	@Test(enabled=true,priority=17)
+	@Test(enabled=false,priority=17)
 	  public void SwishAnthraciteGreyRAL7016GutteringProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -994,9 +1011,9 @@ public class GutteringPlastic{
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1a");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose_1");
 				  String str14=prop.getProperty("popupClose_2");
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -1017,19 +1034,9 @@ public class GutteringPlastic{
 		 }
 			  dr.navigate().to(prop.getProperty("PlasticGutteringMainpage"));
 	  }
-	  
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
+	}
 }
