@@ -15,7 +15,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class FasciaBoards {
+public class SampleTest {
 	public static WebDriver dr= new FirefoxDriver();
 	@BeforeTest
 	  public void LoginTest() {

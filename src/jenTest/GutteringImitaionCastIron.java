@@ -1,5 +1,6 @@
 package jenTest;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,14 +8,18 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -36,7 +41,18 @@ public class GutteringImitaionCastIron{
 			dr.switchTo().window(winhandle);
 	}
 	public static void ScreenCapture() throws IOException{
+		File file=new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		FileInputStream input = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(input);
+		WebElement element=dr.findElement(By.xpath(prop.getProperty("ScreenElement")));
 		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		BufferedImage  fullImg = ImageIO.read(scrFile);
+		Point point = element.getLocation();
+		int eleWidth = element.getSize().getWidth();
+		int eleHeight = element.getSize().getHeight();
+		BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(), eleWidth, eleHeight);
+		ImageIO.write(eleScreenshot, "png", scrFile);
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
@@ -63,19 +79,18 @@ public class GutteringImitaionCastIron{
 		  System.out.println("\t\tThe Final Product Name is:"+Finalproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
-			  String str13=prop.getProperty("popupClose_1");
-			  String str14=prop.getProperty("popupClose_2");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -87,11 +102,15 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
+			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
-			  dr.findElement(By.xpath(str13+r+str14)).click();
+			  String ProEnd="Outlet Adaptor";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
 			  }
+			}
+		  }
 	  }
 	@Test(enabled=true,priority=2)
 	  public void DeepCapacityRoundbyBrettMartinProducts() throws IOException, InterruptedException {
@@ -111,19 +130,18 @@ public class GutteringImitaionCastIron{
 		  System.out.println("\t\tThe Final Product Name is:"+Finalproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
-			  String str13=prop.getProperty("popupClose_1");
-			  String str14=prop.getProperty("popupClose_2");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -135,11 +153,15 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
+			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
-			  dr.findElement(By.xpath(str13+r+str14)).click();		  
-        }
+			  String ProEnd="Side Fixing Rafter Bracket";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 	 }
 	
 	@Test(enabled=true,priority=3)
@@ -160,19 +182,18 @@ public class GutteringImitaionCastIron{
 		  System.out.println("\t\tThe Final Product Name is:"+Finalproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
-			  String str13=prop.getProperty("popupClose_1");
-			  String str14=prop.getProperty("popupClose_2");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -184,11 +205,15 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
+			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
-			  dr.findElement(By.xpath(str13+r+str14)).click();			  
-      }
+			  String ProEnd="Side Fixing Rafter Bracket";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 	 }
 	
 	@Test(enabled=true,priority=4)
@@ -209,19 +234,18 @@ public class GutteringImitaionCastIron{
 		  System.out.println("\t\tThe Final Product Name is:"+Finalproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
-			  String str13=prop.getProperty("popupClose_1");
-			  String str14=prop.getProperty("popupClose_2");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -233,11 +257,15 @@ public class GutteringImitaionCastIron{
 			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
+			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
-			  dr.findElement(By.xpath(str13+r+str14)).click();		  
-         }
+			  String ProEnd="160mm Rise & Fall Rafter Bracket";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 	 }
 	
 	
@@ -247,18 +275,13 @@ public class GutteringImitaionCastIron{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("ImitationCastIronProductPage"));
+		  dr.navigate().to(prop.getProperty("EleganceCastIronSystembyPolypipeProductPage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
-		  dr.findElement(By.xpath(prop.getProperty("EleganceCastIronSystembyPolypipeProducts"))).click();
-		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
-		  String Subcatproname=Subcatproductname.getText();
-		  System.out.println("***********************************************************************************************");
-		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
-		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
+		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
 		  for(int i=1;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
@@ -270,19 +293,18 @@ public class GutteringImitaionCastIron{
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1a");
+				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
-				  String str13=prop.getProperty("popupClose_1");
-				  String str14=prop.getProperty("popupClose_2");
+				  if( n % 2 != 0){
+				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -294,15 +316,25 @@ public class GutteringImitaionCastIron{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
-				  ScreenCapture();
+				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
-				  dr.findElement(By.xpath(str13+r+str14)).click();
-	          }
-			  dr.navigate().to(prop.getProperty("EleganceCastIronSystembyPolypipeProductPage"));
+				  String ProEnd="Elegance Adjustable Offset";
+				  if(ProEnd.equalsIgnoreCase(Proname)){
+					  break;
+				  }
+				}
+			  }
+				  dr.navigate().to(prop.getProperty("EleganceCastIronSystembyPolypipeProductPage"));
+		   }		  	      
 	  }
-	  }
-	
+	@AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
+	}
 	
 	
 }
+	
+	

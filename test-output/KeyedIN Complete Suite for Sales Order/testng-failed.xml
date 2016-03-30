@@ -3,13 +3,23 @@
 <suite name="Failed suite [KeyedIN Complete Suite for Sales Order]">
   <test name="KeyedIN Test(failed)">
     <classes>
-      <class name="jenTest.FasciaSubProducts">
+      <class name="jenTest.GutteringPlastic">
         <methods>
-          <include name="BlackFasciaProducts"/>
+          <include name="IndustrialGutteringProductPage"/>
+          <include name="VictorianOgeeGutterinProducts"/>
+          <include name="StreamlineSquareGutteringProductPage"/>
+          <include name="SovereignMouldedOgeePrducts"/>
+          <include name="LoginTest"/>
           <include name="CloseBrowser"/>
+          <include name="PolyFlowGutterinProducts"/>
+          <include name="TerrainPremiumRangeProducts"/>
+        </methods>
+      </class> <!-- jenTest.GutteringPlastic -->
+      <class name="jenTest.GutteringImitaionCastIron">
+        <methods>
           <include name="LoginTest"/>
         </methods>
-      </class> <!-- jenTest.FasciaSubProducts -->
+      </class> <!-- jenTest.GutteringImitaionCastIron -->
     </classes>
   </test> <!-- KeyedIN Test(failed) -->
 </suite> <!-- Failed suite [KeyedIN Complete Suite for Sales Order] -->

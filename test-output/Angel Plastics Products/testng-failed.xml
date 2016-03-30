@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Angel Plastics Products]">
+  <test name="Angel Test(failed)">
+    <classes>
+      <class name="jenTest.FasciaSubProducts">
+        <methods>
+          <include name="CloseBrowser"/>
+          <include name="GreyFasciaProducts"/>
+          <include name="LoginTest"/>
+        </methods>
+      </class> <!-- jenTest.FasciaSubProducts -->
+      <class name="jenTest.GutteringImitaionCastIron">
+        <methods>
+          <include name="LoginTest"/>
+        </methods>
+      </class> <!-- jenTest.GutteringImitaionCastIron -->
+      <class name="jenTest.GutteringGalvanisedSteel">
+        <methods>
+          <include name="LoginTest"/>
+        </methods>
+      </class> <!-- jenTest.GutteringGalvanisedSteel -->
+      <class name="jenTest.GutteringPlastic">
+        <methods>
+          <include name="VictorianOgeeGutterinProducts"/>
+          <include name="SwishAnthraciteGreyRAL7016GutteringProducts"/>
+          <include name="LoginTest"/>
+          <include name="PolyFlowGutterinProducts"/>
+        </methods>
+      </class> <!-- jenTest.GutteringPlastic -->
+      <class name="jenTest.GutteringCastAluminium">
+        <methods>
+          <include name="LoginTest"/>
+        </methods>
+      </class> <!-- jenTest.GutteringCastAluminium -->
+    </classes>
+  </test> <!-- Angel Test(failed) -->
+</suite> <!-- Failed suite [Angel Plastics Products] -->

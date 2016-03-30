@@ -1,13 +1,11 @@
-<suite name="KeyedIN Complete Suite for Sales Order" verbose="1" >
-  <test name="KeyedIN Test" >
-  <dependency>
-    <groupId>com.relevantcodes</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>2.40.2</version>
-</dependency>
-    <classes>
-       <class name="jenTest.FasciaSubProducts">
-       </class>
+<suite name="Angel Plastics Products" verbose="1" >
+  <test name="Angel Test" >
+   <classes>
+       <class name="jenTest.FasciaSubProducts"/>
+   	   <class name="jenTest.GutteringPlastic"/>
+       <class name="jenTest.GutteringImitaionCastIron"/>
+       <class name="jenTest.GutteringCastAluminium"/>
+       <class name="jenTest.GutteringGalvanisedSteel"/> 
     </classes>
   </test>
 </suite>
