@@ -2,6 +2,8 @@
   <test name="Angel Test" >
    <classes>
        <class name="jenTest.FasciaSubProducts"/>
+       <class name="jenTest.SoftitBoardsSubProducts"/>
+       <class name="jenTest.Cladding"/>
    	   <class name="jenTest.GutteringPlastic"/>
        <class name="jenTest.GutteringImitaionCastIron"/>
        <class name="jenTest.GutteringCastAluminium"/>
