@@ -1,49 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="17" total="56" passed="39">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="331357" started-at="2016-03-30T09:23:48Z" finished-at="2016-03-30T09:29:19Z">
+  <suite name="Angel Plastics Products" duration-ms="9397640" started-at="2016-03-30T13:20:16Z" finished-at="2016-03-30T15:56:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="331357" started-at="2016-03-30T09:23:48Z" finished-at="2016-03-30T09:29:19Z">
-      <class name="jenTest.Cladding">
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.Cladding@98e5da]" name="LoginTest" is-config="true" duration-ms="23125" started-at="2016-03-30T14:53:48Z" finished-at="2016-03-30T14:54:11Z">
+    <test name="Angel Test" duration-ms="9397640" started-at="2016-03-30T13:20:16Z" finished-at="2016-03-30T15:56:54Z">
+      <class name="jenTest.GutteringPlastic">
+        <test-method status="PASS" signature="StandardHalfRoundProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="StandardHalfRoundProducts" duration-ms="742606" started-at="2016-03-30T19:48:43Z" finished-at="2016-03-30T20:01:06Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
-        <test-method status="FAIL" signature="VgrooveEmbossedcladdingProducts()[pri:0, instance:jenTest.Cladding@98e5da]" name="VgrooveEmbossedcladdingProducts" duration-ms="303712" started-at="2016-03-30T14:54:11Z" finished-at="2016-03-30T14:59:15Z">
+        </test-method> <!-- StandardHalfRoundProducts -->
+        <test-method status="PASS" signature="SquareLineGutterinProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="SquareLineGutterinProducts" duration-ms="580066" started-at="2016-03-30T20:01:06Z" finished-at="2016-03-30T20:10:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SquareLineGutterinProducts -->
+        <test-method status="PASS" signature="PolyFlowGutterinProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="PolyFlowGutterinProducts" duration-ms="699859" started-at="2016-03-30T20:10:46Z" finished-at="2016-03-30T20:22:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PolyFlowGutterinProducts -->
+        <test-method status="PASS" signature="VictorianOgeeGutterinProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="VictorianOgeeGutterinProducts" duration-ms="326957" started-at="2016-03-30T20:22:26Z" finished-at="2016-03-30T20:27:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VictorianOgeeGutterinProducts -->
+        <test-method status="PASS" signature="SovereignMouldedOgeePrducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="SovereignMouldedOgeePrducts" duration-ms="394381" started-at="2016-03-30T20:27:53Z" finished-at="2016-03-30T20:34:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SovereignMouldedOgeePrducts -->
+        <test-method status="PASS" signature="MinlineGutteringProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="MinlineGutteringProducts" duration-ms="178801" started-at="2016-03-30T20:34:27Z" finished-at="2016-03-30T20:37:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MinlineGutteringProducts -->
+        <test-method status="FAIL" signature="IndustrialGutteringProductPage()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="IndustrialGutteringProductPage" duration-ms="245692" started-at="2016-03-30T20:37:26Z" finished-at="2016-03-30T20:41:32Z">
           <exception class="org.openqa.selenium.ElementNotVisibleException">
             <message>
               <![CDATA[Element is not currently visible and so may not be interacted with
-Command duration or timeout: 60.07 seconds
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
-System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-Session ID: 641ce964-1d58-45f7-8007-e6590a6480a6
+Command duration or timeout: 60.08 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]]]>
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 60.07 seconds
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
-System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
-Session ID: 641ce964-1d58-45f7-8007-e6590a6480a6
+Command duration or timeout: 60.08 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=45.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at jenTest.Cladding.VgrooveEmbossedcladdingProducts(Cladding.java:414)
+	at jenTest.GutteringPlastic.IndustrialGutteringProductPage(GutteringPlastic.java:489)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
@@ -61,28 +81,1304 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, br
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
 	at org.testng.TestNG.run(TestNG.java:1018)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
 Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:59:12'
-System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.7.0'
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous8524051344916084336webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous8524051344916084336webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous8524051344916084336webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/SAKTHI~1/AppData/Local/Temp/anonymous8524051344916084336webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- IndustrialGutteringProductPage -->
+        <test-method status="FAIL" signature="TerrainPremiumRangeProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="TerrainPremiumRangeProducts" duration-ms="71469" started-at="2016-03-30T20:41:32Z" finished-at="2016-03-30T20:42:43Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span"}
+Command duration or timeout: 60.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span"}
+Command duration or timeout: 60.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at jenTest.GutteringPlastic.TerrainPremiumRangeProducts(GutteringPlastic.java:547)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TerrainPremiumRangeProducts -->
+        <test-method status="PASS" signature="CornicheSquarelineGutteringProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="CornicheSquarelineGutteringProducts" duration-ms="647594" started-at="2016-03-30T20:42:43Z" finished-at="2016-03-30T20:53:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CornicheSquarelineGutteringProducts -->
+        <test-method status="FAIL" signature="RapidflowDeepflowGutteringProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="RapidflowDeepflowGutteringProducts" duration-ms="83688" started-at="2016-03-30T20:53:31Z" finished-at="2016-03-30T20:54:54Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span"}
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span"}
+Command duration or timeout: 60.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at jenTest.GutteringPlastic.RapidflowDeepflowGutteringProducts(GutteringPlastic.java:672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[1]/figure/form/a/span"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RapidflowDeepflowGutteringProducts -->
+        <test-method status="PASS" signature="StreamlineSquareGutteringProductPage()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="StreamlineSquareGutteringProductPage" duration-ms="125451" started-at="2016-03-30T20:54:54Z" finished-at="2016-03-30T20:57:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StreamlineSquareGutteringProductPage -->
+        <test-method status="FAIL" signature="OmegaOgeeGutteringProductPage()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="OmegaOgeeGutteringProductPage" duration-ms="76670" started-at="2016-03-30T20:57:00Z" finished-at="2016-03-30T20:58:17Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.07 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.07 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.GutteringPlastic.OmegaOgeeGutteringProductPage(GutteringPlastic.java:803)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OmegaOgeeGutteringProductPage -->
+        <test-method status="PASS" signature="AccessoriesProductPage()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="AccessoriesProductPage" duration-ms="45202" started-at="2016-03-30T20:58:17Z" finished-at="2016-03-30T20:59:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessoriesProductPage -->
+        <test-method status="PASS" signature="FloplastTradeRangeProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="FloplastTradeRangeProducts" duration-ms="158346" started-at="2016-03-30T20:59:02Z" finished-at="2016-03-30T21:01:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FloplastTradeRangeProducts -->
+        <test-method status="PASS" signature="XtrafloGutterSystemProductPage()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="XtrafloGutterSystemProductPage" duration-ms="83681" started-at="2016-03-30T21:01:40Z" finished-at="2016-03-30T21:03:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- XtrafloGutterSystemProductPage -->
+        <test-method status="FAIL" signature="CapDeepCapacityGutterSystemProductPage()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="CapDeepCapacityGutterSystemProductPage" duration-ms="77046" started-at="2016-03-30T21:03:04Z" finished-at="2016-03-30T21:04:21Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 92dfa141-efba-44cc-8d38-01c894c44c72
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.GutteringPlastic.CapDeepCapacityGutterSystemProductPage(GutteringPlastic.java:1028)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous6480435515370442851webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CapDeepCapacityGutterSystemProductPage -->
+        <test-method status="PASS" signature="SwishAnthraciteGreyRAL7016GutteringProducts()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="SwishAnthraciteGreyRAL7016GutteringProducts" duration-ms="72808" started-at="2016-03-30T21:04:21Z" finished-at="2016-03-30T21:05:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SwishAnthraciteGreyRAL7016GutteringProducts -->
+      </class> <!-- jenTest.GutteringPlastic -->
+      <class name="jenTest.FasciaSubProducts">
+        <test-method status="FAIL" signature="WhiteFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="WhiteFasciaProducts" duration-ms="178063" started-at="2016-03-30T18:52:30Z" finished-at="2016-03-30T18:55:28Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.03 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.03 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.FasciaSubProducts.WhiteFasciaProducts(FasciaSubProducts.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhiteFasciaProducts -->
+        <test-method status="FAIL" signature="BlackFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="BlackFasciaProducts" duration-ms="289162" started-at="2016-03-30T18:55:28Z" finished-at="2016-03-30T19:00:17Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.FasciaSubProducts.BlackFasciaProducts(FasciaSubProducts.java:177)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlackFasciaProducts -->
+        <test-method status="FAIL" signature="LightGreyFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="LightGreyFasciaProducts" duration-ms="171169" started-at="2016-03-30T19:00:17Z" finished-at="2016-03-30T19:03:08Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.FasciaSubProducts.LightGreyFasciaProducts(FasciaSubProducts.java:239)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LightGreyFasciaProducts -->
+        <test-method status="PASS" signature="HazyGreyFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="HazyGreyFasciaProducts" duration-ms="164733" started-at="2016-03-30T19:03:08Z" finished-at="2016-03-30T19:05:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HazyGreyFasciaProducts -->
+        <test-method status="FAIL" signature="AnthraciteGreyFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="AnthraciteGreyFasciaProducts" duration-ms="150184" started-at="2016-03-30T19:05:53Z" finished-at="2016-03-30T19:08:23Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.05 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.05 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.FasciaSubProducts.AnthraciteGreyFasciaProducts(FasciaSubProducts.java:362)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AnthraciteGreyFasciaProducts -->
+        <test-method status="PASS" signature="AnthraciteWoodGreyFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="AnthraciteWoodGreyFasciaProducts" duration-ms="134756" started-at="2016-03-30T19:08:23Z" finished-at="2016-03-30T19:10:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AnthraciteWoodGreyFasciaProducts -->
+        <test-method status="PASS" signature="RosewoodFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="RosewoodFasciaProducts" duration-ms="170909" started-at="2016-03-30T19:10:38Z" finished-at="2016-03-30T19:13:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RosewoodFasciaProducts -->
+        <test-method status="FAIL" signature="MahoganyFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="MahoganyFasciaProducts" duration-ms="148696" started-at="2016-03-30T19:13:29Z" finished-at="2016-03-30T19:15:57Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.FasciaSubProducts.MahoganyFasciaProducts(FasciaSubProducts.java:548)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MahoganyFasciaProducts -->
+        <test-method status="PASS" signature="GoldenOakFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="GoldenOakFasciaProducts" duration-ms="190523" started-at="2016-03-30T19:15:57Z" finished-at="2016-03-30T19:19:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoldenOakFasciaProducts -->
+        <test-method status="PASS" signature="IrishOakFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="IrishOakFasciaProducts" duration-ms="146111" started-at="2016-03-30T19:19:08Z" finished-at="2016-03-30T19:21:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IrishOakFasciaProducts -->
+        <test-method status="FAIL" signature="ChartwellGreenFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="ChartwellGreenFasciaProducts" duration-ms="177434" started-at="2016-03-30T19:21:34Z" finished-at="2016-03-30T19:24:31Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 7f8cc753-6420-4aaf-930b-861322a78a90
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.FasciaSubProducts.ChartwellGreenFasciaProducts(FasciaSubProducts.java:734)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous5605430837033558608webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChartwellGreenFasciaProducts -->
+        <test-method status="PASS" signature="CreamFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="CreamFasciaProducts" duration-ms="122828" started-at="2016-03-30T19:24:31Z" finished-at="2016-03-30T19:26:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreamFasciaProducts -->
+        <test-method status="PASS" signature="MBossFasciaProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="MBossFasciaProducts" duration-ms="79624" started-at="2016-03-30T19:26:34Z" finished-at="2016-03-30T19:27:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MBossFasciaProducts -->
+        <test-method status="PASS" signature="ThickFlatTudorBoardProducts()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="ThickFlatTudorBoardProducts" duration-ms="23919" started-at="2016-03-30T19:27:54Z" finished-at="2016-03-30T19:28:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThickFlatTudorBoardProducts -->
+      </class> <!-- jenTest.FasciaSubProducts -->
+      <class name="jenTest.GutteringGalvanisedSteel">
+        <test-method status="FAIL" signature="BeadedDeepFlowCastAluminiumProducts()[pri:0, instance:jenTest.GutteringGalvanisedSteel@7bd7d6d6]" name="BeadedDeepFlowCastAluminiumProducts" duration-ms="88121" started-at="2016-03-30T21:25:14Z" finished-at="2016-03-30T21:26:42Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+Command duration or timeout: 60.19 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4d5f1027-c3b9-4d85-9a9f-63134447acc3
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+Command duration or timeout: 60.19 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4d5f1027-c3b9-4d85-9a9f-63134447acc3
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at jenTest.GutteringGalvanisedSteel.BeadedDeepFlowCastAluminiumProducts(GutteringGalvanisedSteel.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous8205290065223517221webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous8205290065223517221webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeadedDeepFlowCastAluminiumProducts -->
+      </class> <!-- jenTest.GutteringGalvanisedSteel -->
+      <class name="jenTest.SoftitBoardsSubProducts">
+        <test-method status="PASS" signature="WhiteSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="WhiteSoftitProducts" duration-ms="153111" started-at="2016-03-30T19:28:18Z" finished-at="2016-03-30T19:30:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WhiteSoftitProducts -->
+        <test-method status="PASS" signature="BlackwoodGrainSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="BlackwoodGrainSoftitProducts" duration-ms="107383" started-at="2016-03-30T19:30:51Z" finished-at="2016-03-30T19:32:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BlackwoodGrainSoftitProducts -->
+        <test-method status="PASS" signature="GreySoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="GreySoftitProducts" duration-ms="136679" started-at="2016-03-30T19:32:38Z" finished-at="2016-03-30T19:34:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GreySoftitProducts -->
+        <test-method status="PASS" signature="MahoganySoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="MahoganySoftitProducts" duration-ms="97701" started-at="2016-03-30T19:34:55Z" finished-at="2016-03-30T19:36:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MahoganySoftitProducts -->
+        <test-method status="PASS" signature="GoldenOakWoodgrainSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="GoldenOakWoodgrainSoftitProducts" duration-ms="95220" started-at="2016-03-30T19:36:33Z" finished-at="2016-03-30T19:38:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GoldenOakWoodgrainSoftitProducts -->
+        <test-method status="PASS" signature="RoseWoodgrainSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="RoseWoodgrainSoftitProducts" duration-ms="98859" started-at="2016-03-30T19:38:08Z" finished-at="2016-03-30T19:39:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RoseWoodgrainSoftitProducts -->
+        <test-method status="PASS" signature="IrishOakSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="IrishOakSoftitProducts" duration-ms="59225" started-at="2016-03-30T19:39:47Z" finished-at="2016-03-30T19:40:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IrishOakSoftitProducts -->
+        <test-method status="FAIL" signature="ChartwellGreenSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="ChartwellGreenSoftitProducts" duration-ms="68458" started-at="2016-03-30T19:40:46Z" finished-at="2016-03-30T19:41:54Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+Command duration or timeout: 60.20 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: abe19dcd-c714-475d-83e1-6faceda9912e
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+Command duration or timeout: 60.20 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: abe19dcd-c714-475d-83e1-6faceda9912e
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at jenTest.SoftitBoardsSubProducts.ChartwellGreenSoftitProducts(SoftitBoardsSubProducts.java:527)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous2627473442528903015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous2627473442528903015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChartwellGreenSoftitProducts -->
+        <test-method status="PASS" signature="SolidBrownColourSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="SolidBrownColourSoftitProducts" duration-ms="20866" started-at="2016-03-30T19:41:54Z" finished-at="2016-03-30T19:42:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SolidBrownColourSoftitProducts -->
+        <test-method status="PASS" signature="SolidCreamColourSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="SolidCreamColourSoftitProducts" duration-ms="28801" started-at="2016-03-30T19:42:15Z" finished-at="2016-03-30T19:42:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SolidCreamColourSoftitProducts -->
+        <test-method status="PASS" signature="SolidBlackColourSoftitProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="SolidBlackColourSoftitProducts" duration-ms="22060" started-at="2016-03-30T19:42:44Z" finished-at="2016-03-30T19:43:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SolidBlackColourSoftitProducts -->
+        <test-method status="PASS" signature="ventingProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="ventingProducts" duration-ms="50906" started-at="2016-03-30T19:43:06Z" finished-at="2016-03-30T19:43:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ventingProducts -->
+        <test-method status="FAIL" signature="CreamwoodGrainProducts()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="CreamwoodGrainProducts" duration-ms="70850" started-at="2016-03-30T19:43:57Z" finished-at="2016-03-30T19:45:08Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+Command duration or timeout: 60.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: abe19dcd-c714-475d-83e1-6faceda9912e
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+Command duration or timeout: 60.14 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: abe19dcd-c714-475d-83e1-6faceda9912e
+*** Element info: {Using=xpath, value=html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:490)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at jenTest.SoftitBoardsSubProducts.CreamwoodGrainProducts(SoftitBoardsSubProducts.java:778)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"xpath","selector":"html/body/div[1]/div[2]/div/div/section/section[1]/div[2]/section/div/div/div[2]/div/form/div[2]/h4/b"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Windows/TEMP/anonymous2627473442528903015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous2627473442528903015webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreamwoodGrainProducts -->
+      </class> <!-- jenTest.SoftitBoardsSubProducts -->
+      <class name="jenTest.GutteringImitaionCastIron">
+        <test-method status="PASS" signature="StandardHalfRoundProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="StandardHalfRoundProducts" duration-ms="78707" started-at="2016-03-30T21:05:34Z" finished-at="2016-03-30T21:06:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- StandardHalfRoundProducts -->
+        <test-method status="PASS" signature="DeepCapacityRoundbyBrettMartinProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="DeepCapacityRoundbyBrettMartinProducts" duration-ms="55059" started-at="2016-03-30T21:06:52Z" finished-at="2016-03-30T21:07:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeepCapacityRoundbyBrettMartinProducts -->
+        <test-method status="PASS" signature="MouldedOgeeGutterbyBrettMartinProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="MouldedOgeeGutterbyBrettMartinProducts" duration-ms="80197" started-at="2016-03-30T21:07:47Z" finished-at="2016-03-30T21:09:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MouldedOgeeGutterbyBrettMartinProducts -->
+        <test-method status="PASS" signature="IndustrialHalfRoundbyBrettMartinProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="IndustrialHalfRoundbyBrettMartinProducts" duration-ms="43121" started-at="2016-03-30T21:09:08Z" finished-at="2016-03-30T21:09:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- IndustrialHalfRoundbyBrettMartinProducts -->
+        <test-method status="FAIL" signature="EleganceCastIronSystembyPolypipeProducts()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="EleganceCastIronSystembyPolypipeProducts" duration-ms="247973" started-at="2016-03-30T21:09:51Z" finished-at="2016-03-30T21:13:59Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 04d0c393-3fcd-4689-a1fa-c2424236729e]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.04 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 04d0c393-3fcd-4689-a1fa-c2424236729e
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.GutteringImitaionCastIron.EleganceCastIronSystembyPolypipeProducts(GutteringImitaionCastIron.java:320)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous9140782214737169436webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous9140782214737169436webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous9140782214737169436webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous9140782214737169436webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EleganceCastIronSystembyPolypipeProducts -->
+      </class> <!-- jenTest.GutteringImitaionCastIron -->
+      <class name="jenTest.Cladding">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.Cladding@2ab4bc72]" name="LoginTest" is-config="true" duration-ms="23074" started-at="2016-03-30T18:50:16Z" finished-at="2016-03-30T18:50:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="LoginTest" is-config="true" duration-ms="16070" started-at="2016-03-30T18:50:39Z" finished-at="2016-03-30T18:50:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="LoginTest" is-config="true" duration-ms="17634" started-at="2016-03-30T18:50:55Z" finished-at="2016-03-30T18:51:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.GutteringGalvanisedSteel@7bd7d6d6]" name="LoginTest" is-config="true" duration-ms="14578" started-at="2016-03-30T18:51:13Z" finished-at="2016-03-30T18:51:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="LoginTest" is-config="true" duration-ms="17722" started-at="2016-03-30T18:51:28Z" finished-at="2016-03-30T18:51:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="LoginTest" is-config="true" duration-ms="19494" started-at="2016-03-30T18:51:45Z" finished-at="2016-03-30T18:52:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="LoginTest" is-config="true" duration-ms="24672" started-at="2016-03-30T18:52:05Z" finished-at="2016-03-30T18:52:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="VgrooveEmbossedcladdingProducts()[pri:0, instance:jenTest.Cladding@2ab4bc72]" name="VgrooveEmbossedcladdingProducts" duration-ms="215252" started-at="2016-03-30T19:45:08Z" finished-at="2016-03-30T19:48:43Z">
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- VgrooveEmbossedcladdingProducts -->
-        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.Cladding@98e5da]" name="CloseBrowser" is-config="true" duration-ms="4074" started-at="2016-03-30T14:59:15Z" finished-at="2016-03-30T14:59:19Z">
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.Cladding@2ab4bc72]" name="CloseBrowser" is-config="true" duration-ms="5517" started-at="2016-03-30T21:26:42Z" finished-at="2016-03-30T21:26:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.FasciaSubProducts@5a59ca5e]" name="CloseBrowser" is-config="true" duration-ms="956" started-at="2016-03-30T21:26:48Z" finished-at="2016-03-30T21:26:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="CloseBrowser" is-config="true" duration-ms="650" started-at="2016-03-30T21:26:49Z" finished-at="2016-03-30T21:26:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.GutteringGalvanisedSteel@7bd7d6d6]" name="CloseBrowser" is-config="true" duration-ms="563" started-at="2016-03-30T21:26:49Z" finished-at="2016-03-30T21:26:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.GutteringImitaionCastIron@eadd4fb]" name="CloseBrowser" is-config="true" duration-ms="690" started-at="2016-03-30T21:26:50Z" finished-at="2016-03-30T21:26:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.GutteringPlastic@4e5ed836]" name="CloseBrowser" is-config="true" duration-ms="2182" started-at="2016-03-30T21:26:51Z" finished-at="2016-03-30T21:26:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseBrowser -->
+        <test-method status="PASS" signature="CloseBrowser()[pri:0, instance:jenTest.SoftitBoardsSubProducts@3de8f619]" name="CloseBrowser" is-config="true" duration-ms="1286" started-at="2016-03-30T21:26:53Z" finished-at="2016-03-30T21:26:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseBrowser -->
       </class> <!-- jenTest.Cladding -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="jenTest.GutteringCastAluminium">
+        <test-method status="FAIL" signature="CastAluminiumGuttersProducts()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="CastAluminiumGuttersProducts" duration-ms="123397" started-at="2016-03-30T21:13:59Z" finished-at="2016-03-30T21:16:02Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.03 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b4d99cbf-3f06-4830-b3cc-f8243e62fd2d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.03 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b4d99cbf-3f06-4830-b3cc-f8243e62fd2d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.GutteringCastAluminium.CastAluminiumGuttersProducts(GutteringCastAluminium.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CastAluminiumGuttersProducts -->
+        <test-method status="PASS" signature="VictorianOgeeCastAluminiumProducts()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="VictorianOgeeCastAluminiumProducts" duration-ms="213503" started-at="2016-03-30T21:16:02Z" finished-at="2016-03-30T21:19:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VictorianOgeeCastAluminiumProducts -->
+        <test-method status="FAIL" signature="MouldedNo46OgeeCastAluminiumProducts()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="MouldedNo46OgeeCastAluminiumProducts" duration-ms="91864" started-at="2016-03-30T21:19:36Z" finished-at="2016-03-30T21:21:08Z">
+          <exception class="org.openqa.selenium.ElementNotVisibleException">
+            <message>
+              <![CDATA[Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.05 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b4d99cbf-3f06-4830-b3cc-f8243e62fd2d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 60.05 seconds
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: b4d99cbf-3f06-4830-b3cc-f8243e62fd2d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at jenTest.GutteringCastAluminium.MouldedNo46OgeeCastAluminiumProducts(GutteringCastAluminium.java:225)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:821)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:773)
+	at org.testng.TestRunner.run(TestRunner.java:623)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1185)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1110)
+	at org.testng.TestNG.run(TestNG.java:1018)
+	at org.testng.TestNG.privateMain(TestNG.java:1325)
+	at org.testng.TestNG.main(TestNG.java:1294)
+Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Build info: version: '2.48.2', revision: '41bccdd', time: '2015-10-09 19:55:52'
+System info: host: 'sakthivel-PC', ip: '172.16.11.74', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_65'
+Driver info: driver.version: unknown
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Windows/TEMP/anonymous2201995141440676926webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotVisibleException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MouldedNo46OgeeCastAluminiumProducts -->
+        <test-method status="PASS" signature="BeadedHalfRoundCastAluminiumProducts()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="BeadedHalfRoundCastAluminiumProducts" duration-ms="176922" started-at="2016-03-30T21:21:08Z" finished-at="2016-03-30T21:24:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeadedHalfRoundCastAluminiumProducts -->
+        <test-method status="PASS" signature="BeadedDeepFlowCastAluminiumProducts()[pri:0, instance:jenTest.GutteringCastAluminium@740fb309]" name="BeadedDeepFlowCastAluminiumProducts" duration-ms="69538" started-at="2016-03-30T21:24:04Z" finished-at="2016-03-30T21:25:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BeadedDeepFlowCastAluminiumProducts -->
+      </class> <!-- jenTest.GutteringCastAluminium -->
+    </test> <!-- Angel Test -->
+  </suite> <!-- Angel Plastics Products -->
 </testng-results>
