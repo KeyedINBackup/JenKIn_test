@@ -140,6 +140,13 @@ TemporaryRainWaterPipeProduct=html/body/div[1]/div[2]/div/div/section/section/di
 #HotandColdPlumbingSubproducts
 PolyplumpPushFitProduct=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 *****************************************************************************************************************
+
+#Gutter & Fascia Accessories
+GutterAccessories=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
+FasciaAccessories=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img
+
+*****************************************************************************************************************
+
 #UnderGround
 110mmUnderGroundProducts=html/body/div[1]/div[2]/div/div/section/section/div[1]/figure/a/img
 PolystormModularWaterStorageProducts=html/body/div[1]/div[2]/div/div/section/section/div[2]/figure/a/img

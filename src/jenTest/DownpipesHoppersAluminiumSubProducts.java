@@ -3,6 +3,7 @@ package jenTest;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -15,6 +16,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -75,31 +77,38 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  if( n % 2 != 0){
+				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
-				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
-	          }
+				  //ScreenCapture();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  String ProEnd[]={"Outlet Adaptor", "Plinth Projection", "Drain Connector (black)", "76mm Plinth Projection (swaged)"};
+				  if(Arrays.asList(ProEnd).contains(Proname)){
+					  break;
+				  }
+				}
+			  }
 			  dr.navigate().to(prop.getProperty("RoundAluminiumPipesProductPage"));
 	  }
 	  }
@@ -129,31 +138,38 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
 				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  if( n % 2 != 0){
+				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
-				  ScreenCapture();
-				  dr.findElement(By.xpath(str7+n+str11)).click();
-				  dr.findElement(By.xpath(str7+n+str12)).click();
-	          }
+				  //ScreenCapture();
+				  dr.findElement(By.xpath(str7+r+str11)).click();
+				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  String ProEnd[]={"Connector to Drain", "Plinth Projection", "92.5 Deg Bend (reversible sideways projection)", "76mm Square Plinth Projection (swaged)"};
+				  if(Arrays.asList(ProEnd).contains(Proname)){
+					  break;
+				  }
+				}
+			  }
 			  dr.navigate().to(prop.getProperty("SquareAndRectangularAluminiumPipesProductPage"));
 	  }
 	  }
@@ -172,31 +188,38 @@ public class DownpipesHoppersAluminiumSubProducts{
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+FinalSubproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
-		  for(int n=3; n<=Subtotal; n++){
+		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
-          }
+			  //ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  String ProEnd="Scarborough Hopper";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 		  dr.navigate().to(prop.getProperty("CastAluminiumHoppersProductPage"));
   }
 	  
@@ -215,31 +238,38 @@ public class DownpipesHoppersAluminiumSubProducts{
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+FinalSubproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
-        }
+			  //ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  String ProEnd="The Windsor Lug";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 		  dr.navigate().to(prop.getProperty("OrnamentalFixingLugsProductPage"));
 }
 	
@@ -257,31 +287,38 @@ public class DownpipesHoppersAluminiumSubProducts{
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+FinalSubproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
-      }
+			  //ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  String ProEnd="Lion Head";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 		  dr.navigate().to(prop.getProperty("AluminiumPipesProductPage"));
 }
 	@Test(enabled=true,priority=6)
@@ -298,31 +335,44 @@ public class DownpipesHoppersAluminiumSubProducts{
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+FinalSubproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+n+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+n+str10));
+			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
-			  dr.findElement(By.xpath(str7+n+str11)).click();
-			  dr.findElement(By.xpath(str7+n+str12)).click();
-    }
+			  //ScreenCapture();
+			  dr.findElement(By.xpath(str7+r+str11)).click();
+			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  String ProEnd="Temporary Downpipe";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
 		  dr.navigate().to(prop.getProperty("Downpipes&HoppersProductPage"));
 }
+	
+	@AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
+	}
 }
