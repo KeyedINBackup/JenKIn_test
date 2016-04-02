@@ -1,20 +1,26 @@
 package jenTest;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -37,11 +43,23 @@ public class SiliconesCleanersGlues{
 	}
 	
 	public static void ScreenCapture() throws IOException{
+		File file=new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		FileInputStream input = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(input);
+		WebElement element=dr.findElement(By.xpath(prop.getProperty("ScreenElement")));
 		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		BufferedImage  fullImg = ImageIO.read(scrFile);
+		Point point = element.getLocation();
+		int eleWidth = element.getSize().getWidth();
+		int eleHeight = element.getSize().getHeight();
+		BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(), eleWidth, eleHeight);
+		ImageIO.write(eleScreenshot, "png", scrFile);
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
-	@Test(enabled=false,priority=1)
+	
+	@Test(enabled=true,priority=1)
 	  public void SiliconesProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -70,17 +88,18 @@ public class SiliconesCleanersGlues{
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1a");
+				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  if( n % 2 != 0){
+				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -92,15 +111,20 @@ public class SiliconesCleanersGlues{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
-				  ScreenCapture();
+				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
-		 }
+				  String ProEnd[]={"300ml White Silicone (budget)", "300ml Light Grey Soudal Silirub 2 Silicone", "380ml Black Arbosil Aluminium Gutter Sealant", "290ml CT1 (black)", "Silicone Lubricants"};
+				  if(Arrays.asList(ProEnd).contains(Proname)){
+					  break;
+				  }
+				}
+			  }
 		  dr.navigate().to(prop.getProperty("SiliconesProducts"));
 	}
 }
 	
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	  public void GluesAdhesivesProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -125,17 +149,18 @@ public class SiliconesCleanersGlues{
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  int r=n+1;
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1a");
+				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  if( n % 2 != 0){
+				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -147,10 +172,15 @@ public class SiliconesCleanersGlues{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
-				  ScreenCapture();
+				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
-		 }
+				  String ProEnd[]={"290ml Ubiflex High Tack Sealant", "125ml Solvent Weld Cement", "200ml Accelerator"};
+				  if(Arrays.asList(ProEnd).contains(Proname)){
+					  break;
+				  }
+				}
+			  }
 		  dr.navigate().to(prop.getProperty("SiliconesProducts"));
 	}
 }
@@ -169,17 +199,18 @@ public class SiliconesCleanersGlues{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -191,11 +222,16 @@ public class SiliconesCleanersGlues{
 			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
+			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
-		 }
-	}
+			  String ProEnd="300ml Soudal Gap Filler & Sealant (white)";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
+	    }
 	
 	@Test(enabled=true,priority=4)
 	  public void CleanersProducts() throws IOException, InterruptedException {
@@ -211,17 +247,18 @@ public class SiliconesCleanersGlues{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
-			  int r=n+1;
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1a");
+			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice");
+			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  if( n % 2 != 0){
+			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
@@ -233,9 +270,22 @@ public class SiliconesCleanersGlues{
 			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 			  String Price=ProductPrice.getText();
 			  System.out.println("The Added product price is:"+Price);
-			  ScreenCapture();
+			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
-		 }
-	}	
+			  String ProEnd="400ml Adhesive remover";
+			  if(ProEnd.equalsIgnoreCase(Proname)){
+				  break;
+			  }
+			}
+		  }
+		  dr.navigate().to(prop.getProperty("SiliconesCleanersGluesProductPage"));
+	    }	
+	
+	@AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
+
+	 }
 }

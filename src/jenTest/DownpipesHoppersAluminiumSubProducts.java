@@ -1,5 +1,6 @@
 package jenTest;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,10 +9,13 @@ import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import javax.imageio.ImageIO;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,7 +42,18 @@ public class DownpipesHoppersAluminiumSubProducts{
 			dr.switchTo().window(winhandle);
 	}
 	public static void ScreenCapture() throws IOException{
+		File file=new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		FileInputStream input = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(input);
+		WebElement element=dr.findElement(By.xpath(prop.getProperty("ScreenElement")));
 		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		BufferedImage  fullImg = ImageIO.read(scrFile);
+		Point point = element.getLocation();
+		int eleWidth = element.getSize().getWidth();
+		int eleHeight = element.getSize().getHeight();
+		BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(), eleWidth, eleHeight);
+		ImageIO.write(eleScreenshot, "png", scrFile);
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
@@ -86,7 +101,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -147,7 +162,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -197,7 +212,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -247,7 +262,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -296,7 +311,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -344,7 +359,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;

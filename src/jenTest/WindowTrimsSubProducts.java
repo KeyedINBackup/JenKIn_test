@@ -97,7 +97,7 @@ public class WindowTrimsSubProducts{
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -147,7 +147,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -196,7 +196,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -255,7 +255,7 @@ public class WindowTrimsSubProducts{
 				  String str8=prop.getProperty("Finalproductname_part2");
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -306,7 +306,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -355,7 +355,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -404,7 +404,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -453,7 +453,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -502,7 +502,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -551,7 +551,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -600,7 +600,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -650,7 +650,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -699,7 +699,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -748,7 +748,7 @@ public class WindowTrimsSubProducts{
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_1a");
+			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
