@@ -75,7 +75,8 @@ public class UserRegistration {
 		object.delay(1000);
 		object.keyPress(KeyEvent.VK_TAB);
 		object.keyRelease(KeyEvent.VK_TAB);
-		object.keyPress(KeyEvent.VK_ENTER);
+		object.keyPress(KeyEvent.VK_ENTER);	
+			
 		object.keyRelease(KeyEvent.VK_ENTER);
 		jse.executeScript("scroll(0,1000);");
 		TimeUnit.SECONDS.sleep(2);
