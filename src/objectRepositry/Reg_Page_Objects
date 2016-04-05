@@ -1,0 +1,16 @@
+# Registration page objects
+uname=html/body/div[1]/div[2]/div/div/section/form/div[1]/ul[1]/li[1]/input
+pass=html/body/div[1]/div[2]/div/div/section/form/div[1]/ul[1]/li[2]/input
+conpass=html/body/div[1]/div[2]/div/div/section/form/div[1]/ul[1]/li[3]/input
+fname=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[1]/input
+sname=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[2]/input
+comname=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[3]/input
+add1=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[4]/input
+add2=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[5]/input
+town=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[6]/input
+country=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[7]/input
+pcode=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[8]/input
+email=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[9]/input
+conEmail=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[10]/input
+phoneno=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[11]/input
+mobileno=html/body/div[1]/div[2]/div/div/section/form/div[2]/ul/li[12]/input

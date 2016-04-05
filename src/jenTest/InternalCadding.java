@@ -74,7 +74,6 @@ public class InternalCadding{
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
-		  System.out.println("***********************************************************************************************");
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();

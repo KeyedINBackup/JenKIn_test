@@ -1,20 +1,26 @@
 package jenTest;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -37,7 +43,18 @@ public class RoofingProducts{
 	}
 	
 	public static void ScreenCapture() throws IOException{
+		File file=new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
+		FileInputStream input = new FileInputStream(file);
+		Properties prop = new Properties();
+		prop.load(input);
+		WebElement element=dr.findElement(By.xpath(prop.getProperty("ScreenElement")));
 		File scrFile = ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
+		BufferedImage  fullImg = ImageIO.read(scrFile);
+		Point point = element.getLocation();
+		int eleWidth = element.getSize().getWidth();
+		int eleHeight = element.getSize().getHeight();
+		BufferedImage eleScreenshot= fullImg.getSubimage(point.getX(), point.getY(), eleWidth, eleHeight);
+		ImageIO.write(eleScreenshot, "png", scrFile);
 		String filename="Screenshot"+System.currentTimeMillis();
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
@@ -56,6 +73,7 @@ public class RoofingProducts{
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
+		  // php error in the 1 product. So , starting from 2 product
 		  for(int i=2;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
 			  String str2=prop.getProperty("subproduct_part2");
@@ -66,17 +84,18 @@ public class RoofingProducts{
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
 			  int Subtotal=FinalSubproducts.size();
-			  for(int n=1; n<=Subtotal; n++){
-				  int r=n+1;
+				  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1a");
+				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice");
+				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_1");
+				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  if( n % 2 != 0){
+				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
@@ -88,12 +107,22 @@ public class RoofingProducts{
 				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
 				  String Price=ProductPrice.getText();
 				  System.out.println("The Added product price is:"+Price);
-				  ScreenCapture();
+				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
-		 }
+				  String ProEnd[]={"Angled End Cap for Dry Slate Verge", "290ml Ubiflex High Tack Sealant", "225mm x 10 metre Flashband", "400mm Weathering Slate", "9 inch Backing Timber Fascia", "310ml Lead Sheet Silicone", "50mm x 50mm Arris Rail", "Waterstop Roof Coating"};
+				  if(Arrays.asList(ProEnd).contains(Proname)){
+					  break;
+				  }
+				}
+			  }
 		  dr.navigate().to(prop.getProperty("RoofingProductsPage"));
 	}
 } 
-	
+	@AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
+
+	 }
 }
