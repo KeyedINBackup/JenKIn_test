@@ -87,6 +87,7 @@ public class PlumbingWasteSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -103,6 +104,7 @@ public class PlumbingWasteSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Solpan 90 Deg S (solvent weld spigot)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -146,6 +148,7 @@ public class PlumbingWasteSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -162,6 +165,7 @@ public class PlumbingWasteSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="Universal Waste Coupler";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -207,6 +211,7 @@ public class PlumbingWasteSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -223,6 +228,7 @@ public class PlumbingWasteSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Waste Pipe Shroud", "40mm Coupler Adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -272,6 +278,7 @@ public class PlumbingWasteSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -288,6 +295,7 @@ public class PlumbingWasteSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Screwed Access Plug", "Reducer (from 50mm to 32mm)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -333,6 +341,7 @@ public class PlumbingWasteSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -349,6 +358,7 @@ public class PlumbingWasteSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Reducer (from 40mm to 32mm)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -394,6 +404,7 @@ public class PlumbingWasteSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -410,6 +421,7 @@ public class PlumbingWasteSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Reducer (from 50mm to 32mm)", "Reducer (from 50mm to 40mm)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -445,6 +457,7 @@ public class PlumbingWasteSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -461,6 +474,7 @@ public class PlumbingWasteSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Byelaw 60 Kit"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -494,6 +508,7 @@ public class PlumbingWasteSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -510,6 +525,7 @@ public class PlumbingWasteSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"PVC Tundish Bowl"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -542,6 +558,7 @@ public class PlumbingWasteSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -558,6 +575,7 @@ public class PlumbingWasteSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"50mm Anti-Syphon Unit to ABS Push Fit Spigot"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -601,6 +619,7 @@ public class PlumbingWasteSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -617,6 +636,7 @@ public class PlumbingWasteSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"32mm x 90 Deg Swivel Elbow", "40mm Waste to Trap Connector", "32mm Chromium Plated Extension Tube & Wall Flange"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;

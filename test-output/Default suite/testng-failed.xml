@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.TerrainRoofBalconyOutletsproducts">
+      <class name="jenTest.Cladding">
         <methods>
+          <include name="FeatherEdgeEMbossedcladdingProducts"/>
           <include name="LoginTest"/>
           <include name="CloseBrowser"/>
-          <include name="TerrainRoofBalconyOutletsProduct"/>
         </methods>
-      </class> <!-- jenTest.TerrainRoofBalconyOutletsproducts -->
+      </class> <!-- jenTest.Cladding -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

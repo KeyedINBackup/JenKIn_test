@@ -98,6 +98,7 @@ public class SiliconesCleanersGlues{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -114,6 +115,7 @@ public class SiliconesCleanersGlues{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"300ml White Silicone (budget)", "300ml Light Grey Soudal Silirub 2 Silicone", "380ml Black Arbosil Aluminium Gutter Sealant", "290ml CT1 (black)", "Silicone Lubricants"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -159,6 +161,7 @@ public class SiliconesCleanersGlues{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -175,6 +178,7 @@ public class SiliconesCleanersGlues{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"290ml Ubiflex High Tack Sealant", "125ml Solvent Weld Cement", "200ml Accelerator"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -209,6 +213,7 @@ public class SiliconesCleanersGlues{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -225,6 +230,7 @@ public class SiliconesCleanersGlues{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="300ml Soudal Gap Filler & Sealant (white)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -257,6 +263,7 @@ public class SiliconesCleanersGlues{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -273,6 +280,7 @@ public class SiliconesCleanersGlues{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="400ml Adhesive remover";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;

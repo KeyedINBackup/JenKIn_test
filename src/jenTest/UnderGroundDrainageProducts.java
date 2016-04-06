@@ -99,6 +99,7 @@ public class UnderGroundDrainageProducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -115,6 +116,7 @@ public class UnderGroundDrainageProducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Temporary Pipe Cap", "Rectangular Black Polypropylene Grid", "Puddle Flange", "320mm Recessed Paviour PP Cover & Frame", "Connector to Drain", "Ground Guard Tile"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -149,6 +151,7 @@ public class UnderGroundDrainageProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -165,6 +168,7 @@ public class UnderGroundDrainageProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Strata Check Plus Geo Textile (100 gsm)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -197,6 +201,7 @@ public class UnderGroundDrainageProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -213,6 +218,7 @@ public class UnderGroundDrainageProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Cleaning Fluid"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -245,6 +251,7 @@ public class UnderGroundDrainageProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -261,6 +268,7 @@ public class UnderGroundDrainageProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"160mm to 110mm Level Invert Reducer"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;

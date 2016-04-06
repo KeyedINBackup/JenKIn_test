@@ -60,7 +60,7 @@ public class Cladding{
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
 	
-	@Test(enabled=false,priority=1)
+	@Test(enabled=true,priority=1)
 	  public void StandardShiplapProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -100,6 +100,7 @@ public class Cladding{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -116,6 +117,7 @@ public class Cladding{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Single Butt Joint for Double Shiplap (white)", "60mm x 15mm Cladding Vent Strip", "30mm x 15mm Cladding Vent Srip"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -126,7 +128,7 @@ public class Cladding{
 	  }
 	  }
 	 
-	@Test(enabled=false,priority=2)
+	@Test(enabled=true,priority=2)
 	  public void VgroovecladdingProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);
@@ -161,6 +163,7 @@ public class Cladding{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -177,6 +180,7 @@ public class Cladding{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Corner Trim (female)", "30mm x 15mm Cladding Vent Srip"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -188,7 +192,7 @@ public class Cladding{
 	  }
 	
 	  
-	@Test(enabled=false,priority=3)
+	@Test(enabled=true,priority=3)
 	  public void FeatherEdgeSmoothProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -212,6 +216,7 @@ public class Cladding{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -228,6 +233,7 @@ public class Cladding{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Corner Trim (female)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -237,7 +243,7 @@ public class Cladding{
 			  dr.navigate().to(prop.getProperty("CladdigMainPage"));
 	  }
 
-	@Test(enabled=false,priority=4)
+	@Test(enabled=true,priority=4)
 	  public void DoubleEMbossedcladdingProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -273,6 +279,7 @@ public class Cladding{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -289,6 +296,7 @@ public class Cladding{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"100mm x 50mm Angle Trim (white)", "100mm x 50mm Angle Trim (sand)", "100mm x 50mm Angle Trim (grey)", "300ml Cream Fixology Silicone", "100mm x 50mm Angle Trim (camel)", "100mm x 50mm Angle Trim (anthracite black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -299,7 +307,7 @@ public class Cladding{
 	  }
 	}
 	
-	@Test(enabled=false,priority=5)
+	@Test(enabled=true,priority=5)
 	  public void FeatherEdgeEMbossedcladdingProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -335,6 +343,7 @@ public class Cladding{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -351,6 +360,7 @@ public class Cladding{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"100mm x 50mm Angle Trim (white)", "100mm x 50mm Angle Trim (sand)", "100mm x 50mm Angle Trim (grey)", "300ml Cream Fixology Silicone", "100mm x 50mm Angle Trim (camel)", "100mm x 50mm Angle Trim (anthracite black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -397,6 +407,7 @@ public class Cladding{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -413,6 +424,7 @@ public class Cladding{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"100mm x 50mm Angle Trim (white)", "100mm x 50mm Angle Trim (sand)", "100mm x 50mm Angle Trim (grey)", "300ml Cream Fixology Silicone", "100mm x 50mm Angle Trim (camel)", "100mm x 50mm Angle Trim (anthracite black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;

@@ -102,6 +102,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -118,6 +119,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Outlet Adaptor", "Plinth Projection", "Drain Connector (black)", "76mm Plinth Projection (swaged)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -163,6 +165,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -179,6 +182,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Connector to Drain", "Plinth Projection", "92.5 Deg Bend (reversible sideways projection)", "76mm Square Plinth Projection (swaged)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -213,6 +217,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -229,6 +234,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Scarborough Hopper";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -263,6 +269,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -279,6 +286,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="The Windsor Lug";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -312,6 +320,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -328,6 +337,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Lion Head";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -360,6 +370,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -376,6 +387,7 @@ public class DownpipesHoppersAluminiumSubProducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Temporary Downpipe";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;

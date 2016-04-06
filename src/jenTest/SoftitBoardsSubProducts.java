@@ -99,6 +99,7 @@ public class SoftitBoardsSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -115,6 +116,7 @@ public class SoftitBoardsSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="Start & Edge Trim (white)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -161,6 +163,7 @@ public class SoftitBoardsSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -177,6 +180,7 @@ public class SoftitBoardsSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Start & Edge Trim (black ash)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -222,6 +226,7 @@ public class SoftitBoardsSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -238,6 +243,7 @@ public class SoftitBoardsSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"300ml Light Grey Soudal Silirub 2 Silicone", "300ml Medium Grey Soudal Silirub 2 Silicone", "70mm Soffit Vent (anthracite 7016)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -283,6 +289,7 @@ public class SoftitBoardsSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -299,6 +306,7 @@ public class SoftitBoardsSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Start & Edge Trim (mahogany)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -344,6 +352,7 @@ public class SoftitBoardsSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -360,6 +369,7 @@ public class SoftitBoardsSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Start & Edge Trim (golden oak)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -406,6 +416,7 @@ public class SoftitBoardsSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -422,6 +433,7 @@ public class SoftitBoardsSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Start & Edge Trim (rosewood)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -467,6 +479,7 @@ public class SoftitBoardsSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -483,6 +496,7 @@ public class SoftitBoardsSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="Soffit Joiner (irish oak)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -518,6 +532,7 @@ public class SoftitBoardsSubProducts {
 		  String str10=prop.getProperty("Finalproductprice_1");
 		  String str11=prop.getProperty("FinalQuantity");
 		  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+		  String str13=prop.getProperty("popupClose");
 		  if( n % 2 != 0){
 		  int r=n+1;
 		  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -534,6 +549,7 @@ public class SoftitBoardsSubProducts {
 		  //ScreenCapture();
 		  dr.findElement(By.xpath(str7+r+str11)).click();
 		  dr.findElement(By.xpath(str7+r+str12)).click();
+		  dr.findElement(By.xpath(str5+r+str13)).click();
 		  String ProEnd="300ml Chartwell Green Fixology Silicone";
 		  if(ProEnd.equalsIgnoreCase(Proname)){
 			  break;
@@ -569,6 +585,7 @@ public class SoftitBoardsSubProducts {
 		  String str10=prop.getProperty("Finalproductprice_1");
 		  String str11=prop.getProperty("FinalQuantity");
 		  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+		  String str13=prop.getProperty("popupClose");
 		  if( n % 2 != 0){
 		  int r=n+1;
 		  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -585,6 +602,7 @@ public class SoftitBoardsSubProducts {
 		  //ScreenCapture();
 		  dr.findElement(By.xpath(str7+r+str11)).click();
 		  dr.findElement(By.xpath(str7+r+str12)).click();
+		  dr.findElement(By.xpath(str5+r+str13)).click();
 		  String ProEnd="Starter Trim (brown)";
 		  if(ProEnd.equalsIgnoreCase(Proname)){
 			  break;
@@ -619,6 +637,7 @@ public class SoftitBoardsSubProducts {
 		  String str10=prop.getProperty("Finalproductprice_1");
 		  String str11=prop.getProperty("FinalQuantity");
 		  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+		  String str13=prop.getProperty("popupClose");
 		  if( n % 2 != 0){
 		  int r=n+1;
 		  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -635,6 +654,7 @@ public class SoftitBoardsSubProducts {
 		  //ScreenCapture();
 		  dr.findElement(By.xpath(str7+r+str11)).click();
 		  dr.findElement(By.xpath(str7+r+str12)).click();
+		  dr.findElement(By.xpath(str5+r+str13)).click();
 		  String ProEnd="300ml Cream Fixology Silicone";
 		  if(ProEnd.equalsIgnoreCase(Proname)){
 			  break;
@@ -669,6 +689,7 @@ public class SoftitBoardsSubProducts {
 		  String str10=prop.getProperty("Finalproductprice_1");
 		  String str11=prop.getProperty("FinalQuantity");
 		  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+		  String str13=prop.getProperty("popupClose");
 		  if( n % 2 != 0){
 		  int r=n+1;
 		  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -685,6 +706,7 @@ public class SoftitBoardsSubProducts {
 		  //ScreenCapture();
 		  dr.findElement(By.xpath(str7+r+str11)).click();
 		  dr.findElement(By.xpath(str7+r+str12)).click();
+		  dr.findElement(By.xpath(str5+r+str13)).click();
 		  String ProEnd="Starter Trim (black)";
 		  if(ProEnd.equalsIgnoreCase(Proname)){
 			  break;
@@ -719,6 +741,7 @@ public class SoftitBoardsSubProducts {
 		  String str10=prop.getProperty("Finalproductprice_1");
 		  String str11=prop.getProperty("FinalQuantity");
 		  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+		  String str13=prop.getProperty("popupClose");
 		  if( n % 2 != 0){
 		  int r=n+1;
 		  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -735,6 +758,7 @@ public class SoftitBoardsSubProducts {
 		  //ScreenCapture();
 		  dr.findElement(By.xpath(str7+r+str11)).click();
 		  dr.findElement(By.xpath(str7+r+str12)).click();
+		  dr.findElement(By.xpath(str5+r+str13)).click();
 		  String ProEnd="70mm Soffit Vent (light oak)";
 		  if(ProEnd.equalsIgnoreCase(Proname)){
 			  break;
@@ -769,6 +793,7 @@ public class SoftitBoardsSubProducts {
 		  String str10=prop.getProperty("Finalproductprice_1");
 		  String str11=prop.getProperty("FinalQuantity");
 		  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+		  String str13=prop.getProperty("popupClose");
 		  if( n % 2 != 0){
 		  int r=n+1;
 		  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -785,6 +810,7 @@ public class SoftitBoardsSubProducts {
 		  //ScreenCapture();
 		  dr.findElement(By.xpath(str7+r+str11)).click();
 		  dr.findElement(By.xpath(str7+r+str12)).click();
+		  dr.findElement(By.xpath(str5+r+str13)).click();
 		  String ProEnd="300ml Cream Fixology Silicone";
 		  if(ProEnd.equalsIgnoreCase(Proname)){
 			  break;

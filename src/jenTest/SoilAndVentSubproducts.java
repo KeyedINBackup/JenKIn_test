@@ -107,6 +107,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -123,6 +124,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"110mm Strap Boss (open)", "110mm Socket Plug", "Trapped Floor Gully (top part only)", "Backplate (black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -168,6 +170,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -184,6 +187,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Single Socket Connector (black)", "110mm Access Saddle", "Internal Drain Connector", "Backplate (black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -234,6 +238,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -250,6 +255,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"110mm Strap Boss (open)", "110mm Socket Plug", "Trapped Floor Gully (top part only)", "Backplate (grey)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -295,6 +301,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -311,6 +318,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Double Socket 3 Way Bossed Pipe", "110mm Socket Plug", "Trapped Floor Gully (top part only)", "Metal Drive in Spike"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -361,6 +369,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -377,6 +386,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"110mm Strap Boss (open)", "110mm Socket Plug", "Trapped Floor Gully (top part only)", "Backplate (brown)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -411,6 +421,7 @@ public class SoilAndVentSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -427,6 +438,7 @@ public class SoilAndVentSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Trapped Floor Gully (top part only)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -460,6 +472,7 @@ public class SoilAndVentSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -476,6 +489,7 @@ public class SoilAndVentSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"110mm Vent Terminal (black floplast)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -524,6 +538,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -540,6 +555,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Rainwater adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -585,6 +601,7 @@ public class SoilAndVentSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -601,6 +618,7 @@ public class SoilAndVentSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Rainwater adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -635,6 +653,7 @@ public class SoilAndVentSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -651,6 +670,7 @@ public class SoilAndVentSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Rainwater adaptor"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -684,6 +704,7 @@ public class SoilAndVentSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -700,6 +721,7 @@ public class SoilAndVentSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Trapped Floor Gully (top part only)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;

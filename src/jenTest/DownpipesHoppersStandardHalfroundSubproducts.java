@@ -107,6 +107,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -123,6 +124,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Outlet Adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -168,6 +170,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -184,6 +187,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Long Hose Rainwater Diverter Kit (black)", "Extended Backplate (brown)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -229,6 +233,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -245,6 +250,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Rainwater adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -290,6 +296,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -306,6 +313,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Drain Connector (black)", "110mm Grey Drain Connector"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -356,6 +364,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -372,6 +381,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Outlet Adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -417,6 +427,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -433,6 +444,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Long Hose Rainwater Diverter Kit (black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -478,6 +490,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -494,6 +507,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Access Pipe 75mm (terr black)", "75mm Square Branch (terr white)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -539,6 +553,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -555,6 +570,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Rainwater adaptor"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -600,6 +616,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -616,6 +633,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Drain Connector (black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -650,6 +668,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -666,6 +685,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"Socket Adaptor (82mm x 68mm)"};
 			  if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -715,6 +735,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -731,6 +752,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"Connector to Drain"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -776,6 +798,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -792,6 +815,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="Rainwater adaptor (80mm -110mm)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -837,6 +861,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -853,6 +878,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="110mm Single Socket Access Pipe (black floplast)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;

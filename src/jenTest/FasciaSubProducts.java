@@ -98,6 +98,7 @@ public class FasciaSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -114,6 +115,7 @@ public class FasciaSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd[]={"135 Deg Internal Square/Ogee Fascia Angle (white)", "500mm Bullnose Internal Fascia Corner (white)", "300mm Fascia Joiner (white)"};
 			   if(Arrays.asList(ProEnd).contains(Proname)){
 				  break;
@@ -160,6 +162,7 @@ public class FasciaSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -176,6 +179,7 @@ public class FasciaSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="70mm Decorative Architrave (black woodgrain)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;
@@ -222,6 +226,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -238,6 +243,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="300ml Light Grey Soudal Silirub 2 Silicone";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -284,6 +290,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -300,6 +307,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="300ml Medium Grey Soudal Silirub 2 Silicone";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -345,6 +353,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -361,6 +370,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="70mm Soffit Vent (anthracite 7016)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -407,6 +417,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -423,6 +434,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="70mm Soffit Vent (anthracite 7016)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -469,6 +481,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -485,6 +498,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"500mm External Fascia Corner(rosewood)", "300mm External Corner 135 Deg (rosewood)", "Internal Ogee Fascia Corner (rosewood)", "Double Ended Ogee Fascia Joiner (rosewood)"};
 				   if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -531,6 +545,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -547,6 +562,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"500mm External Fascia Corner(mahogany)", "300mm External Corner 135 Deg (mahogany)", "Internal Ogee Fascia Corner (mahogany)", "Double Ended Ogee Fascia Joiner (mahogany)"};
 				   if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -593,6 +609,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -609,6 +626,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"500mm External Fascia Corner(golden oak)", "300mm External Corner 135 Deg (golden oak)", "Internal Ogee Fascia Corner (golden oak)", "Double Ended Ogee Fascia Joiner (golden oak)"};
 				   if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -655,6 +673,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -671,6 +690,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="Start & Edge Trim (irish oak)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -717,6 +737,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -733,6 +754,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="300ml Chartwell Green Fixology Silicone";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -779,6 +801,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -795,6 +818,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd="300ml Cream Fixology Silicone";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
@@ -841,6 +865,7 @@ public class FasciaSubProducts {
 				  String str10=prop.getProperty("Finalproductprice_1");
 				  String str11=prop.getProperty("FinalQuantity");
 				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str13=prop.getProperty("popupClose");
 				  if( n % 2 != 0){
 				  int r=n+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -857,6 +882,7 @@ public class FasciaSubProducts {
 				  //ScreenCapture();
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  dr.findElement(By.xpath(str5+r+str13)).click();
 				  String ProEnd[]={"300mm M-Boss Fascia Joiner (black)", "300mm M-Boss Fascia Joiner (white)"};
 				   if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
@@ -892,6 +918,7 @@ public class FasciaSubProducts {
 			  String str10=prop.getProperty("Finalproductprice_1");
 			  String str11=prop.getProperty("FinalQuantity");
 			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str13=prop.getProperty("popupClose");
 			  if( n % 2 != 0){
 			  int r=n+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
@@ -908,6 +935,7 @@ public class FasciaSubProducts {
 			  //ScreenCapture();
 			  dr.findElement(By.xpath(str7+r+str11)).click();
 			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  dr.findElement(By.xpath(str5+r+str13)).click();
 			  String ProEnd="150mm Wide Tudor Board (mahogany)";
 			  if(ProEnd.equalsIgnoreCase(Proname)){
 				  break;

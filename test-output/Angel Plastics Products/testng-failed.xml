@@ -12,9 +12,9 @@
       </class> <!-- jenTest.GutteringGalvanisedSteel -->
       <class name="jenTest.Cladding">
         <methods>
+          <include name="FeatherEdgeEMbossedcladdingProducts"/>
           <include name="LoginTest"/>
           <include name="CloseBrowser"/>
-          <include name="VgrooveEmbossedcladdingProducts"/>
         </methods>
       </class> <!-- jenTest.Cladding -->
       <class name="jenTest.FasciaSubProducts">
