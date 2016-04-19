@@ -1,106 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Angel Plastics Products]">
-  <test name="Angel Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.GutteringGalvanisedSteel">
-        <methods>
-          <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
-          <include name="BeadedDeepFlowCastAluminiumProducts"/>
-        </methods>
-      </class> <!-- jenTest.GutteringGalvanisedSteel -->
-      <class name="jenTest.Cladding">
-        <methods>
-          <include name="FeatherEdgeEMbossedcladdingProducts"/>
-          <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
-        </methods>
-      </class> <!-- jenTest.Cladding -->
       <class name="jenTest.FasciaSubProducts">
         <methods>
-          <include name="BlackFasciaProducts"/>
-          <include name="LightGreyFasciaProducts"/>
-          <include name="AnthraciteGreyFasciaProducts"/>
-          <include name="MBossFasciaProducts"/>
-          <include name="IrishOakFasciaProducts"/>
-          <include name="RosewoodFasciaProducts"/>
-          <include name="AnthraciteWoodGreyFasciaProducts"/>
-          <include name="MahoganyFasciaProducts"/>
-          <include name="ChartwellGreenFasciaProducts"/>
-          <include name="GoldenOakFasciaProducts"/>
-          <include name="CloseBrowser"/>
-          <include name="ThickFlatTudorBoardProducts"/>
-          <include name="HazyGreyFasciaProducts"/>
-          <include name="WhiteFasciaProducts"/>
           <include name="LoginTest"/>
-          <include name="CreamFasciaProducts"/>
+          <include name="WhiteFasciaProducts"/>
+          <include name="CheckoutProcess"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
-      <class name="jenTest.GutteringCastAluminium">
-        <methods>
-          <include name="CloseBrowser"/>
-          <include name="BeadedHalfRoundCastAluminiumProducts"/>
-          <include name="VictorianOgeeCastAluminiumProducts"/>
-          <include name="BeadedDeepFlowCastAluminiumProducts"/>
-          <include name="MouldedNo46OgeeCastAluminiumProducts"/>
-          <include name="LoginTest"/>
-          <include name="CastAluminiumGuttersProducts"/>
-        </methods>
-      </class> <!-- jenTest.GutteringCastAluminium -->
-      <class name="jenTest.GutteringImitaionCastIron">
-        <methods>
-          <include name="StandardHalfRoundProducts"/>
-          <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
-          <include name="DeepCapacityRoundbyBrettMartinProducts"/>
-          <include name="MouldedOgeeGutterbyBrettMartinProducts"/>
-          <include name="IndustrialHalfRoundbyBrettMartinProducts"/>
-          <include name="EleganceCastIronSystembyPolypipeProducts"/>
-        </methods>
-      </class> <!-- jenTest.GutteringImitaionCastIron -->
-      <class name="jenTest.SoftitBoardsSubProducts">
-        <methods>
-          <include name="GreySoftitProducts"/>
-          <include name="ChartwellGreenSoftitProducts"/>
-          <include name="BlackwoodGrainSoftitProducts"/>
-          <include name="CreamwoodGrainProducts"/>
-          <include name="MahoganySoftitProducts"/>
-          <include name="RoseWoodgrainSoftitProducts"/>
-          <include name="CloseBrowser"/>
-          <include name="LoginTest"/>
-          <include name="WhiteSoftitProducts"/>
-          <include name="SolidBlackColourSoftitProducts"/>
-          <include name="ventingProducts"/>
-          <include name="SolidBrownColourSoftitProducts"/>
-          <include name="IrishOakSoftitProducts"/>
-          <include name="GoldenOakWoodgrainSoftitProducts"/>
-          <include name="SolidCreamColourSoftitProducts"/>
-        </methods>
-      </class> <!-- jenTest.SoftitBoardsSubProducts -->
-      <class name="jenTest.GutteringPlastic">
-        <methods>
-          <include name="MinlineGutteringProducts"/>
-          <include name="CornicheSquarelineGutteringProducts"/>
-          <include name="CapDeepCapacityGutterSystemProductPage"/>
-          <include name="StandardHalfRoundProducts"/>
-          <include name="PolyFlowGutterinProducts"/>
-          <include name="SquareLineGutterinProducts"/>
-          <include name="TerrainPremiumRangeProducts"/>
-          <include name="RapidflowDeepflowGutteringProducts"/>
-          <include name="IndustrialGutteringProductPage"/>
-          <include name="AccessoriesProductPage"/>
-          <include name="VictorianOgeeGutterinProducts"/>
-          <include name="StreamlineSquareGutteringProductPage"/>
-          <include name="SwishAnthraciteGreyRAL7016GutteringProducts"/>
-          <include name="OmegaOgeeGutteringProductPage"/>
-          <include name="SovereignMouldedOgeePrducts"/>
-          <include name="CloseBrowser"/>
-          <include name="LoginTest"/>
-          <include name="FloplastTradeRangeProducts"/>
-          <include name="XtrafloGutterSystemProductPage"/>
-        </methods>
-      </class> <!-- jenTest.GutteringPlastic -->
     </classes>
-  </test> <!-- Angel Test(failed) -->
-</suite> <!-- Failed suite [Angel Plastics Products] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

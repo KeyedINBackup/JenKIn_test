@@ -816,7 +816,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Rainwater adaptor (80mm -110mm)";
+				  String ProEnd="Rainwater adaptor (80mm - 110mm)";
 				  if(ProEnd.equalsIgnoreCase(Proname)){
 					  break;
 				  }

@@ -393,8 +393,9 @@ public class SoilAndVentSubproducts{
 				  }
 				}
 			  }
-			  dr.navigate().to(prop.getProperty("Brown110mmSoilProductpage"));
+			  dr.navigate().to(prop.getProperty("Pushfit/RingsealBrownSoilProductPage"));
 	  }
+		  dr.navigate().to(prop.getProperty("Brown110mmSoilProductpage")); 
 	  }
 	
 	@Test(enabled=true,priority=6)

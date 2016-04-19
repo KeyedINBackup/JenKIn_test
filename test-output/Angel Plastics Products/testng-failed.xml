@@ -5,16 +5,18 @@
     <classes>
       <class name="jenTest.GutteringGalvanisedSteel">
         <methods>
-          <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
           <include name="BeadedDeepFlowCastAluminiumProducts"/>
         </methods>
       </class> <!-- jenTest.GutteringGalvanisedSteel -->
       <class name="jenTest.Cladding">
         <methods>
           <include name="FeatherEdgeEMbossedcladdingProducts"/>
+          <include name="StandardShiplapProducts"/>
+          <include name="FeatherEdgeSmoothProducts"/>
           <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
+          <include name="VgroovecladdingProducts"/>
+          <include name="VgrooveEmbossedcladdingProducts"/>
+          <include name="DoubleEMbossedcladdingProducts"/>
         </methods>
       </class> <!-- jenTest.Cladding -->
       <class name="jenTest.FasciaSubProducts">
@@ -29,30 +31,24 @@
           <include name="MahoganyFasciaProducts"/>
           <include name="ChartwellGreenFasciaProducts"/>
           <include name="GoldenOakFasciaProducts"/>
-          <include name="CloseBrowser"/>
           <include name="ThickFlatTudorBoardProducts"/>
           <include name="HazyGreyFasciaProducts"/>
           <include name="WhiteFasciaProducts"/>
-          <include name="LoginTest"/>
           <include name="CreamFasciaProducts"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
       <class name="jenTest.GutteringCastAluminium">
         <methods>
-          <include name="CloseBrowser"/>
           <include name="BeadedHalfRoundCastAluminiumProducts"/>
           <include name="VictorianOgeeCastAluminiumProducts"/>
           <include name="BeadedDeepFlowCastAluminiumProducts"/>
           <include name="MouldedNo46OgeeCastAluminiumProducts"/>
-          <include name="LoginTest"/>
           <include name="CastAluminiumGuttersProducts"/>
         </methods>
       </class> <!-- jenTest.GutteringCastAluminium -->
       <class name="jenTest.GutteringImitaionCastIron">
         <methods>
           <include name="StandardHalfRoundProducts"/>
-          <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
           <include name="DeepCapacityRoundbyBrettMartinProducts"/>
           <include name="MouldedOgeeGutterbyBrettMartinProducts"/>
           <include name="IndustrialHalfRoundbyBrettMartinProducts"/>
@@ -67,8 +63,6 @@
           <include name="CreamwoodGrainProducts"/>
           <include name="MahoganySoftitProducts"/>
           <include name="RoseWoodgrainSoftitProducts"/>
-          <include name="CloseBrowser"/>
-          <include name="LoginTest"/>
           <include name="WhiteSoftitProducts"/>
           <include name="SolidBlackColourSoftitProducts"/>
           <include name="ventingProducts"/>
@@ -95,8 +89,6 @@
           <include name="SwishAnthraciteGreyRAL7016GutteringProducts"/>
           <include name="OmegaOgeeGutteringProductPage"/>
           <include name="SovereignMouldedOgeePrducts"/>
-          <include name="CloseBrowser"/>
-          <include name="LoginTest"/>
           <include name="FloplastTradeRangeProducts"/>
           <include name="XtrafloGutterSystemProductPage"/>
         </methods>

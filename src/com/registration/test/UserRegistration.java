@@ -33,7 +33,7 @@ public class UserRegistration {
 		Properties prop = new Properties();
 		prop.load(input);
 		dr=new FirefoxDriver();
-		for(int i=1; i<=22; i++){
+		for(int i=1; i<=25; i++){
 		dr.navigate().to("http://dev.angelplastics.co.uk/");
 		dr.manage().window().maximize();
 		dr.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
@@ -46,7 +46,7 @@ public class UserRegistration {
 		String surname=DataDrivenTest.getExcelData(i, 4);
 		String companyname=DataDrivenTest.getExcelData(i, 5);
 		String address1=DataDrivenTest.getExcelData(i, 6);
-		String address2=DataDrivenTest.getExcelData(i, 7);
+		String address2=DataDrivenTest.getExcelData(i, 7);	
 		String town=DataDrivenTest.getExcelData(i, 8);
 		String country=DataDrivenTest.getExcelData(i, 9);
 		String postcodenumber=DataDrivenTest.getExcelData(i, 10);

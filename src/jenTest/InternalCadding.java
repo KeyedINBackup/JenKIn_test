@@ -115,7 +115,7 @@ public class InternalCadding{
 				  dr.findElement(By.xpath(str7+r+str11)).click();
 				  dr.findElement(By.xpath(str7+r+str12)).click();
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Neptune Mega Panel (black sparkle)", "Neptune Mega Panel (White sparkle)", "2.7 Mt Black Gloss Marble (T & G Joint/Recessed Silver Strip)", "2.6 Mt Neptune 2 Part Corner Trim (Cream White)"};
+				  String ProEnd[]={"Neptune Mega Panel (black sparkle)", "Neptune Wall Panel (white sparkle)", "2.7 Mt Black Gloss Marble (T & G Joint/Recessed Silver Strip)", "2.6 Mt Neptune 2 Part Corner Trim (Black)"};
 				  if(Arrays.asList(ProEnd).contains(Proname)){
 					  break;
 				  }

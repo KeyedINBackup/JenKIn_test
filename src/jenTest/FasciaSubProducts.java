@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -20,6 +21,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -126,7 +128,7 @@ public class FasciaSubProducts {
   }
   }
   
-  @Test(enabled=true,priority=2)
+  @Test(enabled=false,priority=2)
   public void BlackFasciaProducts() throws IOException, InterruptedException {
 	  
 	  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -190,7 +192,7 @@ public class FasciaSubProducts {
   }
   }
 	  
-	  @Test(enabled=true,priority=3)
+	  @Test(enabled=false,priority=3)
 	  public void LightGreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -254,7 +256,7 @@ public class FasciaSubProducts {
 	   }
 	  }
   
-	  @Test(enabled=true,priority=4)
+	  @Test(enabled=false,priority=4)
 	  public void HazyGreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -318,7 +320,7 @@ public class FasciaSubProducts {
 	   }
 	  }
 	  
-	  @Test(enabled=true,priority=5)
+	  @Test(enabled=false,priority=5)
 	  public void AnthraciteGreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -381,7 +383,7 @@ public class FasciaSubProducts {
 	   }
 	  }  
 	  
-	  @Test(enabled=true,priority=6)
+	  @Test(enabled=false,priority=6)
 	  public void AnthraciteWoodGreyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -445,7 +447,7 @@ public class FasciaSubProducts {
 	   }
 	  }  
 	  	  
-	  @Test(enabled=true,priority=7)
+	  @Test(enabled=false,priority=7)
 	  public void RosewoodFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -509,7 +511,7 @@ public class FasciaSubProducts {
 	  }
 	  }
   
-	  @Test(enabled=true,priority=8)
+	  @Test(enabled=false,priority=8)
 	  public void MahoganyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -573,7 +575,7 @@ public class FasciaSubProducts {
 	  }
 	  }
 	  
-	  @Test(enabled=true,priority=9)
+	  @Test(enabled=false,priority=9)
 	  public void GoldenOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -637,7 +639,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=10)
+	  @Test(enabled=false,priority=10)
 	  public void IrishOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -701,7 +703,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=11)
+	  @Test(enabled=false,priority=11)
 	  public void ChartwellGreenFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -765,7 +767,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=12)
+	  @Test(enabled=false,priority=12)
 	  public void CreamFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -829,7 +831,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=13)
+	  @Test(enabled=false,priority=13)
 	  public void MBossFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -893,7 +895,7 @@ public class FasciaSubProducts {
 	  }
 	  } 
 	  
-	  @Test(enabled=true,priority=14)
+	  @Test(enabled=false,priority=14)
 	  public void ThickFlatTudorBoardProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -945,9 +947,39 @@ public class FasciaSubProducts {
 			  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  }
 	  @AfterTest
-	  public static void CloseBrowser(){
-		  dr.close();
-		  dr.quit();
+	  public static void CheckoutProcess() throws InterruptedException{
+		  dr.findElement(By.xpath("html/body/div[1]/header/section[2]/div/div/div/div[2]/div/nav/ul/li[7]/a/b")).click();
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/a[1]")).click();
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[1]/label")).click();
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[7]/input")).sendKeys("UK");
+			Select sel=new Select(dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[9]/select")));
+			sel.selectByIndex(2);
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[10]/input")).sendKeys("02086449922");
+			JavascriptExecutor jse=(JavascriptExecutor)dr;
+			jse.executeScript("scroll(0,500);");
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[2]/figure[2]")).click();
+			WebElement TPrice =dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[3]/table/tbody/tr[5]/td[2]"));
+			String Total=TPrice.getText();
+			System.out.println("The Total price including all Vat is :"+Total);
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[3]/table/tbody/tr[6]/td/label")).click();
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[3]/table/tbody/tr[7]/td/input")).click();
+			TimeUnit.SECONDS.sleep(3);
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div/input")).click();
+			dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[2]/div[3]/div/div[1]/div/div[2]/div[1]/span/input")).click();
+			dr.findElement(By.id("login_email")).sendKeys("angeltests@im360.co.uk");
+			dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
+			dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div[3]/p[4]/input")).click();
+			WebElement PPrice =dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[3]"));
+			String PayPalTotal=PPrice.getText();
+			System.out.println("The PayPal Total price including all Vat is :"+PayPalTotal);
+			dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[2]/div[3]/div/div[1]/div[2]/div[2]/div[5]/div/input")).click();
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div[3]/div/form[2]/div/div[2]/div[3]/div/div/div/div[2]/div[2]/div[2]/ul/li[1]/span/span/input")).click();
+			TimeUnit.SECONDS.sleep(3);
+			Alert alt =dr.switchTo().alert();
+			alt.accept();
+			dr.findElement(By.xpath("html/body/div[1]/div[2]/div[3]/form/div/div/div[2]/p[3]/span/input")).click();
+			dr.close();
+			dr.quit();
 	  }
 
 	  

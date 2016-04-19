@@ -653,10 +653,6 @@ public class PlumbingWasteSubproducts{
 		  dr.close();
 		  dr.quit();
 
-	 }
-	
-	
-	
-	
+	}	
 	
  }

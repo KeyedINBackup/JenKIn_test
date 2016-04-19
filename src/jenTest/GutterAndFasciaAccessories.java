@@ -58,7 +58,7 @@ public class GutterAndFasciaAccessories{
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	}
 	
-	@Test(enabled=false,priority=1)
+	@Test(enabled=true,priority=1)
 	  public void GutterAccessoriesSubProduct() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 		  FileInputStream input = new FileInputStream(file);

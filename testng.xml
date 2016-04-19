@@ -1,13 +1,6 @@
-<suite name="Angel Plastics Products" verbose="1" >
-  <test name="Angel Test" >
-   <classes>
-       <class name="jenTest.FasciaSubProducts"/>
-       <class name="jenTest.SoftitBoardsSubProducts"/>
-       <class name="jenTest.Cladding"/>
-   	   <class name="jenTest.GutteringPlastic"/>
-       <class name="jenTest.GutteringImitaionCastIron"/>
-       <class name="jenTest.GutteringCastAluminium"/>
-       <class name="jenTest.GutteringGalvanisedSteel"/> 
-    </classes>
-  </test>
-</suite>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="none">
+  <test name="PayPalTest">
+  </test> <!-- PayPalTest -->
+</suite> <!-- Suite -->
