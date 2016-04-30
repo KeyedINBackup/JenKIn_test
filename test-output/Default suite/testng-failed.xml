@@ -7,7 +7,7 @@
         <methods>
           <include name="LoginTest"/>
           <include name="WhiteFasciaProducts"/>
-          <include name="CheckoutProcess"/>
+          <include name="CloseBrowser"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
     </classes>

@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -21,7 +19,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -38,7 +35,7 @@ public class FasciaSubProducts {
 			for(String win: dr.getWindowHandles()){
 				dr.switchTo().window(win);
 				dr.findElement(By.id("login_username")).sendKeys("kelvin");
-				dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
+				dr.findElement(By.id("login_password")).sendKeys("123test456");
 				dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/input")).click();
 			}
 			dr.switchTo().window(winhandle);	  
@@ -72,11 +69,13 @@ public class FasciaSubProducts {
 	  String Mainproductname=mainname.getText();
 	  System.out.println("***********************************************************************************************");
 	  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
+	  TimeUnit.SECONDS.sleep(1);
 	  dr.findElement(By.xpath(prop.getProperty("WhiteFascia"))).click();
 	  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 	  String Subproname=Subproductname.getText();
 	  System.out.println("***********************************************************************************************");
 	  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+	  TimeUnit.SECONDS.sleep(1);
 	  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 	  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 	  int t=list.size();
@@ -90,42 +89,28 @@ public class FasciaSubProducts {
 		  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
-		  for(int n=4; n<=Subtotal; n++){
+		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-500);");
+			  jse.executeScript("scroll(0,-750);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(3);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd[]={"135 Deg Internal Square/Ogee Fascia Angle (white)", "500mm Bullnose Internal Fascia Corner (white)", "300mm Fascia Joiner (white)"};
-			   if(Arrays.asList(ProEnd).contains(Proname)){
-				  break;
-			  }
 			}
-		  }
 		  dr.navigate().to(prop.getProperty("WhiteFasicaproductpage"));
-  }
+      }
   }
   
   @Test(enabled=false,priority=2)
@@ -154,40 +139,26 @@ public class FasciaSubProducts {
 		  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-500);");
+			  jse.executeScript("scroll(0,-750);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="70mm Decorative Architrave (black woodgrain)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
 		  dr.navigate().to(prop.getProperty("BlackFasicaproductpage"));
   }
   }
@@ -218,40 +189,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="300ml Light Grey Soudal Silirub 2 Silicone";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 		 dr.navigate().to(prop.getProperty("LightgreyURL"));
 	   }
 	  }
@@ -282,40 +239,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="300ml Medium Grey Soudal Silirub 2 Silicone";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 		 dr.navigate().to(prop.getProperty("HazygreyURL"));
 	   }
 	  }
@@ -345,40 +288,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="70mm Soffit Vent (anthracite 7016)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 		 dr.navigate().to(prop.getProperty("AnthraciteGreyURL"));
 	   }
 	  }  
@@ -409,40 +338,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="70mm Soffit Vent (anthracite 7016)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 		 dr.navigate().to(prop.getProperty("AnthraciteWoodGreyURL"));
 	   }
 	  }  
@@ -473,40 +388,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"500mm External Fascia Corner(rosewood)", "300mm External Corner 135 Deg (rosewood)", "Internal Ogee Fascia Corner (rosewood)", "Double Ended Ogee Fascia Joiner (rosewood)"};
-				   if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("RosewoodFasciaMainPage"));
 	  }
 	  }
@@ -537,40 +438,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"500mm External Fascia Corner(mahogany)", "300mm External Corner 135 Deg (mahogany)", "Internal Ogee Fascia Corner (mahogany)", "Double Ended Ogee Fascia Joiner (mahogany)"};
-				   if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("MahoganyFasciaMainPage"));
 	  }
 	  }
@@ -601,40 +488,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"500mm External Fascia Corner(golden oak)", "300mm External Corner 135 Deg (golden oak)", "Internal Ogee Fascia Corner (golden oak)", "Double Ended Ogee Fascia Joiner (golden oak)"};
-				   if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("GoldenOakFasciaMainPage"));
 	  }
 	  } 
@@ -665,40 +538,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Start & Edge Trim (irish oak)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("IrishOakFasciaMainPage"));
 	  }
 	  } 
@@ -729,40 +588,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="300ml Chartwell Green Fixology Silicone";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("ChartwellGreenFasciamainPage"));
 	  }
 	  } 
@@ -793,40 +638,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="300ml Cream Fixology Silicone";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("CreamFasciamainPage"));
 	  }
 	  } 
@@ -857,40 +688,26 @@ public class FasciaSubProducts {
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
 				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-500);");
+				  jse.executeScript("scroll(0,-750);");
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"300mm M-Boss Fascia Joiner (black)", "300mm M-Boss Fascia Joiner (white)"};
-				   if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("M-BossFasciamainPage"));
 	  }
 	  } 
@@ -910,77 +727,33 @@ public class FasciaSubProducts {
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
 			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-500);");
+			  jse.executeScript("scroll(0,-750);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="150mm Wide Tudor Board (mahogany)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
 			  dr.navigate().to(prop.getProperty("FasciaMainPage"));
 	  }
 	  @AfterTest
-	  public static void CheckoutProcess() throws InterruptedException{
-		  dr.findElement(By.xpath("html/body/div[1]/header/section[2]/div/div/div/div[2]/div/nav/ul/li[7]/a/b")).click();
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/a[1]")).click();
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[1]/label")).click();
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[7]/input")).sendKeys("UK");
-			Select sel=new Select(dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[9]/select")));
-			sel.selectByIndex(2);
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[1]/div/div[2]/ul/li[10]/input")).sendKeys("02086449922");
-			JavascriptExecutor jse=(JavascriptExecutor)dr;
-			jse.executeScript("scroll(0,500);");
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[2]/figure[2]")).click();
-			WebElement TPrice =dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[3]/table/tbody/tr[5]/td[2]"));
-			String Total=TPrice.getText();
-			System.out.println("The Total price including all Vat is :"+Total);
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[3]/table/tbody/tr[6]/td/label")).click();
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div[3]/table/tbody/tr[7]/td/input")).click();
-			TimeUnit.SECONDS.sleep(3);
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div/div/section/form/div/input")).click();
-			dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[2]/div[3]/div/div[1]/div/div[2]/div[1]/span/input")).click();
-			dr.findElement(By.id("login_email")).sendKeys("angeltests@im360.co.uk");
-			dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
-			dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[2]/div[3]/div/div[1]/div/div[2]/div[2]/div[3]/p[4]/input")).click();
-			WebElement PPrice =dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[1]/div/div[2]/div/div[2]/div/div[3]"));
-			String PayPalTotal=PPrice.getText();
-			System.out.println("The PayPal Total price including all Vat is :"+PayPalTotal);
-			dr.findElement(By.xpath("html/body/div[2]/div[2]/div[3]/div/form[2]/div[2]/div[2]/div[3]/div/div[1]/div[2]/div[2]/div[5]/div/input")).click();
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div[3]/div/form[2]/div/div[2]/div[3]/div/div/div/div[2]/div[2]/div[2]/ul/li[1]/span/span/input")).click();
-			TimeUnit.SECONDS.sleep(3);
-			Alert alt =dr.switchTo().alert();
-			alt.accept();
-			dr.findElement(By.xpath("html/body/div[1]/div[2]/div[3]/form/div/div/div[2]/p[3]/span/input")).click();
-			dr.close();
-			dr.quit();
-	  }
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
 
+	 }
 	  
 }
