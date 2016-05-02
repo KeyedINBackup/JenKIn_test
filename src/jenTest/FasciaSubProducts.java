@@ -19,6 +19,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -96,9 +98,10 @@ public class FasciaSubProducts {
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str13=prop.getProperty("popupClose");
+			  String str14=prop.getProperty("popupSection");
 			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-750);");
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+n+str6)).click();
 			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
@@ -106,8 +109,11 @@ public class FasciaSubProducts {
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Recently viewed product name is:"+Proname);
 			  //ScreenCapture();
-			  TimeUnit.SECONDS.sleep(3);
+			  WebDriverWait wait=new WebDriverWait(dr, 5);
+			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(str5+r+str14)));
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
+			  TimeUnit.SECONDS.sleep(1);
 			}
 		  dr.navigate().to(prop.getProperty("WhiteFasicaproductpage"));
       }
@@ -146,6 +152,7 @@ public class FasciaSubProducts {
 			  String str6=prop.getProperty("ProductImage_Part2");
 			  String str8=prop.getProperty("Finalproductname_part2");
 			  String str13=prop.getProperty("popupClose");
+			  String str14=prop.getProperty("popupImage");
 			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-750);");
@@ -156,6 +163,8 @@ public class FasciaSubProducts {
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Recently viewed product name is:"+Proname);
 			  //ScreenCapture();
+			  WebDriverWait wait=new WebDriverWait(dr, 20);
+			  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(str5+r+str14)));
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
 			}
