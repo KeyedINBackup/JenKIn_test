@@ -19,8 +19,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -60,7 +58,7 @@ public class FasciaSubProducts {
 		FileUtils.copyFile(scrFile, new File("c:\\sel_screen\\"+filename+".png"));
 	
 	}
-  @Test(enabled=true,priority=1)
+  @Test(enabled=false,priority=1)
   public void WhiteFasciaProducts() throws IOException, InterruptedException {
 	  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
 	  FileInputStream input = new FileInputStream(file);
@@ -96,30 +94,27 @@ public class FasciaSubProducts {
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  String str14=prop.getProperty("popupSection");
 			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  WebDriverWait wait=new WebDriverWait(dr, 5);
-			  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(str5+r+str14)));
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  TimeUnit.SECONDS.sleep(1);
 			}
 		  dr.navigate().to(prop.getProperty("WhiteFasicaproductpage"));
       }
   }
   
-  @Test(enabled=false,priority=2)
+  @Test(enabled=true,priority=2)
   public void BlackFasciaProducts() throws IOException, InterruptedException {
 	  
 	  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -150,21 +145,19 @@ public class FasciaSubProducts {
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  String str14=prop.getProperty("popupImage");
 			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-750);");
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  WebDriverWait wait=new WebDriverWait(dr, 20);
-			  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(str5+r+str14)));
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
 			}
@@ -203,17 +196,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -253,17 +247,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -302,17 +297,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -352,17 +348,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -371,7 +368,7 @@ public class FasciaSubProducts {
 	   }
 	  }  
 	  	  
-	  @Test(enabled=false,priority=7)
+	  @Test(enabled=true,priority=7)
 	  public void RosewoodFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -402,17 +399,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -421,7 +419,7 @@ public class FasciaSubProducts {
 	  }
 	  }
   
-	  @Test(enabled=false,priority=8)
+	  @Test(enabled=true,priority=8)
 	  public void MahoganyFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -452,17 +450,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -471,7 +470,7 @@ public class FasciaSubProducts {
 	  }
 	  }
 	  
-	  @Test(enabled=false,priority=9)
+	  @Test(enabled=true,priority=9)
 	  public void GoldenOakFasciaProducts() throws IOException, InterruptedException {
 		  
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -502,17 +501,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -552,17 +552,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -602,17 +603,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -652,17 +654,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -702,17 +705,18 @@ public class FasciaSubProducts {
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-750);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
 				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
@@ -741,17 +745,18 @@ public class FasciaSubProducts {
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
 			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-750);");
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
 			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();

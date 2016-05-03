@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="jenTest.FasciaBoards">
+      <class name="jenTest.SoftitBoardsSubProducts">
         <methods>
-          <include name="FasciaBoardsProduct"/>
+          <include name="LoginTest"/>
+          <include name="CloseBrowser"/>
+          <include name="GoldenOakWoodgrainSoftitProducts"/>
         </methods>
-      </class> <!-- jenTest.FasciaBoards -->
+      </class> <!-- jenTest.SoftitBoardsSubProducts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

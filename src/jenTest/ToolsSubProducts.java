@@ -20,6 +20,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -35,7 +36,7 @@ public class ToolsSubProducts{
 			for(String win: dr.getWindowHandles()){
 				dr.switchTo().window(win);
 				dr.findElement(By.id("login_username")).sendKeys("kelvin");
-				dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
+				dr.findElement(By.id("login_password")).sendKeys("123test456");
 				dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/input")).click();
 			}
 			dr.switchTo().window(winhandle);
@@ -86,39 +87,31 @@ public class ToolsSubProducts{
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
-				  String str5=prop.getProperty("QuickView_part1");
-				  String str6=prop.getProperty("QuickView_part2");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity_part1");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str5=prop.getProperty("ProductImage_Part1");
+				  String str6=prop.getProperty("ProductImage_Part2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  String str14=prop.getProperty("FinalQuantity_part2");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,-1000);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str11+n+str14)).click();
-				  dr.findElement(By.xpath(str11+n+str12)).click();	
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  TimeUnit.SECONDS.sleep(2);
-				  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str5+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str5+r+str13)).click();		  
-			  }
+				  TimeUnit.SECONDS.sleep(2);
+				  dr.findElement(By.xpath(str5+r+str13)).click();
+				}
 		  dr.navigate().to(prop.getProperty("ToolsProductPage"));
 	}
 } 
-//	@AfterTest
-//	  public static void CloseBrowser(){
-//		  dr.close();
-//		  dr.quit();
+	@AfterTest
+	  public static void CloseBrowser(){
+		  dr.close();
+		  dr.quit();
 
-//	 }
+	 }
 }

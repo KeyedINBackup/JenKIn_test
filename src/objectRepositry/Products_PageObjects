@@ -231,8 +231,8 @@ ok=closedialog
 QuickView_part1=html/body/div[1]/div[2]/div/div/section/section/div[
 QuickView_part2=]/figure/form/a/span
 Finalproductname_part1=html/body/div[1]/div[2]/div/div/section/section[1]/div[
-Finalproductname_part1a=html/body/div[1]/div[2]/div/div/section/div[
-Finalproductname_part2=]/section/div/div/div[2]/div/form/div[1]/h4
+Finalproductname_part1a=]/figure/form/h2
+Finalproductname_part2=]/section/div/div/div[2]/div/form/div[1]/h4/b
 Finalproductprice=]/section/div/div/div[2]/div/form/div[2]/div[1]/span/p
 Finalproductprice_1=]/section/div/div/div[2]/div/form/div[1]/div[2]/span/p
 FinalQuantity_part1=html/body/div[1]/div[2]/div/div/section/section/div[
@@ -242,7 +242,7 @@ Finalproduct_Addtocart_1a=]/section/div/div/div[2]/div/form/div[2]/div[2]/a
 Finalproduct_Addtocart_2=]/figure/form/div/div[2]/div[3]/a
 popupClose_1=html/body/div[1]/div[2]/div/div/section/div[
 popupClose=]/section/button
-popupSection=]/section
+popupSection=.//div[@class='custom_scrollbar scrollable']
 qtyfield=9148quantity
 Continue_shopping=html/body/div[1]/div[2]/div/div/section/a[3]
 

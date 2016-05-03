@@ -76,19 +76,20 @@ public class GroundGuardLawnPavingTile{
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str8=prop.getProperty("Finalproductname_part2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
 			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
-			  jse.executeScript("scroll(0,-750);");
+			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str5+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
 			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  TimeUnit.SECONDS.sleep(3);
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
 			}
 	    }
