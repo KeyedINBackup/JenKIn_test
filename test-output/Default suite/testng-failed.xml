@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.SoilAndVentSubproducts">
+      <class name="jenTest.SiliconesCleanersGlues">
         <methods>
           <include name="CloseBrowser"/>
-          <include name="MMPolypipeSoilProductpage"/>
           <include name="LoginTest"/>
+          <include name="GluesAdhesivesProducts"/>
         </methods>
-      </class> <!-- jenTest.SoilAndVentSubproducts -->
+      </class> <!-- jenTest.SiliconesCleanersGlues -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

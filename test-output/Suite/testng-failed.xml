@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="jenTest.SoftitBoardsSubProducts">
+      <class name="jenTest.SiliconesCleanersGlues">
         <methods>
+          <include name="SiliconesProducts"/>
+          <include name="GluesAdhesivesProducts"/>
           <include name="LoginTest"/>
           <include name="CloseBrowser"/>
-          <include name="GoldenOakWoodgrainSoftitProducts"/>
         </methods>
-      </class> <!-- jenTest.SoftitBoardsSubProducts -->
+      </class> <!-- jenTest.SiliconesCleanersGlues -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

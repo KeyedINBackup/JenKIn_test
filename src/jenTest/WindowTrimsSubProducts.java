@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -36,7 +35,7 @@ public class WindowTrimsSubProducts{
 			for(String win: dr.getWindowHandles()){
 				dr.switchTo().window(win);
 				dr.findElement(By.id("login_username")).sendKeys("kelvin");
-				dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
+				dr.findElement(By.id("login_password")).sendKeys("123test456");
 				dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/input")).click();
 			}
 			dr.switchTo().window(winhandle);
@@ -88,40 +87,27 @@ public class WindowTrimsSubProducts{
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"22mm Scotia", "120mm Decorative Arch (white)", "100 x 100 Angle (white)", "50 x 50 Flexi Angle (white)"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("StandaraWhiteWindowTrimsProductpage"));
 	  }
 	  }
@@ -140,40 +126,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd[]={"80mm x 80mm Angle (black woodgrain)"};
-			  if(Arrays.asList(ProEnd).contains(Proname)){
-				  break;
-			  }
 			}
-		  }
 	  }
 
 	@Test(enabled=true,priority=3)
@@ -191,40 +164,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="100mm x 80mm Hollow Angle (rosewood)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
 	  }
 
 	@Test(enabled=true,priority=4)
@@ -252,40 +212,27 @@ public class WindowTrimsSubProducts{
 			  System.out.println("\t\tThe Sub category Product Name is:"+Subcatproname);
 			  System.out.println("***********************************************************************************************");
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"25mm x 20mm Rectangle (Anthracite Grey 7016 Smooth)", "25mm x 20mm Rectangle (Anthracite Grey 7016 Woodgrain)"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
 				}
-			  }
 			  dr.navigate().to(prop.getProperty("AnthraciteGreyProductpage"));
 	  }
 	  }
@@ -305,40 +252,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="100mm x 80mm Hollow Angle (golden oak)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=6)
@@ -356,40 +290,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="300ml Chartwell Green Fixology Silicone";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=7)
@@ -407,40 +328,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="100mm x 80mm Hollow Angle";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=8)
@@ -458,40 +366,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="300mm x 9mm Flat Board (white woodgrain)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=9)
@@ -509,40 +404,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="25mm x 6mm D Section (irish oak)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=10)
@@ -560,40 +442,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="300ml Cream Fixology Silicone";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=11)
@@ -611,40 +480,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="100mm White End Cap";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=12)
@@ -663,40 +519,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("***********************************************************************************************");
 		  dr.findElement(By.xpath(prop.getProperty("WhiteHockeyBoard"))).click();
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="135mm Flat End Cap";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }	
   }
 	
 	@Test(enabled=true,priority=13)
@@ -714,40 +557,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="300mm End Cap";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
   }
 	
 	@Test(enabled=true,priority=14)
@@ -765,40 +595,27 @@ public class WindowTrimsSubProducts{
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="5 x 100 Woodscrews";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
 			}
-		  }
 			  dr.navigate().to(prop.getProperty("WindowTrimsMainpage"));
 	  }
 	
