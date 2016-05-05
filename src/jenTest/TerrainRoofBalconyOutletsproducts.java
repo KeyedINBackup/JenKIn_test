@@ -70,6 +70,7 @@ public class TerrainRoofBalconyOutletsproducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();

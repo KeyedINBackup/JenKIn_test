@@ -4,7 +4,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -36,7 +35,7 @@ public class GutteringPlastic{
 			for(String win: dr.getWindowHandles()){
 				dr.switchTo().window(win);
 				dr.findElement(By.id("login_username")).sendKeys("kelvin");
-				dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
+				dr.findElement(By.id("login_password")).sendKeys("123test456");
 				dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/input")).click();
 			}
 			dr.switchTo().window(winhandle);
@@ -64,26 +63,25 @@ public class GutteringPlastic{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("GutteringMainpage"));
+		  dr.navigate().to(prop.getProperty("PlasticGutteringMainpage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
-		  dr.findElement(By.xpath(prop.getProperty("PlasticGutteringProducts"))).click();
+		  dr.findElement(By.xpath(prop.getProperty("PolypipeTradeRangeProducts"))).click();
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
-		  dr.findElement(By.xpath(prop.getProperty("PolypipeTradeRangeProducts"))).click();
+		  dr.findElement(By.xpath(prop.getProperty("112mmStandardHalfRoundProducts"))).click();
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
 		  dr.findElement(By.xpath(prop.getProperty("112mmStandardHalfRoundProducts"))).click();
-		  WebElement Subfinalproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
-		  String Subfinalproname=Subfinalproductname.getText();
-		  System.out.println("***********************************************************************************************");
-		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -96,44 +94,32 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Long Hose Rainwater Diverter Kit (black)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("112mmStandardHalfRoundProductspage"));
 	  }
-	  }
+	}
 	@Test(enabled=true,priority=2)
 	  public void SquareLineGutterinProducts() throws IOException, InterruptedException {
 		  File file = new File("C:\\Selenium\\jenkindemo\\src\\objectRepositry\\Products_PageObjects");
@@ -146,6 +132,7 @@ public class GutteringPlastic{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -158,40 +145,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Standard Hopper Head (black)", "Standard Hopper Head (brown)", "Pipe Clip Square (brown)"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("112mmSquarelineGutteringProductPage"));
 	  }
@@ -221,40 +196,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Long Hose Rainwater Diverter Kit (black)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("117mmPolyflowGutteringProductPage"));
 	  }
@@ -272,6 +235,7 @@ public class GutteringPlastic{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -284,40 +248,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Outlet Adaptor";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("130mmVictorianOgeeGutteringProductPage"));
 	  }
@@ -335,6 +287,7 @@ public class GutteringPlastic{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -347,40 +300,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Outlet Adaptor", "Long Hose Rainwater Diverter Kit (black)", "Galvanised Rise & Fall Bracket"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("117mmSovereignMouldedOgeePrductPage"));
 	  }
@@ -398,6 +339,7 @@ public class GutteringPlastic{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -410,40 +352,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Pipe Clip", "68mm to 50mm Reducer (grey)"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("75mmMinlineGutteringProductPage"));
 	  }
@@ -461,6 +391,7 @@ public class GutteringPlastic{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -473,40 +404,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Drain Connector (black)", "110mm Grey Drain Connector"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("150mmIndustrialGutteringProductPage"));
 	  }
@@ -525,11 +444,13 @@ public class GutteringPlastic{
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("110mmCrescentHalfRoundGutteringProduts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -542,40 +463,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Small Hopper Head (black)", "Long Hose Rainwater Diverter Kit (black)"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("110mmCrescentHalfRoundGutteringProdutPage"));
 	  }
@@ -588,11 +497,13 @@ public class GutteringPlastic{
 		  Properties prop = new Properties();
 		  prop.load(input);
 		  dr.navigate().to(prop.getProperty("TerrainPremiumRangeMainPage"));
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("120mmCornicheSquarelineGutteringProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -605,40 +516,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Long Hose Rainwater Diverter Kit (black)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("120mmCornicheSquarelineGutteringProductPage"));
 	  }
@@ -659,6 +558,7 @@ public class GutteringPlastic{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -671,40 +571,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Rapidflow, Streamline & Omega Gutter Seal";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("131mmRapidflowDeepflowGutteringProductPage"));
 	  }
@@ -722,6 +610,7 @@ public class GutteringPlastic{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -734,40 +623,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Adjustable Rise & Fall Terrain Bracket (with drive in spike)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("137mmStreamlineSquareGutteringProductPage"));
 	  }
@@ -785,6 +662,7 @@ public class GutteringPlastic{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -797,40 +675,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd="Adjustable Rise & Fall Terrain Bracket (with drive in spike)";
-				  if(ProEnd.equalsIgnoreCase(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("122mmOmegaOgeeGutteringProductPage"));
 	  }
@@ -844,44 +710,33 @@ public class GutteringPlastic{
 		  prop.load(input);
 		  dr.navigate().to(prop.getProperty("TerrainPremiumRangeMainPage"));
 		  dr.findElement(By.xpath(prop.getProperty("AccessoriesProducts"))).click();
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
-		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
-		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
-		  int t=list.size();
-		  for(int n=1; n<=t; n++){
+		  TimeUnit.SECONDS.sleep(1);
+		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
+		  int Subtotal=FinalSubproducts.size();
+		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="Adaptor to Other Half Round Gutters";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
-			}
 		  }
 		  dr.navigate().to(prop.getProperty("TerrainPremiumRangeMainPage"));
 		  }
@@ -893,56 +748,47 @@ public class GutteringPlastic{
 		  Properties prop = new Properties();
 		  prop.load(input);
 		  dr.navigate().to(prop.getProperty("PlasticGutteringMainpage"));
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("FloplastTradeRangeProducts"))).click();
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("112mmStandardHalfRoundFloplastProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("BlackHalfRoundFloplastProducts"))).click();
 		  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
 		  String finalcatproname=productname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="Spacer Plate (black)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
-			}
 		  }
 		  dr.navigate().to(prop.getProperty("112mmStandardHalfRoundFloplastProductPage"));
   }
@@ -959,46 +805,35 @@ public class GutteringPlastic{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("BlackHalfRoundFloplastProducts"))).click();
 		  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
 		  String finalcatproname=productname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="Connector to Drain";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
-			}
 		  }
 		  dr.navigate().to(prop.getProperty("170mmXtrafloGutterSystemProductPage"));
 		 
@@ -1018,6 +853,7 @@ public class GutteringPlastic{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -1030,40 +866,28 @@ public class GutteringPlastic{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
 			  for(int n=1; n<=Subtotal; n++){
 				  String str5=prop.getProperty("ProductImage_Part1");
 				  String str6=prop.getProperty("ProductImage_Part2");
-				  String str7=prop.getProperty("Finalproductname_part1");
-				  String str8=prop.getProperty("Finalproductname_part2");
-				  String str10=prop.getProperty("Finalproductprice_1");
-				  String str11=prop.getProperty("FinalQuantity");
-				  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+				  String str8=prop.getProperty("Finalproductname_part1a");
 				  String str13=prop.getProperty("popupClose");
-				  if( n % 2 != 0){
-				  int r=n+1;
+				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
 				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
-				  dr.findElement(By.xpath(str5+n+str6)).click();
-				  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
 				  String Proname=Name.replaceAll("[\r\n]+", " ");
-				  System.out.println("The Added product name is:"+Proname);
-				  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-				  String Price=ProductPrice.getText();
-				  System.out.println("The Added product price is:"+Price);
+				  System.out.println("The Recently viewed product name is:"+Proname);
+				  dr.findElement(By.xpath(str5+n+str6)).click();
+				  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 				  //ScreenCapture();
-				  dr.findElement(By.xpath(str7+r+str11)).click();
-				  dr.findElement(By.xpath(str7+r+str12)).click();
+				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				  String ProEnd[]={"Spacer Plate (grey)", "Black 68mm Round Centre Pipe Clip (floplast)"};
-				  if(Arrays.asList(ProEnd).contains(Proname)){
-					  break;
-				  }
-				}
 			  }
 			  dr.navigate().to(prop.getProperty("112mmHi-CapDeepCapacityGutterSystemProductPage"));
 	  }
@@ -1083,40 +907,28 @@ public class GutteringPlastic{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
-		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("div"));
+		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
 		  for(int n=1; n<=Subtotal; n++){
 			  String str5=prop.getProperty("ProductImage_Part1");
 			  String str6=prop.getProperty("ProductImage_Part2");
-			  String str7=prop.getProperty("Finalproductname_part1");
-			  String str8=prop.getProperty("Finalproductname_part2");
-			  String str10=prop.getProperty("Finalproductprice_1");
-			  String str11=prop.getProperty("FinalQuantity");
-			  String str12=prop.getProperty("Finalproduct_Addtocart_2");
+			  String str8=prop.getProperty("Finalproductname_part1a");
 			  String str13=prop.getProperty("popupClose");
-			  if( n % 2 != 0){
-			  int r=n+1;
+			  int r=Subtotal+1;
 			  JavascriptExecutor jse=(JavascriptExecutor)dr;
 			  jse.executeScript("scroll(0,-500);");
 			  TimeUnit.SECONDS.sleep(2);
-			  dr.findElement(By.xpath(str5+n+str6)).click();
-			  WebElement ProductName=dr.findElement(By.xpath(str7+r+str8));
+			  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 			  String Name=ProductName.getText();
 			  String Proname=Name.replaceAll("[\r\n]+", " ");
-			  System.out.println("The Added product name is:"+Proname);
-			  WebElement ProductPrice=dr.findElement(By.xpath(str7+r+str10));
-			  String Price=ProductPrice.getText();
-			  System.out.println("The Added product price is:"+Price);
+			  System.out.println("The Recently viewed product name is:"+Proname);
+			  dr.findElement(By.xpath(str5+n+str6)).click();
+			  dr.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			  //ScreenCapture();
-			  dr.findElement(By.xpath(str7+r+str11)).click();
-			  dr.findElement(By.xpath(str7+r+str12)).click();
+			  TimeUnit.SECONDS.sleep(2);
 			  dr.findElement(By.xpath(str5+r+str13)).click();
-			  String ProEnd="Hopper Head (68mm Swish 7016)";
-			  if(ProEnd.equalsIgnoreCase(Proname)){
-				  break;
-			  }
-			}
 		  }
 			  dr.navigate().to(prop.getProperty("PlasticGutteringMainpage"));
 	  }

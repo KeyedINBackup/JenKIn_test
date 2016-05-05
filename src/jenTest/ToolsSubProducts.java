@@ -70,6 +70,7 @@ public class ToolsSubProducts{
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
@@ -83,6 +84,7 @@ public class ToolsSubProducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();

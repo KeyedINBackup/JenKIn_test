@@ -69,11 +69,11 @@ public class RoofingProducts{
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
-		  // php error in the 1 product. So , starting from 2 product
-		  for(int i=2;i<=t;i++){
+		  for(int i=1;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
 			  String str2=prop.getProperty("subproduct_part2");
 			  dr.findElement(By.xpath(str1+i+str2)).click();
@@ -82,6 +82,7 @@ public class RoofingProducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -103,7 +104,7 @@ public class RoofingProducts{
 				  //ScreenCapture();
 				  TimeUnit.SECONDS.sleep(2);
 				  dr.findElement(By.xpath(str5+r+str13)).click();
-				}
+			  }
 		  dr.navigate().to(prop.getProperty("RoofingProductsPage"));
 	}
 } 

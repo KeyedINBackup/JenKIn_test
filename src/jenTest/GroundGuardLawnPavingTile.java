@@ -65,11 +65,13 @@ public class GroundGuardLawnPavingTile{
 		  Properties prop = new Properties();
 		  prop.load(input);
 		  dr.navigate().to(prop.getProperty("GroundGuardLawnPavingTileProductPage"));
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();

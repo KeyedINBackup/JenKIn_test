@@ -69,11 +69,13 @@ public class SiliconesCleanersGlues{
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("SiliconesProducts"))).click();
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -86,6 +88,7 @@ public class SiliconesCleanersGlues{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -124,10 +127,11 @@ public class SiliconesCleanersGlues{
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
-		  for(int i=1;i<=t;i++){
+		  for(int i=2;i<=t;i++){
 			  String str1=prop.getProperty("subproduct_part1");
 			  String str2=prop.getProperty("subproduct_part2");
 			  dr.findElement(By.xpath(str1+i+str2)).click();
@@ -136,6 +140,7 @@ public class SiliconesCleanersGlues{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -146,7 +151,7 @@ public class SiliconesCleanersGlues{
 				  String str13=prop.getProperty("popupClose");
 				  int r=Subtotal+1;
 				  JavascriptExecutor jse=(JavascriptExecutor)dr;
-				  jse.executeScript("scroll(0,200);");
+				  jse.executeScript("scroll(0,-500);");
 				  TimeUnit.SECONDS.sleep(2);
 				  WebElement ProductName=dr.findElement(By.xpath(str5+n+str8));
 				  String Name=ProductName.getText();
@@ -175,6 +180,7 @@ public class SiliconesCleanersGlues{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
@@ -212,6 +218,7 @@ public class SiliconesCleanersGlues{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();

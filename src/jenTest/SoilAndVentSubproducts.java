@@ -68,21 +68,25 @@ public class SoilAndVentSubproducts{
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("110mmPolypipeSoilProducts"))).click();
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("Black110mmSoilProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("Pushfit/RingsealBlackSoilProducts"))).click();
 		  WebElement Subfinalproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -95,6 +99,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -133,6 +138,7 @@ public class SoilAndVentSubproducts{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -145,6 +151,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -184,6 +191,7 @@ public class SoilAndVentSubproducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
 		  dr.findElement(By.xpath(prop.getProperty("Pushfit/RingsealGreySoilProducts"))).click();
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement Subfinalproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -200,6 +208,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -238,6 +247,7 @@ public class SoilAndVentSubproducts{
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -250,6 +260,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -288,11 +299,13 @@ public class SoilAndVentSubproducts{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("Pushfit/RingsealBrownSoilProducts"))).click();
 		  WebElement Subfinalproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subfinalproname=Subfinalproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("figure"));
 		  int t=list.size();
@@ -305,6 +318,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -345,6 +359,7 @@ public class SoilAndVentSubproducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
@@ -383,6 +398,7 @@ public class SoilAndVentSubproducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
@@ -419,11 +435,13 @@ public class SoilAndVentSubproducts{
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  dr.findElement(By.xpath(prop.getProperty("Black82mmSoilProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -436,6 +454,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -474,6 +493,7 @@ public class SoilAndVentSubproducts{
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
 		  int t=list.size();
@@ -486,6 +506,7 @@ public class SoilAndVentSubproducts{
 			  System.out.println("***********************************************************************************************");
 			  System.out.println("\t\tThe Final Product Name is:"+finalcatproname);
 			  System.out.println("***********************************************************************************************");
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 			  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 			  int Subtotal=FinalSubproducts.size();
@@ -525,6 +546,7 @@ public class SoilAndVentSubproducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
@@ -563,6 +585,7 @@ public class SoilAndVentSubproducts{
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  System.out.println("***********************************************************************************************");
+		  TimeUnit.SECONDS.sleep(1);
 		  WebElement FinalSubProduct=dr.findElement(By.xpath(prop.getProperty("FinalProduct")));
 		  List<WebElement> FinalSubproducts=FinalSubProduct.findElements(By.tagName("figure"));
 		  int Subtotal=FinalSubproducts.size();
