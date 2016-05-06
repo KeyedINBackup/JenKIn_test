@@ -20,7 +20,7 @@ public class Login {
 		for(String win: dr.getWindowHandles()){
 			dr.switchTo().window(win);
 			dr.findElement(By.id("login_username")).sendKeys("kelvin");
-			dr.findElement(By.id("login_password")).sendKeys("123asd!@#");
+			dr.findElement(By.id("login_password")).sendKeys("123test456");
 			dr.findElement(By.xpath("html/body/div[1]/div[1]/section/form/ul/li[4]/input")).click();
 		}
 		dr.switchTo().window(winhandle);

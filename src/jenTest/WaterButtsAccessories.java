@@ -28,7 +28,7 @@ public class WaterButtsAccessories{
 	public static WebDriver dr= new FirefoxDriver();
 	@BeforeTest
 	  public void LoginTest() {
-		  	dr.get("http://dev.angelplastics.co.uk/");
+		  	dr.get("http://angelplastics.co.uk/");
 			dr.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 			dr.manage().window().maximize();
 			String winhandle =dr.getWindowHandle();

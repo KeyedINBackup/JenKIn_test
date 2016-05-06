@@ -3,28 +3,25 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="jenTest.GutteringPlastic">
+      <class name="jenTest.FasciaSubProducts">
         <methods>
-          <include name="MinlineGutteringProducts"/>
-          <include name="CornicheSquarelineGutteringProducts"/>
-          <include name="CapDeepCapacityGutterSystemProductPage"/>
-          <include name="StandardHalfRoundProducts"/>
-          <include name="PolyFlowGutterinProducts"/>
-          <include name="SquareLineGutterinProducts"/>
-          <include name="TerrainPremiumRangeProducts"/>
-          <include name="RapidflowDeepflowGutteringProducts"/>
-          <include name="IndustrialGutteringProductPage"/>
-          <include name="AccessoriesProductPage"/>
-          <include name="VictorianOgeeGutterinProducts"/>
-          <include name="StreamlineSquareGutteringProductPage"/>
-          <include name="SwishAnthraciteGreyRAL7016GutteringProducts"/>
-          <include name="OmegaOgeeGutteringProductPage"/>
-          <include name="SovereignMouldedOgeePrducts"/>
+          <include name="BlackFasciaProducts"/>
+          <include name="LightGreyFasciaProducts"/>
+          <include name="AnthraciteGreyFasciaProducts"/>
+          <include name="MBossFasciaProducts"/>
+          <include name="IrishOakFasciaProducts"/>
+          <include name="RosewoodFasciaProducts"/>
+          <include name="AnthraciteWoodGreyFasciaProducts"/>
+          <include name="MahoganyFasciaProducts"/>
+          <include name="ChartwellGreenFasciaProducts"/>
+          <include name="GoldenOakFasciaProducts"/>
+          <include name="ThickFlatTudorBoardProducts"/>
+          <include name="HazyGreyFasciaProducts"/>
+          <include name="WhiteFasciaProducts"/>
           <include name="LoginTest"/>
-          <include name="FloplastTradeRangeProducts"/>
-          <include name="XtrafloGutterSystemProductPage"/>
+          <include name="CreamFasciaProducts"/>
         </methods>
-      </class> <!-- jenTest.GutteringPlastic -->
+      </class> <!-- jenTest.FasciaSubProducts -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

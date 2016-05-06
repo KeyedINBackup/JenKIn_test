@@ -27,7 +27,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 	public static WebDriver dr= new FirefoxDriver();
 	@BeforeTest
 	  public void LoginTest() {
-		  	dr.get("http://dev.angelplastics.co.uk/");
+		  	dr.get("http://angelplastics.co.uk/");
 			dr.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 			dr.manage().window().maximize();
 			String winhandle =dr.getWindowHandle();
@@ -63,16 +63,11 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("Downpipes&HoppersProductPage"));
+		  dr.navigate().to(prop.getProperty("PolypipeTradeDownpipeRangeProductPage"));
 		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
 		  String Mainproductname=mainname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
-		  dr.findElement(By.xpath(prop.getProperty("StandardPlasticPipesProducts"))).click();
-		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
-		  String Subproname=Subproductname.getText();
-		  System.out.println("***********************************************************************************************");
-		  System.out.println("\t\tThe Sub Product Name is:"+Subproname);
 		  dr.findElement(By.xpath(prop.getProperty("StandardRoundPipe68mmProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
@@ -285,17 +280,12 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("StandardPlasticPipesProductPage"));
-		  dr.findElement(By.xpath(prop.getProperty("TerrainPremiumDownpipeRangeProducts"))).click();
+		  dr.navigate().to(prop.getProperty("TerrainPremiumDownpipeRangeMainPage"));
+		  dr.findElement(By.xpath(prop.getProperty("68mmRoundDownPipeProducts"))).click();
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Sub sub-category Product Name is:"+Subcatproname);
-		  dr.findElement(By.xpath(prop.getProperty("68mmRoundDownPipeProducts"))).click();
-		  WebElement Subfinalproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
-		  String Subfinalproname=Subfinalproductname.getText();
-		  System.out.println("***********************************************************************************************");
-		  System.out.println("\t\tThe Final Sub-category Product Name is:"+Subfinalproname);
 		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
@@ -304,6 +294,7 @@ public class DownpipesHoppersStandardHalfroundSubproducts{
 			  String str1=prop.getProperty("subproduct_part1");
 			  String str2=prop.getProperty("subproduct_part2");
 			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
 			  String finalcatproname=productname.getText();
 			  System.out.println("***********************************************************************************************");

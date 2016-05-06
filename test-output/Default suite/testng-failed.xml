@@ -3,13 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.FixingProducts">
+      <class name="jenTest.Cladding">
         <methods>
+          <include name="FeatherEdgeEMbossedcladdingProducts"/>
+          <include name="VgrooveEmbossedcladdingProducts"/>
           <include name="LoginTest"/>
-          <include name="CloseBrowser"/>
-          <include name="FixingsProductsPage"/>
+          <include name="FeatherEdgeSmoothProducts"/>
+          <include name="DoubleEMbossedcladdingProducts"/>
+          <include name="VgroovecladdingProducts"/>
+          <include name="StandardShiplapProducts"/>
         </methods>
-      </class> <!-- jenTest.FixingProducts -->
+      </class> <!-- jenTest.Cladding -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
