@@ -79,6 +79,7 @@ public class DecorativeSubproducts{
 			  String str1=prop.getProperty("subproduct_part1");
 			  String str2=prop.getProperty("subproduct_part2");
 			  dr.findElement(By.xpath(str1+i+str2)).click();
+			  TimeUnit.SECONDS.sleep(1);
 			  WebElement productname=dr.findElement(By.xpath(prop.getProperty("subcatproductname")));
 			  String finalcatproname=productname.getText();
 			  System.out.println("***********************************************************************************************");

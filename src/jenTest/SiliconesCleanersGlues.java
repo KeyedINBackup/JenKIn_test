@@ -64,13 +64,7 @@ public class SiliconesCleanersGlues{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("SiliconesCleanersGluesProductPage"));
-		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
-		  String Mainproductname=mainname.getText();
-		  System.out.println("***********************************************************************************************");
-		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
-		  TimeUnit.SECONDS.sleep(1);
-		  dr.findElement(By.xpath(prop.getProperty("SiliconesProducts"))).click();
+		  dr.navigate().to(prop.getProperty("SiliconesProductPage"));
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
@@ -121,8 +115,7 @@ public class SiliconesCleanersGlues{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("SiliconesCleanersGluesProductPage"));
-		  dr.findElement(By.xpath(prop.getProperty("GluesAdhesivesProducts"))).click();
+		  dr.navigate().to(prop.getProperty("GlueProductPage"));
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
