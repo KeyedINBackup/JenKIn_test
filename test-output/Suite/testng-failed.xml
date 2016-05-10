@@ -5,21 +5,10 @@
     <classes>
       <class name="jenTest.FasciaSubProducts">
         <methods>
-          <include name="BlackFasciaProducts"/>
-          <include name="LightGreyFasciaProducts"/>
           <include name="AnthraciteGreyFasciaProducts"/>
-          <include name="MBossFasciaProducts"/>
-          <include name="IrishOakFasciaProducts"/>
-          <include name="RosewoodFasciaProducts"/>
           <include name="AnthraciteWoodGreyFasciaProducts"/>
-          <include name="MahoganyFasciaProducts"/>
-          <include name="ChartwellGreenFasciaProducts"/>
-          <include name="GoldenOakFasciaProducts"/>
-          <include name="ThickFlatTudorBoardProducts"/>
-          <include name="HazyGreyFasciaProducts"/>
-          <include name="WhiteFasciaProducts"/>
+          <include name="CloseBrowser"/>
           <include name="LoginTest"/>
-          <include name="CreamFasciaProducts"/>
         </methods>
       </class> <!-- jenTest.FasciaSubProducts -->
     </classes>

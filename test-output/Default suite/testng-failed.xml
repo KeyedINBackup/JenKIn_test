@@ -3,13 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="jenTest.DecorativeSubproducts">
+      <class name="jenTest.GutteringPlastic">
         <methods>
-          <include name="LoginTest"/>
+          <include name="XtrafloGutterSystemProductPage"/>
+          <include name="OmegaOgeeGutteringProductPage"/>
+          <include name="TerrainPremiumRangeProducts"/>
+          <include name="StreamlineSquareGutteringProductPage"/>
+          <include name="StandardHalfRoundProducts"/>
+          <include name="AccessoriesProductPage"/>
+          <include name="CapDeepCapacityGutterSystemProductPage"/>
+          <include name="FloplastTradeRangeProducts"/>
           <include name="CloseBrowser"/>
-          <include name="DecorativeINTEXTsubProduct"/>
+          <include name="LoginTest"/>
+          <include name="SwishAnthraciteGreyRAL7016GutteringProducts"/>
         </methods>
-      </class> <!-- jenTest.DecorativeSubproducts -->
+      </class> <!-- jenTest.GutteringPlastic -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

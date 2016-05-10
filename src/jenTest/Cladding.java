@@ -65,13 +65,7 @@ public class Cladding{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("CladdigMainPage"));
-		  WebElement mainname=dr.findElement(By.xpath(prop.getProperty("mainproductname")));
-		  String Mainproductname=mainname.getText();
-		  System.out.println("***********************************************************************************************");
-		  System.out.println("\t\tThe Main Product Name is:"+Mainproductname);
-		  dr.findElement(By.xpath(prop.getProperty("StandardShiplap"))).click();
-		  TimeUnit.SECONDS.sleep(1);
+		  dr.navigate().to(prop.getProperty("StandardShiplapProductpage"));
 		  WebElement Subproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subproname=Subproductname.getText();
 		  System.out.println("***********************************************************************************************");
