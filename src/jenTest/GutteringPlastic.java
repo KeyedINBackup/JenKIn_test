@@ -68,7 +68,6 @@ public class GutteringPlastic{
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");
 		  System.out.println("\t\tThe Final sub-category Product Name is:"+Subcatproname);
-		  dr.findElement(By.xpath(prop.getProperty("112mmStandardHalfRoundProducts"))).click();
 		  TimeUnit.SECONDS.sleep(1);
 		  WebElement SubProduct=dr.findElement(By.xpath(prop.getProperty("subproduct")));
 		  List<WebElement> list=SubProduct.findElements(By.tagName("div"));
