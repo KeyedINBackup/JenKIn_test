@@ -476,9 +476,7 @@ public class GutteringPlastic{
 		  FileInputStream input = new FileInputStream(file);
 		  Properties prop = new Properties();
 		  prop.load(input);
-		  dr.navigate().to(prop.getProperty("TerrainPremiumRangeMainPage"));
-		  TimeUnit.SECONDS.sleep(1);
-		  dr.findElement(By.xpath(prop.getProperty("120mmCornicheSquarelineGutteringProducts"))).click();
+		  dr.navigate().to(prop.getProperty("120mmCornicheSquarelineGutteringProductPage"));
 		  WebElement Subcatproductname=dr.findElement(By.xpath(prop.getProperty("subproductname")));
 		  String Subcatproname=Subcatproductname.getText();
 		  System.out.println("***********************************************************************************************");

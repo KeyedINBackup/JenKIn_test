@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="none">
   <test name="Test">
     <classes>
-      <class name="jenTest.GutteringPlastic"/>
+      <class name="jenTest.GutteringCastAluminium"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

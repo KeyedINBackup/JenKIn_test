@@ -3,28 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
-      <class name="jenTest.GutteringPlastic">
+      <class name="jenTest.GutteringCastAluminium">
         <methods>
-          <include name="MinlineGutteringProducts"/>
-          <include name="CornicheSquarelineGutteringProducts"/>
-          <include name="CapDeepCapacityGutterSystemProductPage"/>
-          <include name="StandardHalfRoundProducts"/>
-          <include name="PolyFlowGutterinProducts"/>
-          <include name="SquareLineGutterinProducts"/>
-          <include name="TerrainPremiumRangeProducts"/>
-          <include name="RapidflowDeepflowGutteringProducts"/>
-          <include name="IndustrialGutteringProductPage"/>
-          <include name="AccessoriesProductPage"/>
-          <include name="VictorianOgeeGutterinProducts"/>
-          <include name="StreamlineSquareGutteringProductPage"/>
-          <include name="SwishAnthraciteGreyRAL7016GutteringProducts"/>
-          <include name="OmegaOgeeGutteringProductPage"/>
-          <include name="SovereignMouldedOgeePrducts"/>
+          <include name="CloseBrowser"/>
+          <include name="BeadedDeepFlowCastAluminiumProducts"/>
           <include name="LoginTest"/>
-          <include name="FloplastTradeRangeProducts"/>
-          <include name="XtrafloGutterSystemProductPage"/>
         </methods>
-      </class> <!-- jenTest.GutteringPlastic -->
+      </class> <!-- jenTest.GutteringCastAluminium -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
